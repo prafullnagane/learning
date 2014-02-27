@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="output" path="eclipsebin/notused"/>
+
+	<classpathentry exported="false" kind="src" path="/platform" />
+	<classpathentry exported="true" kind="src" path="/lucenesearch" />
+	<classpathentry exported="true" kind="lib" path="lib/geronimo-stax-api_1.0_spec-1.0.1.jar" />
+	<classpathentry exported="true" kind="lib" path="lib/perf4j-0.9.16.jar" />
+	<classpathentry exported="true" kind="lib" path="lib/solr-analysis-extras-3.6.0.jar" />
+	<classpathentry exported="true" kind="lib" path="lib/solr-cell-3.6.0.jar" />
+	<classpathentry exported="true" kind="lib" path="lib/solr-clustering-3.6.0.jar" />
+	<classpathentry exported="true" kind="lib" path="lib/solr-core-3.6.0.jar" />
+	<classpathentry exported="true" kind="lib" path="lib/solr-dataimporthandler-3.6.0.jar" />
+	<classpathentry exported="true" kind="lib" path="lib/solr-dataimporthandler-extras-3.6.0.jar" />
+	<classpathentry exported="true" kind="lib" path="lib/solr-langid-3.6.0.jar" />
+	<classpathentry exported="true" kind="lib" path="lib/solr-solrj-3.6.0.jar" />
+	<classpathentry exported="true" kind="lib" path="lib/solr-test-framework-3.6.0.jar" />
+	<classpathentry exported="true" kind="lib" path="lib/solr-uima-3.6.0.jar" />
+	<classpathentry exported="true" kind="lib" path="lib/solr-velocity-3.6.0.jar" />
+	<classpathentry exported="true" kind="lib" path="lib/wstx-asl-3.2.7.jar" />
+	<classpathentry exported="true" kind="lib" path="bin/solrfacetsearchserver.jar" >
+		<attributes>
+			<attribute name="javadoc_location" value="https://download.hybris.com/api/5.0.0.0"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry exported="true" kind="lib" path="resources" />
+	<classpathentry exported="true" output="eclipsebin/classes" kind="src" path="testsrc" />
+				
+</classpath>
+				

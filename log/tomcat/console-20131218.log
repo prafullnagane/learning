@@ -1,0 +1,4 @@
+STATUS | wrapper  | main    | 2013/12/18 18:37:13.265 | Pinging the JVM took 1 seconds to respond.
+INFO   | jvm 1    | main    | 2013/12/18 20:14:22.411 | [0;33mWARN  [hybrisHTTP35] [192.168.1.106] [ContextInformationLoader] Cannot find CMSSite associated with current URL (http://192.168.1.111:9001/store/electronics/en/_ui/desktop/theme-neev/images/favicon.ico)!
+INFO   | jvm 1    | main    | 2013/12/18 20:14:22.720 | [m[0;33mWARN  [hybrisHTTP33] [192.168.1.106] [ContextInformationLoader] Cannot find CMSSite associated with current URL (http://192.168.1.111:9001/store/electronics/en/_ui/desktop/theme-neev/images/favicon.ico)!
+INFO   | jvm 1    | main    | 2013/12/18 20:14:23.228 | [m

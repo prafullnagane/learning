@@ -1,0 +1,23 @@
+<vjdbc-configuration>
+<!--
+	<connection id="${virtualjdbc.id}" driver="${db.driver}" url="${db.url}" user="${db.username}"
+	 password="${db.password}"
+	 loginHandler="de.hybris.platform.virtualjdbc.login.VirtualDataSourceAuthenticationHandler"
+	 dataSourceProvider="de.hybris.platform.virtualjdbc.db.VirtualDataSourceProvider"/>
+-->
+	  <!-- connection-poolde.hybris.platform.virtualjdbc.servlet.VJDBCPlatformServlet.doPost
+                   maxActive="20"
+                   maxIdle="10"
+                   maxWait="10000"
+                   timeBetweenEvictionRunsMillis="5000"
+                   minEvictableIdleTimeMillis="10000"/>
+	 </connection-->
+
+	 <connection id="${virtualjdbc.id}" driver="${db.driver}" url="${db.url}" user="${db.username}"
+	 password="${db.password}"
+	 loginHandler="de.hybris.platform.virtualjdbc.login.VirtualDataSourceAuthenticationHandler"
+	 dataSourceProvider="de.hybris.platform.virtualjdbc.db.HybrisDataSourceProvider"/>
+
+	<occt checkingPeriod="3m" timeout="5m"/>
+
+</vjdbc-configuration>

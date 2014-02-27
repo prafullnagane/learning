@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<testclasses>
+  <yacceleratorcockpits>
+    <testclass>de.hybris.platform.yacceleratorcockpits.jalo.YAcceleratorcockpitsTest</testclass>
+    <testclass>de.hybris.platform.yacceleratorcockpits.cmscockpit.sitewizard.CMSSiteUtilsTest</testclass>
+  </yacceleratorcockpits>
+</testclasses>

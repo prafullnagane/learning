@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<web-app id="hac" version="2.4" xmlns="http://java.sun.com/xml/ns/j2ee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+
+	<display-name>testweb</display-name>
+
+	
+	<servlet>
+		<servlet-name>JUnitTestServlet</servlet-name>
+		<servlet-class>de.hybris.platform.testframework.TestServlet</servlet-class>
+		<init-param>
+			<param-name>thread</param-name>
+			<param-value>false</param-value>
+		</init-param>
+		<init-param>
+			<param-name>htmlRefreshDelay</param-name>
+			<param-value>6</param-value>
+		</init-param>
+	</servlet>
+
+
+	<servlet-mapping>
+		<servlet-name>JUnitTestServlet</servlet-name>
+		<url-pattern>/</url-pattern>
+	</servlet-mapping>
+
+
+	
+	
+
+	<!-- Session config -->
+
+	<session-config>
+		<session-timeout>120</session-timeout>
+	</session-config>
+</web-app> 

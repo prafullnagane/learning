@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="output" path="eclipsebin/notused"/>
+
+	<classpathentry exported="false" kind="src" path="/platform" />
+	<classpathentry exported="true" kind="src" path="/acceleratorservices" />
+	<classpathentry exported="true" kind="src" path="/basecommerce" />
+	<classpathentry exported="true" kind="lib" path="lib/archaius-core-0.5.6.jar" />
+	<classpathentry exported="true" kind="lib" path="lib/flexjson-3.0.jar" />
+	<classpathentry exported="true" kind="lib" path="lib/httpclient-4.2.1.jar" />
+	<classpathentry exported="true" kind="lib" path="lib/httpcore-4.2.1.jar" />
+	<classpathentry exported="true" kind="lib" path="lib/hybris-commons-configuration-0.24.0.jar" />
+	<classpathentry exported="true" kind="lib" path="lib/hybris-commons-context-0.24.0.jar" />
+	<classpathentry exported="true" kind="lib" path="lib/hybris-commons-rest-client-0.24.0.jar" />
+	<classpathentry exported="true" kind="lib" path="lib/hybris-commons-security-0.24.0.jar" />
+	<classpathentry exported="true" kind="lib" path="lib/hybris-commons-tenant-0.24.0.jar" />
+	<classpathentry exported="true" kind="lib" path="lib/hybris-commons-tenant-rest-client-0.24.0.jar" />
+	<classpathentry exported="true" kind="lib" path="lib/hystrix-core-1.2.8.jar" />
+	<classpathentry exported="true" kind="lib" path="lib/jdbc-engine-1.21.2.jar" />
+	<classpathentry exported="true" kind="lib" path="lib/jersey-apache-client-1.13.jar" />
+	<classpathentry exported="true" kind="lib" path="lib/jersey-client-1.13.jar" />
+	<classpathentry exported="true" kind="lib" path="lib/jersey-core-1.13.jar" />
+	<classpathentry exported="true" kind="lib" path="lib/jersey-json-1.13.jar" />
+	<classpathentry exported="true" kind="lib" path="lib/jersey-server-1.13.jar" />
+	<classpathentry exported="true" kind="lib" path="lib/jersey-servlet-1.13.jar" />
+	<classpathentry exported="true" kind="lib" path="lib/jersey-spring-1.13.jar" />
+	<classpathentry exported="true" kind="lib" path="lib/jul-to-slf4j-1.6.4.jar" />
+	<classpathentry exported="true" kind="lib" path="lib/kernel-api-1.21.5.jar" />
+	<classpathentry exported="true" kind="lib" path="lib/kernel-cache-1.21.2.jar" />
+	<classpathentry exported="true" kind="lib" path="lib/kernel-persistence-1.21.2.jar" />
+	<classpathentry exported="true" kind="lib" path="lib/kernel-service-1.21.2.jar" />
+	<classpathentry exported="true" kind="lib" path="lib/kernel-type-system-1.21.2.jar" />
+	<classpathentry exported="true" kind="lib" path="lib/kernel-utils-1.21.2.jar" />
+	<classpathentry exported="true" kind="lib" path="lib/mongodb-engine-1.21.2.jar" />
+	<classpathentry exported="true" kind="lib" path="lib/usermanagement-api-0.15.0.jar" />
+	<classpathentry exported="true" kind="lib" path="lib/usermanagement-client-authentication-0.15.0.jar" />
+	<classpathentry exported="true" kind="lib" path="lib/usermanagement-facade-0.15.0.jar" />
+	<classpathentry exported="true" kind="lib" path="lib/usermanagement-rest-client-0.15.0.jar" />
+	<classpathentry exported="true" kind="lib" path="lib/usermanagement-service-0.15.0.jar" />
+	<classpathentry exported="true" kind="lib" path="bin/ondemandcommonserver.jar" >
+		<attributes>
+			<attribute name="javadoc_location" value="https://download.hybris.com/api/5.0.0.0"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry exported="true" kind="lib" path="hmc/bin/ondemandcommonhmc.jar" >
+		<attributes>
+			<attribute name="javadoc_location" value="https://download.hybris.com/api/5.0.0.0"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry exported="true" kind="lib" path="resources" />
+	<classpathentry exported="true" output="eclipsebin/classes" kind="src" path="testsrc" />
+				
+</classpath>
+				

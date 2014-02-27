@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<!--
+ [y] hybris Platform
+
+ Copyright (c) 2000-2013 hybris AG
+ All rights reserved.
+
+ This software is the confidential and proprietary information of hybris
+ ("Confidential Information"). You shall not disclose such Confidential
+ Information and shall use it only in accordance with the terms of the
+ license agreement you entered into with hybris.
+
+
+-->
+<project name="virtualjdbc_buildcallbacks" >
+
+
+	<macrodef name="virtualjdbc_before_dist">
+		<sequential>
+			<echo>Deleting vjdbc client jar</echo>
+			<delete file="${HYBRIS_TEMP_DIR}/virtualjdbc/hybris-virtualjdbc.jar" failonerror="false"   />
+		</sequential>
+	</macrodef>
+
+
+	<macrodef name="virtualjdbc_after_dist">
+				<sequential>
+					<echo>Creating vjdbc client jar</echo>
+				    <property name="ext.virtualjdbc.tmp" value="${HYBRIS_TEMP_DIR}/_vjdbc_client_temp" />
+					<mkdir dir="${ext.virtualjdbc.tmp}"  />
+					
+					<unzip src="${ext.core.path}/lib/commons-logging-1.1.1.jar" overwrite="true"  dest="${ext.virtualjdbc.tmp}"/>
+					<copy todir="${ext.virtualjdbc.tmp}"   >
+						<fileset dir="${ext.virtualjdbc.path}/classes"   >
+							<include name="de/simplicit/vjdbc/cache/**/*.class"/>
+							<include name="de/simplicit/vjdbc/command/**/*.class"/>
+							<include name="de/simplicit/vjdbc/parameters/**/*.class"/>
+							<include name="de/simplicit/vjdbc/serial/**/*.class"/>
+							<include name="de/simplicit/vjdbc/servlet/**/*.class"/>
+							<include name="de/simplicit/vjdbc/util/**/*.class"/>
+							<include name="de/simplicit/vjdbc/*.class"/>
+							<include name="de/hybris/vjdbc/**/*Driver.class"/>
+							
+						</fileset>
+					</copy>
+					<jar destfile="${HYBRIS_TEMP_DIR}/virtualjdbc/hybris-virtualjdbc.jar" >
+						<fileset  dir="${ext.virtualjdbc.tmp}"/>
+						<manifest>
+							<attribute name="Built-By" value="hybris"/>
+							<attribute name="Implementation-Vendor" value="hybris"/>
+							<attribute name="Implementation-Title" value="hybris virtual jdbc"/>
+							<attribute name="Implementation-Version" value="1.0"/>
+						</manifest>
+					</jar>
+					
+					<delete includeemptydirs="true" dir="${ext.virtualjdbc.tmp}" failonerror="false" >
+						<fileset dir="${ext.virtualjdbc.tmp}" includes="**/*"   />
+					</delete>
+				</sequential>
+	</macrodef>
+
+</project>
+

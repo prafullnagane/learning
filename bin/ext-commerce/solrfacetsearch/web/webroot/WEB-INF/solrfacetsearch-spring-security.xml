@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ [y] hybris Platform
+
+ Copyright (c) 2000-2013 hybris AG
+ All rights reserved.
+
+ This software is the confidential and proprietary information of hybris
+ ("Confidential Information"). You shall not disclose such Confidential
+ Information and shall use it only in accordance with the terms of the
+ license agreement you entered into with hybris.
+-->
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:security="http://www.springframework.org/schema/security"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+		http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+        http://www.springframework.org/schema/security
+        http://www.springframework.org/schema/security/spring-security-3.1.xsd 
+        http://www.springframework.org/schema/aop
+        http://www.springframework.org/schema/aop/spring-aop-3.1.xsd"
+    default-autowire="byName">
+	
+	<security:http pattern="/login.jsp" security="none" />
+	<security:http pattern="/**/replication" security="none" />
+	<security:http pattern="/favicon.ico" security="none" />
+	<security:http pattern="/solr_small.png" security="none" />
+	<security:http pattern="/images/**" security="none" />
+	<security:http pattern="/styles/**" security="none" />
+	
+	<security:http>
+	  	<security:anonymous username="anonymous" granted-authority="ROLE_ANONYMOUS"/>
+	  	<security:session-management session-fixation-protection="none"/>
+    	<security:intercept-url pattern="/**" access="IS_AUTHENTICATED_REMEMBERED"/>
+		<security:http-basic />
+		<security:form-login always-use-default-target="false" login-page="/login.jsp" authentication-failure-url="/login.jsp?login_error=1"/>
+		<security:logout logout-url="/j_spring_security_logout"  logout-success-url="/login.jsp"/>
+	</security:http>
+	
+	<bean id="accessDecisionManager" class="org.springframework.security.access.vote.AffirmativeBased">
+		<property name="decisionVoters">
+			<list>
+				<bean id="notInitializedVoter" class="de.hybris.platform.spring.security.voter.HybrisNotInitializedVoter" />
+				<bean id="roleVoter" class="org.springframework.security.access.vote.RoleVoter" />
+				<bean id="authenticatedVoter" class="org.springframework.security.access.vote.AuthenticatedVoter" />
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="rememberMeServices" class="de.hybris.platform.spring.security.CoreRememberMeService">
+		<property name="key" value="adminweb" />
+		<property name="cookieName" value="LoginToken" />
+		<!-- avoiding hard reference to tenant-scoped 'coreUserDetailsService' -->
+		<lookup-method name="lookupUserDetailsService" bean="coreUserDetailsService" />
+	</bean>
+
+	<security:authentication-manager>
+		<security:authentication-provider ref="coreAuthenticationProvider"/>
+	</security:authentication-manager>
+	
+	<bean id="coreAuthenticationProvider" class="de.hybris.platform.spring.security.CoreAuthenticationProvider">
+		<property name="userDetailsService" ref="coreUserDetailsService" />
+	</bean>
+	
+	<bean id="coreUserDetailsService" class="de.hybris.platform.spring.security.CoreUserDetailsService" />
+	
+
+</beans>

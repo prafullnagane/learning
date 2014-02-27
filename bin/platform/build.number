@@ -1,0 +1,10 @@
+#Wed, 27 Mar 2013 15:31:10 +0100
+#Ant properties
+#Wed Mar 27 15:31:10 CET 2013
+builddate=20130327 1523
+releasedate=20130327 1523
+vendor=hybris
+version=5.0.0.0
+
+revision=68171
+svnurl=https\://svn.hybris.com/ebusiness/branches/5.0.0/bin/platform

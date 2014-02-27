@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<widgets>
+    <widget id="mainSlot" widgetDefinitionId="com.hybris.cockpitng.backoffice.mainLayout" slotId="mainSlot" template="false">
+        <widget id="systemBar" widgetDefinitionId="com.hybris.cockpitng.widgets.common.systembar" slotId="headerArea" template="false">
+            <widget id="backofficePerspectiveChooser" widgetDefinitionId="com.hybris.backoffice.perspectiveChooser" slotId="perspectiveChooser" template="false"/>
+        </widget>
+        <widget id="backofficeMainSlot" widgetDefinitionId="com.hybris.backoffice.perspectiveContainer" slotId="mainArea" template="false"/>
+        <widget id="authorityGroupSelector" widgetDefinitionId="com.hybris.cockpitng.authorityGroupSelector" slotId="roleSelectorSlot" template="false"/>
+    </widget>
+    <widget-connection sourceWidgetId="backofficeMainSlot" outputId="possiblePerspectives" targetWidgetId="backofficePerspectiveChooser" inputId="possiblePerspectives"/>
+    <widget-connection sourceWidgetId="backofficePerspectiveChooser" outputId="selectPerspective" targetWidgetId="backofficeMainSlot" inputId="selectPerspective"/>
+</widgets>

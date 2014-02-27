@@ -1,0 +1,11 @@
+#Wed, 27 Mar 2013 15:28:34 +0100
+#Ant properties
+#Wed Mar 27 15:28:34 CET 2013
+builddate=20130327 1523
+description=cscockpit
+name=cscockpit
+vendor=hybris
+version=5.0.0.0
+
+revision=1716
+svnurl=https\://partnersvn.hybris.de/neoworks/cs/branches/5.0.0/cscockpit

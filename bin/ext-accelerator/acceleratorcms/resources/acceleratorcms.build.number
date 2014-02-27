@@ -1,0 +1,11 @@
+#Wed, 27 Mar 2013 15:23:11 +0100
+#Ant properties
+#Wed Mar 27 15:23:10 CET 2013
+builddate=20130327 1523
+description=acceleratorcms
+name=acceleratorcms
+vendor=hybris
+version=5.0.0.0
+
+revision=18649
+svnurl=https\://partnersvn.hybris.de/hybris/projectaccelerator/branches/5.0.0/projectaccelerator/acceleratorcms

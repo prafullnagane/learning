@@ -1,0 +1,93 @@
+<!--
+  ~ [y] hybris Platform
+  ~
+  ~ Copyright (c) 2000-2013 hybris AG
+  ~ All rights reserved.
+  ~
+  ~ This software is the confidential and proprietary information of hybris
+  ~ ("Confidential Information"). You shall not disclose such Confidential
+  ~ Information and shall use it only in accordance with the terms of the
+  ~ license agreement you entered into with hybris.
+  -->
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+						http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+		 				http://www.springframework.org/schema/aop
+                        http://www.springframework.org/schema/aop/spring-aop-3.1.xsd">
+
+	<alias name="defaultOndemandDeliveryAddressStrategy" alias="ondemandDeliveryAddressStrategy"/>
+	<bean id="defaultOndemandDeliveryAddressStrategy" class="de.hybris.platform.integration.commons.strategies.impl.DefaultOndemandDeliveryAddressStrategy"/>
+
+	<alias name="defaultOndemandTaxAreaLookupStrategy" alias="taxAreaLookupStrategy"/>
+	<bean id="defaultOndemandTaxAreaLookupStrategy" class="de.hybris.platform.integration.commons.strategies.impl.DefaultOndemandTaxAreaLookupStrategy">
+		<property name="ondemandDeliveryAddressStrategy" ref="ondemandDeliveryAddressStrategy"/>
+	</bean>
+
+	<alias name="defaultOndemandTaxCalculationService" alias="ondemandTaxCalculationService"/>
+	<bean id="defaultOndemandTaxCalculationService" class="de.hybris.platform.integration.commons.services.impl.DefaultOndemandTaxCalculationService"/>
+
+	<alias name="defaultDefaultOndemandTenantPreferenceSelectorStrategy" alias="ondemandTenantPreferenceSelectorStrategy"/>
+	<bean id="defaultDefaultOndemandTenantPreferenceSelectorStrategy" class="de.hybris.platform.integration.commons.strategies.impl.DefaultOndemandTenantPreferenceSelectorStrategy">
+		<property name="baseStoreService" ref="baseStoreService"/>
+		<property name="tenantContextService" ref="tenantContextService"/>
+	</bean>
+
+	<!--  COMMON CONFIGURATION BEANS FOR REST CLIENT -->
+	<bean id="ondemandSlf4jInit" class="de.hybris.platform.integration.commons.log.OndemandSlf4jInit" init-method="init" scope="singleton"/>
+
+	<import resource="classpath:/META-INF/hybris-commons-tenant-spring.xml"/>
+	<import resource="classpath:/META-INF/hybris-commons-context-spring.xml"/>
+
+	<bean id="endpointProvider"
+	      class="com.hybris.commons.client.external.ExternalEndpointProvider">
+		<property name="gatewayUri" value="${hybris.gateway.uri}"/>
+	</bean>
+
+	<bean id="acceptsDefaultRestCallDecorator" class="com.hybris.commons.client.decorator.defaults.AcceptsDefaultRestCallDecorator"/>
+	<bean id="typeDefaultRestCallDecorator" class="com.hybris.commons.client.decorator.defaults.TypeDefaultRestCallDecorator"/>
+
+	<alias name="onDemandRestLoggingFilter" alias="hybrisCommonsRestClientLoggingFilter"/>
+	<bean id="onDemandRestLoggingFilter" class="com.sun.jersey.api.client.filter.LoggingFilter"/>
+
+	<alias alias="onDemandDiscountableEntryStrategy" name="defaultOnDemandDiscountableEntryStrategy"/>
+	<bean id="defaultOnDemandDiscountableEntryStrategy" class="de.hybris.platform.integration.commons.strategies.impl.DefaultOndemandDiscountableEntryStrategy"/>
+
+	<alias name="defaultOnDemandPromotionService" alias="onDemandPromotionService"/>
+	<bean id="defaultOnDemandPromotionService" class="de.hybris.platform.integration.commons.services.impl.DefaultOndemandPromotionService">
+		<property name="discountableEntryStrategy" ref="onDemandDiscountableEntryStrategy"/>
+		<property name="taxCalculationService" ref="ondemandTaxCalculationService" />
+	</bean>
+
+	<bean class="de.hybris.platform.integration.commons.hystrix.OndemandHystrixThreadPoolTenantListener" id="ondemandHystrixThreadPoolTenantListener" init-method="init"/>
+
+	<bean id="ondemandAfterInitializationStartEventListener" class="de.hybris.platform.integration.commons.event.AfterInitializationStartEventListener" parent="abstractEventListener">
+		<property name="configurationService" ref="configurationService"/>
+	</bean>
+
+	<bean id="ondemandAfterInitializationEndEventListener" class="de.hybris.platform.integration.commons.event.AfterInitializationEndEventListener" parent="abstractEventListener">
+		<property name="configurationService" ref="configurationService"/>
+	</bean>
+
+	<!-- Client authentication configuration -->
+	<import resource="classpath:/META-INF/usermanagement-client-authentication-spring.xml"/>
+
+	<aop:config proxy-target-class="true" expose-proxy="true">
+		<aop:aspect id="cisAuthenticationAspect" ref="authenticationAspect">
+			<aop:around method="assureCallIsAuthenticated" pointcut="execution(* com.hybris.cis.client.impl..*.*(..))"/>
+		</aop:aspect>
+		<aop:aspect id="omsAuthenticationAspect" ref="authenticationAspect">
+			<aop:around method="assureCallIsAuthenticated" pointcut="execution(* com.hybris.oms..rest.client..*.*(..))"/>
+		</aop:aspect>
+	</aop:config>
+
+	<bean id="keyStoreApiKeyProvider" class="com.hybris.commons.security.impl.KeyStoreApiKeyProvider">
+ 	 	<property name="keyStoreUtil" ref="keyStoreUtil"/>
+	</bean>
+ 
+	<bean id="keyStoreUtil" class="com.hybris.commons.security.util.KeyStoreUtil">
+  		<property name="pathToKeyStore" value="${hybris.authentication.key.path}" />
+  		<property name="keyStorePassword" value="${hybris.authentication.key.password}" />
+	</bean>
+</beans>

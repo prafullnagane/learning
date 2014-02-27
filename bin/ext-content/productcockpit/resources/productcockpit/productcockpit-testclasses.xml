@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<testclasses>
+  <productcockpit>
+    <testclass>de.hybris.platform.productcockpit.jalo.ProductcockpitTest</testclass>
+  </productcockpit>
+</testclasses>

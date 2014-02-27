@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<testclasses>
+  <yacceleratorcore>
+    <testclass>de.hybris.platform.yacceleratorcore.checkout.flow.impl.SiteCheckoutFlowStrategyTest</testclass>
+    <testclass>de.hybris.platform.yacceleratorcore.suggestion.DefaultSimpleSuggestionServiceIntegrationTest</testclass>
+    <testclass>de.hybris.platform.yacceleratorcore.setup.CoreSystemSetupUnitTest</testclass>
+    <testclass>de.hybris.platform.yacceleratorcore.suggestion.impl.DefaultSimpleSuggestionServiceTest</testclass>
+    <testclass>de.hybris.platform.yacceleratorcore.batch.task.BatchIntegrationTest</testclass>
+    <testclass>de.hybris.platform.yacceleratorcore.checkout.flow.impl.NewCustomerCheckoutFlowStrategyTest</testclass>
+    <testclass>de.hybris.platform.yacceleratorcore.checkout.flow.impl.PickUpInStoreCheckoutFlowStrategyTest</testclass>
+    <testclass>de.hybris.platform.yacceleratorcore.checkout.flow.impl.FixedCheckoutFlowStrategyTest</testclass>
+  </yacceleratorcore>
+</testclasses>

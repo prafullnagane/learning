@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<testclasses>
+  <europe1>
+    <testclass>de.hybris.platform.europe1.jalo.Europe1DiscountsTranslatorTest</testclass>
+    <testclass>de.hybris.platform.europe1.jalo.OrderManagerAndEurope1Test</testclass>
+    <testclass>de.hybris.platform.europe1.jalo.PriceInfoTest</testclass>
+    <testclass>de.hybris.platform.europe1.persistence.DiscountRowTest</testclass>
+    <testclass>de.hybris.platform.europe1.jalo.CustomPriceFactoryTest</testclass>
+    <testclass>de.hybris.platform.europe1.jalo.TaxValuesCountTest</testclass>
+    <testclass>de.hybris.platform.europe1.persistence.PriceRowTest</testclass>
+    <testclass>de.hybris.platform.europe1.jalo.Europe1PricesTranslatorTest</testclass>
+    <testclass>de.hybris.platform.europe1.jalo.Europe1PriceFactoryConcurrentTest</testclass>
+  </europe1>
+</testclasses>

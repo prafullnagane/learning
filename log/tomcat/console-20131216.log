@@ -1,0 +1,7 @@
+STATUS | wrapper  | main    | 2013/12/16 01:53:28.024 | Pinging the JVM took 1 seconds to respond.
+INFO   | jvm 1    | main    | 2013/12/16 11:17:14.353 | [0;32mINFO  [hybrisHTTP28] [192.168.1.130] [TypeRemovalUtil] Checking for orphaned types ..
+INFO   | jvm 1    | main    | 2013/12/16 11:17:14.356 | [m[0;32mINFO  [hybrisHTTP28] [192.168.1.130] [TypeRemovalUtil]   - Loading types from items.xml
+INFO   | jvm 1    | main    | 2013/12/16 11:17:14.557 | [m[0;32mINFO  [hybrisHTTP28] [192.168.1.130] [TypeRemovalUtil]   - Loading types from system
+INFO   | jvm 1    | main    | 2013/12/16 11:17:14.558 | [m[0;32mINFO  [hybrisHTTP28] [192.168.1.130] [TypeRemovalUtil]   - Determining orphaned types
+INFO   | jvm 1    | main    | 2013/12/16 11:17:14.659 | [m[0;32mINFO  [hybrisHTTP28] [192.168.1.130] [TypeRemovalUtil] Finished checking for orphaned types
+INFO   | jvm 1    | main    | 2013/12/16 11:17:15.160 | [m

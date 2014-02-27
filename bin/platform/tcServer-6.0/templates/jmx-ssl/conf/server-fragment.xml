@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Server>
+	<Listener className="com.springsource.tcserver.serviceability.rmi.JmxSocketListener"
+			update:useSSL="true"
+			add:useJdkClientFactory="true"
+			passwordFile="${catalina.base}/conf/jmxremote.password"
+			accessFile="${catalina.base}/conf/jmxremote.access"
+			add:keystoreFile="${catalina.base}/conf/tcserver.keystore"
+			add:keystorePass="changeme"
+			add:truststoreFile="${catalina.base}/conf/tcserver.keystore"
+			add:truststorePass="changeme"
+			update:authenticate="false"/>
+
+</Server>

@@ -1,0 +1,10 @@
+INFO   | jvm 1    | main    | 2014/01/16 13:19:38.611 | [0;33mWARN  [hybrisHTTP33] [192.168.1.30] [DefaultFindDeliveryCostStrategy] Could not find deliveryCost for order [00003000] due to : null... skipping!
+INFO   | jvm 1    | main    | 2014/01/16 13:19:38.615 | [m[0;33mWARN  [hybrisHTTP33] [192.168.1.30] [DefaultFindPaymentCostStrategy] Could not find paymentCost for order [00003000] due to : null... skipping!
+INFO   | jvm 1    | main    | 2014/01/16 13:19:39.117 | [m
+INFO   | jvm 1    | main    | 2014/01/16 13:20:07.258 | [0;33mWARN  [hybrisHTTP31] [192.168.1.30] [DefaultFindDeliveryCostStrategy] Could not find deliveryCost for order [00003000] due to : null... skipping!
+INFO   | jvm 1    | main    | 2014/01/16 13:20:07.259 | [m[0;33mWARN  [hybrisHTTP31] [192.168.1.30] [DefaultFindPaymentCostStrategy] Could not find paymentCost for order [00003000] due to : null... skipping!
+INFO   | jvm 1    | main    | 2014/01/16 13:20:07.761 | [m
+INFO   | jvm 1    | main    | 2014/01/16 18:00:54.343 | [0;33mWARN  [hybrisHTTP3] [192.168.1.30] [DefaultFindDeliveryCostStrategy] Could not find deliveryCost for order [00003000] due to : null... skipping!
+INFO   | jvm 1    | main    | 2014/01/16 18:00:54.347 | [m[0;33mWARN  [hybrisHTTP3] [192.168.1.30] [DefaultFindPaymentCostStrategy] Could not find paymentCost for order [00003000] due to : null... skipping!
+INFO   | jvm 1    | main    | 2014/01/16 18:00:54.849 | [m
+STATUS | wrapper  | main    | 2014/01/16 18:32:05.504 | Pinging the JVM took 1 seconds to respond.

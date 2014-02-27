@@ -1,0 +1,38 @@
+# Do not translate; Do not translate; To be translated; To be translated;
+# ImpEx for Importing German Localisations for the MCC;;;;
+
+$lang=de;;;;
+$catalogVersion=catalogVersion(catalog(id[default='Default']),version[default='Online'])[unique=true,default='Default:Online'];;;;
+
+UPDATE Catalog;id[unique=true];Name[lang=$lang];;
+;Default;Standardkatalog;;
+
+UPDATE CatalogVersion;catalog(id)[unique=true];version[unique=true];languages(isocode)[mode=append];
+;Default;Online;$lang;
+;Default;Staged;$lang;
+
+UPDATE StaticLink;code[unique=true];title[lang=$lang];description[lang=$lang];
+;reportCockpit;Report Cockpit;Ermöglicht das Anfertigen komplexer Berichte, die flexibel anpassbar und darstellbar sind.;
+;admincockpit;Administration Cockpit;hybris-Systemadministration und Bearbeitung von Validierungsregeln.;
+;hmc2;Benutzer- und Benutzergruppenverwaltung (hMC);Flexible und eindeutige Benutzerverwaltung.;
+;hmc;Managementkonsole (hMC);Verwalten Sie alle grundlegenden Kernkomponenten Ihres hybris-Systems.;
+;hac;Verwaltungskonsole;Präsentieren Sie eine Gesamtansicht der hilfreichen Tools für Systemadministration.;
+;productcockpit;Product Cockpit (PCM);Optimiert über die intuitive Benutzerschnittstelle Katalog- und Produktverwaltung und ermöglicht effizientes Massendatenmanagement.;
+;importcockit;Import Cockpit;Reduzieren Sie die Importkomplexität und konsolidieren Sie die Produktdaten aus mehreren Quellen mithilfe eines intuitiven und graphischen Importtools.;
+#;mam;hybris DAM Server (Celum);Gehen Sie nach der Installation direkt zum hybris Digital Asset Management Server, der auf Celum basiert.;
+;hmc3;Marketing Tools (hMC);Verwalten Sie Marketingkampagnen zentral für alle Vertriebskanäle.;
+;hmc4;Order Management (hMC);Verwalten Sie Ihre Bestellungen, Zahlungs- und Liefermodi.;
+
+"#% if: !de.hybris.platform.jalo.extension.ExtensionManager.getInstance().isExtensionInstalled(""btgcockpit"")";;;;
+;cmscockpit;Web Content Management Module (WCMS);Erstellen, verwalten und veröffentlichen Sie mobile Inhalte im Internet mithilfe einer integrierten WCMS-Schnittstelle (Web Content Management Interface).;
+#% endif:;;;;
+
+"#% if: de.hybris.platform.jalo.extension.ExtensionManager.getInstance().isExtensionInstalled(""btgcockpit"")";;;;
+;cmscockpit;WCMS Cockpit mit Advanced Personalisation-Funktionalität;Veröffentlichungssystem für Webinhalte zum Verwalten von Websites, einschließlich Advanced Personalisation-Funktionalität für Kundensegmentierung.;
+#% endif:;;;;
+
+;cscockpit;Customer Service Cockpit (CS);Bieten Sie Kundenservice und Vertriebsunterstützung über eine einzige integrierte Benutzerschnittstelle.;
+;printcockpit;Print Cockpit;Erstellen Sie (halb)-automatisch Druckpublikationen und veröffentlichen Sie diese in DTP-Programmen.;
+;webfrontends;Web Frontends:;;
+;storetemplate;StoreTemplate;Beispiel eines Front-Ends für einen Online-Shop, im Quellcode übermittelt.;
+;mobiletemplate;MobileTemplate;Mobiltelefon-Frontend. Beachten Sie, dass diese Vorlage je nach Funktionalität des von Ihnen verwendeten Mobiltelefons drei verschiedene visuelle Darstellungsformen aufweist. Die Versionen: WAP 1, WAP 2 und HTML5. Betrachten Sie diese auf einem geeigneten Mobilgerät.;

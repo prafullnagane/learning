@@ -1,0 +1,595 @@
+STATUS | wrapper  | main    | 2014/01/03 13:44:24.840 | --> Wrapper Started as Console
+STATUS | wrapper  | main    | 2014/01/03 13:44:24.841 | Java Service Wrapper Standard Edition 64-bit 3.5.17
+STATUS | wrapper  | main    | 2014/01/03 13:44:24.841 |   Copyright (C) 1999-2012 Tanuki Software, Ltd. All Rights Reserved.
+STATUS | wrapper  | main    | 2014/01/03 13:44:24.841 |     http://wrapper.tanukisoftware.com
+STATUS | wrapper  | main    | 2014/01/03 13:44:24.842 |   Licensed to hybris software - www.hybris.com for hybris Platform
+STATUS | wrapper  | main    | 2014/01/03 13:44:24.842 | 
+STATUS | wrapper  | main    | 2014/01/03 13:44:25.147 | Launching a JVM...
+INFO   | jvm 1    | main    | 2014/01/03 13:44:25.554 | WrapperManager: Initializing...
+INFO   | jvm 1    | main    | 2014/01/03 13:44:26.462 | Jan 03, 2014 1:44:26 PM org.apache.coyote.http11.Http11Protocol init
+INFO   | jvm 1    | main    | 2014/01/03 13:44:26.465 | INFO: Initializing Coyote HTTP/1.1 on http-9001
+INFO   | jvm 1    | main    | 2014/01/03 13:44:26.967 | Jan 03, 2014 1:44:26 PM org.apache.coyote.http11.Http11Protocol init
+INFO   | jvm 1    | main    | 2014/01/03 13:44:26.968 | INFO: Initializing Coyote HTTP/1.1 on http-9002
+INFO   | jvm 1    | main    | 2014/01/03 13:44:26.968 | Jan 03, 2014 1:44:26 PM org.apache.catalina.startup.Catalina load
+INFO   | jvm 1    | main    | 2014/01/03 13:44:26.969 | INFO: Initialization processed in 973 ms
+INFO   | jvm 1    | main    | 2014/01/03 13:44:26.969 | Jan 03, 2014 1:44:26 PM org.apache.catalina.realm.JAASRealm setContainer
+INFO   | jvm 1    | main    | 2014/01/03 13:44:26.970 | INFO: Set JAAS app name Catalina
+INFO   | jvm 1    | main    | 2014/01/03 13:44:27.170 | Jan 03, 2014 1:44:27 PM org.apache.catalina.mbeans.JmxRemoteLifecycleListener createServer
+INFO   | jvm 1    | main    | 2014/01/03 13:44:27.173 | INFO: The JMX Remote Listener has configured the registry on port 9003 and the server on port 9004 for the Platform server
+INFO   | jvm 1    | main    | 2014/01/03 13:44:27.175 | Jan 03, 2014 1:44:27 PM org.apache.catalina.core.StandardService start
+INFO   | jvm 1    | main    | 2014/01/03 13:44:27.176 | INFO: Starting service Catalina
+INFO   | jvm 1    | main    | 2014/01/03 13:44:39.593 | [0;32mINFO  [WrapperSimpleAppMain] [AbstractTenant] Created master data source DataSourceImpl<<master/master>>
+INFO   | jvm 1    | main    | 2014/01/03 13:44:39.697 | [m[0;32mINFO  [WrapperSimpleAppMain] [DefaultBroadcastService] Started message broadcast service:
+INFO   | jvm 1    | main    | 2014/01/03 13:44:39.699 | clustering (enabled:false)
+INFO   | jvm 1    | main    | 2014/01/03 13:44:39.701 | sending synchronously - no queue
+INFO   | jvm 1    | main    | 2014/01/03 13:44:39.702 | methods [<loopback>::de.hybris.platform.cluster.LoopBackBroadcastMethod@4fb7a0d3]
+INFO   | jvm 1    | main    | 2014/01/03 13:44:40.005 | [m[0;32mINFO  [WrapperSimpleAppMain] [hybrisserver] 
+INFO   | jvm 1    | main    | 2014/01/03 13:44:40.006 | [m[0;32mINFO  [WrapperSimpleAppMain] [hybrisserver] *****************************************************************
+INFO   | jvm 1    | main    | 2014/01/03 13:44:40.007 | [m[0;32mINFO  [WrapperSimpleAppMain] [hybrisserver] 
+INFO   | jvm 1    | main    | 2014/01/03 13:44:40.008 | [m[0;32mINFO  [WrapperSimpleAppMain] [hybrisserver] Starting up hybris server
+INFO   | jvm 1    | main    | 2014/01/03 13:44:40.010 | [m[0;32mINFO  [WrapperSimpleAppMain] [hybrisserver] 
+INFO   | jvm 1    | main    | 2014/01/03 13:44:40.012 | [m[0;32mINFO  [WrapperSimpleAppMain] [hybrisserver] Configuration:
+INFO   | jvm 1    | main    | 2014/01/03 13:44:40.014 | [m[0;32mINFO  [WrapperSimpleAppMain] [hybrisserver] 
+INFO   | jvm 1    | main    | 2014/01/03 13:44:40.015 | [m[0;32mINFO  [WrapperSimpleAppMain] [hybrisserver] Cluster:     disabled
+INFO   | jvm 1    | main    | 2014/01/03 13:44:40.016 | [m[0;32mINFO  [WrapperSimpleAppMain] [hybrisserver] Tenant:      master
+INFO   | jvm 1    | main    | 2014/01/03 13:44:40.017 | [m[0;32mINFO  [WrapperSimpleAppMain] [hybrisserver] OS:          Linux 3.2.0-29-generic, amd64
+INFO   | jvm 1    | main    | 2014/01/03 13:44:40.017 | [m[0;32mINFO  [WrapperSimpleAppMain] [hybrisserver] Database:    Pool: hybris - hsqldb, table prefix: 
+INFO   | jvm 1    | main    | 2014/01/03 13:44:40.018 | [m[0;32mINFO  [WrapperSimpleAppMain] [hybrisserver]              SA - jdbc:hsqldb:file:/home/admin1/hybris/data/hsqldb/mydb;shutdown=true;hsqldb.cache_rows=100000;hsqldb.cache_size=20000;hsqldb.write_delay_millis=1000;hsqldb.inc_backup=true;hsqldb.defrag_limit=2;hsqldb.nio_data_file=false
+INFO   | jvm 1    | main    | 2014/01/03 13:44:40.020 | [m[0;32mINFO  [WrapperSimpleAppMain] [hybrisserver] Platform:    5.0.0.0
+INFO   | jvm 1    | main    | 2014/01/03 13:44:40.020 | [m[0;32mINFO  [WrapperSimpleAppMain] [hybrisserver] Java:        Oracle Corporation
+INFO   | jvm 1    | main    | 2014/01/03 13:44:40.021 | [m[0;32mINFO  [WrapperSimpleAppMain] [hybrisserver]              OpenJDK Runtime Environment, 1.7.0_25-b30
+INFO   | jvm 1    | main    | 2014/01/03 13:44:40.022 | [m[0;32mINFO  [WrapperSimpleAppMain] [hybrisserver]              /usr/lib/jvm/java-7-openjdk-amd64/jre
+INFO   | jvm 1    | main    | 2014/01/03 13:44:40.022 | [m[0;32mINFO  [WrapperSimpleAppMain] [hybrisserver] VM Locale:   language=en,country=US,region=null
+INFO   | jvm 1    | main    | 2014/01/03 13:44:40.023 | [m[0;32mINFO  [WrapperSimpleAppMain] [hybrisserver] Cache:       RegionCache is not yet initialized. [de.hybris.platform.cache.impl.RegionCacheAdapter]
+INFO   | jvm 1    | main    | 2014/01/03 13:44:40.024 | [m[0;32mINFO  [WrapperSimpleAppMain] [hybrisserver] Server type: tomcat
+INFO   | jvm 1    | main    | 2014/01/03 13:44:40.025 | [m[0;32mINFO  [WrapperSimpleAppMain] [hybrisserver] 
+INFO   | jvm 1    | main    | 2014/01/03 13:44:40.025 | [m[0;32mINFO  [WrapperSimpleAppMain] [hybrisserver] *****************************************************************
+INFO   | jvm 1    | main    | 2014/01/03 13:44:40.027 | [m[0;32mINFO  [WrapperSimpleAppMain] [hybrisserver] 
+INFO   | jvm 1    | main    | 2014/01/03 13:44:40.027 | [m[0;32mINFO  [WrapperSimpleAppMain] [hybrisserver] ---------------------------------------------------------------
+INFO   | jvm 1    | main    | 2014/01/03 13:44:40.029 | [m[0;32mINFO  [WrapperSimpleAppMain] [hybrisserver] --- Extensions (in dependency order, options: 
+INFO   | jvm 1    | main    | 2014/01/03 13:44:40.029 | [m[0;32mINFO  [WrapperSimpleAppMain] [hybrisserver] ---  p .. platform extension 
+INFO   | jvm 1    | main    | 2014/01/03 13:44:40.030 | [m[0;32mINFO  [WrapperSimpleAppMain] [hybrisserver] ---  * .. auto-required 
+INFO   | jvm 1    | main    | 2014/01/03 13:44:40.031 | [m[0;32mINFO  [WrapperSimpleAppMain] [hybrisserver] ---  ? .. lazy-loaded 
+INFO   | jvm 1    | main    | 2014/01/03 13:44:40.031 | [m[0;32mINFO  [WrapperSimpleAppMain] [hybrisserver] ---  i .. got <extname>-items.xml 
+INFO   | jvm 1    | main    | 2014/01/03 13:44:40.032 | [m[0;32mINFO  [WrapperSimpleAppMain] [hybrisserver] ---  b .. got <extname>-beans.xml 
+INFO   | jvm 1    | main    | 2014/01/03 13:44:40.032 | [m[0;32mINFO  [WrapperSimpleAppMain] [hybrisserver] ---  c .. got core module 
+INFO   | jvm 1    | main    | 2014/01/03 13:44:40.033 | [m[0;32mINFO  [WrapperSimpleAppMain] [hybrisserver] ---  w .. got web module 
+INFO   | jvm 1    | main    | 2014/01/03 13:44:40.033 | [m[0;32mINFO  [WrapperSimpleAppMain] [hybrisserver] ---  h .. got HMC module ) 
+INFO   | jvm 1    | main    | 2014/01/03 13:44:40.034 | [m[0;32mINFO  [WrapperSimpleAppMain] [hybrisserver] ---------------------------------------------------------------
+INFO   | jvm 1    | main    | 2014/01/03 13:44:40.035 | [m[0;32mINFO  [WrapperSimpleAppMain] [hybrisserver] core 5.0.0.0 [p*ci]
+INFO   | jvm 1    | main    | 2014/01/03 13:44:40.035 | [m[0;32mINFO  [WrapperSimpleAppMain] [hybrisserver] deliveryzone 5.0.0.0 [p*ci]
+INFO   | jvm 1    | main    | 2014/01/03 13:44:40.036 | [m[0;32mINFO  [WrapperSimpleAppMain] [hybrisserver] mediaweb 5.0.0.0 [p*cw]
+INFO   | jvm 1    | main    | 2014/01/03 13:44:40.036 | [m[0;32mINFO  [WrapperSimpleAppMain] [hybrisserver] paymentstandard 5.0.0.0 [p*ci]
+INFO   | jvm 1    | main    | 2014/01/03 13:44:40.037 | [m[0;32mINFO  [WrapperSimpleAppMain] [hybrisserver] commons 5.0.0.0 [p*ci]
+INFO   | jvm 1    | main    | 2014/01/03 13:44:40.037 | [m[0;32mINFO  [WrapperSimpleAppMain] [hybrisserver] testweb 5.0.0.0 [p*w]
+INFO   | jvm 1    | main    | 2014/01/03 13:44:40.038 | [m[0;32mINFO  [WrapperSimpleAppMain] [hybrisserver] processing->commons 5.0.0.0 [p*ci]
+INFO   | jvm 1    | main    | 2014/01/03 13:44:40.038 | [m[0;32mINFO  [WrapperSimpleAppMain] [hybrisserver] impex->processing 5.0.0.0 [p*ci]
+INFO   | jvm 1    | main    | 2014/01/03 13:44:40.039 | [m[0;32mINFO  [WrapperSimpleAppMain] [hybrisserver] validation->impex 5.0.0.0 [p*ci]
+INFO   | jvm 1    | main    | 2014/01/03 13:44:40.039 | [m[0;32mINFO  [WrapperSimpleAppMain] [hybrisserver] europe1->impex 5.0.0.0 [p*ci]
+INFO   | jvm 1    | main    | 2014/01/03 13:44:40.040 | [m[0;32mINFO  [WrapperSimpleAppMain] [hybrisserver] catalog->(validation,commons,europe1) 5.0.0.0 [p*ci]
+INFO   | jvm 1    | main    | 2014/01/03 13:44:40.040 | [m[0;32mINFO  [WrapperSimpleAppMain] [hybrisserver] platformservices->(paymentstandard,deliveryzone,catalog,processing,impex) 5.0.0.0 [p*c]
+INFO   | jvm 1    | main    | 2014/01/03 13:44:40.041 | [m[0;32mINFO  [WrapperSimpleAppMain] [hybrisserver] hac->(platformservices,catalog,processing,impex) 5.0.0.0 [p*w]
+INFO   | jvm 1    | main    | 2014/01/03 13:44:40.042 | [m[0;32mINFO  [WrapperSimpleAppMain] [hybrisserver] advancedsavedquery->(catalog,processing,impex) 5.0.0.0 [p*ci]
+INFO   | jvm 1    | main    | 2014/01/03 13:44:40.043 | [m[0;32mINFO  [WrapperSimpleAppMain] [hybrisserver] workflow->(platformservices,catalog,commons,processing) 5.0.0.0 [p*ci]
+INFO   | jvm 1    | main    | 2014/01/03 13:44:40.044 | [m[0;32mINFO  [WrapperSimpleAppMain] [hybrisserver] comments->(catalog,processing,impex,workflow) 5.0.0.0 [p*ci]
+INFO   | jvm 1    | main    | 2014/01/03 13:44:40.045 | [m[0;32mINFO  [WrapperSimpleAppMain] [hybrisserver] maintenanceweb 5.0.0.0 [p*w]
+INFO   | jvm 1    | main    | 2014/01/03 13:44:40.046 | [m[0;32mINFO  [WrapperSimpleAppMain] [hybrisserver] yempty 5.0.0.0 [cibw] path:/home/admin1/hybris/bin/ext-template/yempty
+INFO   | jvm 1    | main    | 2014/01/03 13:44:40.047 | [m[0;32mINFO  [WrapperSimpleAppMain] [hybrisserver] instoresampledata 5.0.0.0 path:/home/admin1/hybris/bin/ext-data/instoresampledata
+INFO   | jvm 1    | main    | 2014/01/03 13:44:40.048 | [m[0;32mINFO  [WrapperSimpleAppMain] [hybrisserver] virtualjdbc->catalog 5.0.0.0 [cw] path:/home/admin1/hybris/bin/ext-platform-optional/virtualjdbc
+INFO   | jvm 1    | main    | 2014/01/03 13:44:40.049 | [m[0;32mINFO  [WrapperSimpleAppMain] [hybrisserver] lucenesearch->processing 5.0.0.0 [ci] path:/home/admin1/hybris/bin/ext-platform-optional/lucenesearch
+INFO   | jvm 1    | main    | 2014/01/03 13:44:40.050 | [m[0;32mINFO  [WrapperSimpleAppMain] [hybrisserver] solrfacetsearch->lucenesearch 5.0.0.0 [cibw] path:/home/admin1/hybris/bin/ext-commerce/solrfacetsearch
+INFO   | jvm 1    | main    | 2014/01/03 13:44:40.052 | [m[0;32mINFO  [WrapperSimpleAppMain] [hybrisserver] platformwebservices->(lucenesearch,platformservices) 5.0.0.0 [w] path:/home/admin1/hybris/bin/ext-platform-optional/platformwebservices
+INFO   | jvm 1    | main    | 2014/01/03 13:44:40.054 | [m[0;32mINFO  [WrapperSimpleAppMain] [hybrisserver] ldap->(catalog,processing,impex) 5.0.0.0 [ci] path:/home/admin1/hybris/bin/ext-platform-optional/ldap
+INFO   | jvm 1    | main    | 2014/01/03 13:44:40.055 | [m[0;32mINFO  [WrapperSimpleAppMain] [hybrisserver] gridfsstorage 5.0.0.0 [ci] path:/home/admin1/hybris/bin/ext-platform-optional/gridfsstorage
+INFO   | jvm 1    | main    | 2014/01/03 13:44:40.057 | [m[0;32mINFO  [WrapperSimpleAppMain] [hybrisserver] azurecloud 5.0.0.0 [ci] path:/home/admin1/hybris/bin/ext-platform-optional/azurecloud
+INFO   | jvm 1    | main    | 2014/01/03 13:44:40.059 | [m[0;32mINFO  [WrapperSimpleAppMain] [hybrisserver] amazoncloud 5.0.0.0 [ci] path:/home/admin1/hybris/bin/ext-platform-optional/amazoncloud
+INFO   | jvm 1    | main    | 2014/01/03 13:44:40.060 | [m[0;32mINFO  [WrapperSimpleAppMain] [hybrisserver] hmc 5.0.0.0 [ciw] path:/home/admin1/hybris/bin/ext-platform/hmc
+INFO   | jvm 1    | main    | 2014/01/03 13:44:40.062 | [m[0;32mINFO  [WrapperSimpleAppMain] [hybrisserver] yaddon->hmc 5.0.0.0 [cibwh] path:/home/admin1/hybris/bin/ext-template/yaddon
+INFO   | jvm 1    | main    | 2014/01/03 13:44:40.064 | [m[0;32mINFO  [WrapperSimpleAppMain] [hybrisserver] voucher->hmc 5.0.0.0 [cih] path:/home/admin1/hybris/bin/ext-commerce/voucher
+INFO   | jvm 1    | main    | 2014/01/03 13:44:40.066 | [m[0;32mINFO  [WrapperSimpleAppMain] [hybrisserver] solrfacetsearchhmc->(solrfacetsearch,hmc) 5.0.0.0 [cibh] path:/home/admin1/hybris/bin/ext-commerce/solrfacetsearchhmc
+INFO   | jvm 1    | main    | 2014/01/03 13:44:40.068 | [m[0;32mINFO  [WrapperSimpleAppMain] [hybrisserver] promotions->(voucher,hmc) 5.0.0.0 [cih] path:/home/admin1/hybris/bin/ext-commerce/promotions
+INFO   | jvm 1    | main    | 2014/01/03 13:44:40.070 | [m[0;32mINFO  [WrapperSimpleAppMain] [hybrisserver] customerreview->hmc 5.0.0.0 [cih] path:/home/admin1/hybris/bin/ext-commerce/customerreview
+INFO   | jvm 1    | main    | 2014/01/03 13:44:40.072 | [m[0;32mINFO  [WrapperSimpleAppMain] [hybrisserver] basecommerce->hmc 5.0.0.0 [cibh] path:/home/admin1/hybris/bin/ext-commerce/basecommerce
+INFO   | jvm 1    | main    | 2014/01/03 13:44:40.074 | [m[0;32mINFO  [WrapperSimpleAppMain] [hybrisserver] cms2->(basecommerce,hmc) 5.0.0.0 [cih] path:/home/admin1/hybris/bin/ext-content/cms2
+INFO   | jvm 1    | main    | 2014/01/03 13:44:40.076 | [m[0;32mINFO  [WrapperSimpleAppMain] [hybrisserver] cms2lib->cms2 5.0.0.0 [ci] path:/home/admin1/hybris/bin/ext-content/cms2lib
+INFO   | jvm 1    | main    | 2014/01/03 13:44:40.078 | [m[0;32mINFO  [WrapperSimpleAppMain] [hybrisserver] btg->(cms2,hmc) 5.0.0.0 [cih] path:/home/admin1/hybris/bin/ext-commerce/btg
+INFO   | jvm 1    | main    | 2014/01/03 13:44:40.081 | [m[0;32mINFO  [WrapperSimpleAppMain] [hybrisserver] ticketsystem->(basecommerce,hmc) 5.0.0.0 [cih] path:/home/admin1/hybris/bin/ext-commerce/ticketsystem
+INFO   | jvm 1    | main    | 2014/01/03 13:44:40.083 | [m[0;32mINFO  [WrapperSimpleAppMain] [hybrisserver] payment->(basecommerce,hmc) 5.0.0.0 [cih] path:/home/admin1/hybris/bin/ext-commerce/payment
+INFO   | jvm 1    | main    | 2014/01/03 13:44:40.085 | [m[0;32mINFO  [WrapperSimpleAppMain] [hybrisserver] lucenesearchhmc->(lucenesearch,hmc) 5.0.0.0 [h] path:/home/admin1/hybris/bin/ext-platform-optional/lucenesearchhmc
+INFO   | jvm 1    | main    | 2014/01/03 13:44:40.087 | [m[0;32mINFO  [WrapperSimpleAppMain] [hybrisserver] platformhmc->(ldap,hmc) 5.0.0.0 [cibh] path:/home/admin1/hybris/bin/ext-platform/platformhmc
+INFO   | jvm 1    | main    | 2014/01/03 13:44:40.089 | [m[0;32mINFO  [WrapperSimpleAppMain] [hybrisserver] commerceservices->(solrfacetsearch,payment,platformhmc,basecommerce,customerreview,promotions,hmc) 5.0.0.0 [cibh] path:/home/admin1/hybris/bin/ext-commerce/commerceservices
+INFO   | jvm 1    | main    | 2014/01/03 13:44:40.092 | [m[0;32mINFO  [WrapperSimpleAppMain] [hybrisserver] acceleratorservices->(cms2,hmc,commerceservices) 5.0.0.0 [cibwh] path:/home/admin1/hybris/bin/ext-accelerator/acceleratorservices
+INFO   | jvm 1    | main    | 2014/01/03 13:44:40.094 | [m[0;32mINFO  [WrapperSimpleAppMain] [hybrisserver] yacceleratorfulfilmentprocess->(acceleratorservices,ticketsystem) 5.0.0.0 [ci] path:/home/admin1/hybris/bin/ext-template/yacceleratorfulfilmentprocess
+INFO   | jvm 1    | main    | 2014/01/03 13:44:40.096 | [m[0;32mINFO  [WrapperSimpleAppMain] [hybrisserver] acceleratorsampledata->acceleratorservices 5.0.0.0 [c] path:/home/admin1/hybris/bin/ext-data/acceleratorsampledata
+INFO   | jvm 1    | main    | 2014/01/03 13:44:40.098 | [m[0;32mINFO  [WrapperSimpleAppMain] [hybrisserver] acceleratorcms->(acceleratorservices,cms2,hmc,cms2lib) 5.0.0.0 [cibh] path:/home/admin1/hybris/bin/ext-accelerator/acceleratorcms
+INFO   | jvm 1    | main    | 2014/01/03 13:44:40.100 | [m[0;32mINFO  [WrapperSimpleAppMain] [hybrisserver] merchandisecore->(acceleratorservices,yacceleratorfulfilmentprocess,acceleratorcms,hmc) 5.0.0.0 [cih] path:/home/admin1/hybris/bin/custom/merchandise/merchandisecore
+INFO   | jvm 1    | main    | 2014/01/03 13:44:40.103 | [m[0;32mINFO  [WrapperSimpleAppMain] [hybrisserver] merchandiseinitialdata->(acceleratorsampledata,merchandisecore) 5.0.0.0 [c] path:/home/admin1/hybris/bin/custom/merchandise/merchandiseinitialdata
+INFO   | jvm 1    | main    | 2014/01/03 13:44:40.105 | [m[0;32mINFO  [WrapperSimpleAppMain] [hybrisserver] commercefacades->commerceservices 5.0.0.0 [cb] path:/home/admin1/hybris/bin/ext-commerce/commercefacades
+INFO   | jvm 1    | main    | 2014/01/03 13:44:40.107 | [m[0;32mINFO  [WrapperSimpleAppMain] [hybrisserver] ycommercewebservices->(commercefacades,commerceservices) 5.0.0.0 [cbw] path:/home/admin1/hybris/bin/ext-template/ycommercewebservices
+INFO   | jvm 1    | main    | 2014/01/03 13:44:40.109 | [m[0;32mINFO  [WrapperSimpleAppMain] [hybrisserver] acceleratorfacades->(acceleratorservices,acceleratorcms,commercefacades) 5.0.0.0 [cb] path:/home/admin1/hybris/bin/ext-accelerator/acceleratorfacades
+INFO   | jvm 1    | main    | 2014/01/03 13:44:40.111 | [m[0;32mINFO  [WrapperSimpleAppMain] [hybrisserver] merchandisefacades->(merchandisecore,acceleratorfacades) 5.0.0.0 [cb] path:/home/admin1/hybris/bin/custom/merchandise/merchandisefacades
+INFO   | jvm 1    | main    | 2014/01/03 13:44:40.113 | [m[0;32mINFO  [WrapperSimpleAppMain] [hybrisserver] merchandisetest->(merchandisefacades,merchandiseinitialdata) 5.0.0.0 [c] path:/home/admin1/hybris/bin/custom/merchandise/merchandisetest
+INFO   | jvm 1    | main    | 2014/01/03 13:44:40.115 | [m[0;32mINFO  [WrapperSimpleAppMain] [hybrisserver] merchandisestorefront->(merchandisefacades,btg) 5.0.0.0 [w] path:/home/admin1/hybris/bin/custom/merchandise/merchandisestorefront
+INFO   | jvm 1    | main    | 2014/01/03 13:44:40.117 | [m[0;32mINFO  [WrapperSimpleAppMain] [hybrisserver] addonsupport->(acceleratorcms,acceleratorfacades) 5.0.0.0 [cibw] path:/home/admin1/hybris/bin/ext-addon/addonsupport
+INFO   | jvm 1    | main    | 2014/01/03 13:44:40.119 | [m[0;32mINFO  [WrapperSimpleAppMain] [hybrisserver] instore->commercefacades 5.0.0.0 [cibw] path:/home/admin1/hybris/bin/ext-channel/instore
+INFO   | jvm 1    | main    | 2014/01/03 13:44:40.121 | [m[0;32mINFO  [WrapperSimpleAppMain] [hybrisserver] yinstoreinitialdata->(acceleratorservices,instore,instoresampledata,acceleratorsampledata) 5.0.0.0 [c] path:/home/admin1/hybris/bin/ext-template/yinstoreinitialdata
+INFO   | jvm 1    | main    | 2014/01/03 13:44:40.124 | [m[0;32mINFO  [WrapperSimpleAppMain] [hybrisserver] cockpit->(validation,catalog,processing,impex,workflow,comments) 5.0.0.0 [ci] path:/home/admin1/hybris/bin/ext-platform/cockpit
+INFO   | jvm 1    | main    | 2014/01/03 13:44:40.126 | [m[0;32mINFO  [WrapperSimpleAppMain] [hybrisserver] cscockpit->(payment,solrfacetsearch,cockpit,basecommerce,ticketsystem,commerceservices) 5.0.0.0 [ciw] path:/home/admin1/hybris/bin/ext-channel/cscockpit
+INFO   | jvm 1    | main    | 2014/01/03 13:44:40.128 | [m[0;32mINFO  [WrapperSimpleAppMain] [hybrisserver] productcockpit->(cockpit,hmc) 5.0.0.0 [cwh] path:/home/admin1/hybris/bin/ext-content/productcockpit
+INFO   | jvm 1    | main    | 2014/01/03 13:44:40.130 | [m[0;32mINFO  [WrapperSimpleAppMain] [hybrisserver] cmscockpit->(cockpit,basecommerce,cms2,hmc) 5.0.0.0 [ciwh] path:/home/admin1/hybris/bin/ext-content/cmscockpit
+INFO   | jvm 1    | main    | 2014/01/03 13:44:40.132 | [m[0;32mINFO  [WrapperSimpleAppMain] [hybrisserver] btgcockpit->(virtualjdbc,cmscockpit,btg) 5.0.0.0 [ciw] path:/home/admin1/hybris/bin/ext-commerce/btgcockpit
+INFO   | jvm 1    | main    | 2014/01/03 13:44:40.134 | [m[0;32mINFO  [WrapperSimpleAppMain] [hybrisserver] reportcockpit->(virtualjdbc,cockpit,impex) 5.0.0.0 [ciw] path:/home/admin1/hybris/bin/ext-platform-optional/reportcockpit
+INFO   | jvm 1    | main    | 2014/01/03 13:44:40.136 | [m[0;32mINFO  [WrapperSimpleAppMain] [hybrisserver] merchandisecockpits->(acceleratorservices,productcockpit,cmscockpit,cscockpit,reportcockpit,acceleratorcms) 5.0.0.0 [c] path:/home/admin1/hybris/bin/custom/merchandise/merchandisecockpits
+INFO   | jvm 1    | main    | 2014/01/03 13:44:40.139 | [m[0;32mINFO  [WrapperSimpleAppMain] [hybrisserver] mcc->(cockpit,processing,impex) 5.0.0.0 [ciw] path:/home/admin1/hybris/bin/ext-platform/mcc
+INFO   | jvm 1    | main    | 2014/01/03 13:44:40.141 | [m[0;32mINFO  [WrapperSimpleAppMain] [hybrisserver] backoffice 5.0.0.0 [ciw] path:/home/admin1/hybris/bin/ext-platform/backoffice
+INFO   | jvm 1    | main    | 2014/01/03 13:44:40.143 | [m[0;32mINFO  [WrapperSimpleAppMain] [hybrisserver] admincockpit->(cockpit,validation,processing,impex) 5.0.0.0 [ciw] path:/home/admin1/hybris/bin/ext-platform/admincockpit
+INFO   | jvm 1    | main    | 2014/01/03 13:44:40.145 | [m[0;32mINFO  [WrapperSimpleAppMain] [hybrisserver] ---------------------------------------------------------------
+INFO   | jvm 1    | main    | 2014/01/03 13:44:40.647 | [m
+INFO   | jvm 1    | main    | 2014/01/03 13:44:42.652 | [0;32mINFO  [WrapperSimpleAppMain] [HybrisContextFactory] Loading <<global>> spring config from extension (core) located in (global-core-spring.xml,core-cache.xml,global-servicelayer-spring.xml,global-core-jmx-spring.xml,global-statistics-spring.xml) took: (273.4 ms)
+INFO   | jvm 1    | main    | 2014/01/03 13:44:42.656 | [m[0;32mINFO  [WrapperSimpleAppMain] [HybrisContextFactory] Loading <<global>> spring config from extension (cockpit) located in (global-cockpit-spring.xml) took: (19.48 ms)
+INFO   | jvm 1    | main    | 2014/01/03 13:44:42.961 | [m[0;32mINFO  [WrapperSimpleAppMain] [HybrisContextFactory] - Refreshing SpringContext (Global context) took: (297.2 ms)
+INFO   | jvm 1    | main    | 2014/01/03 13:44:42.964 | [m[0;32mINFO  [WrapperSimpleAppMain] [HybrisContextFactory] Initializing <<global>> Spring ApplicationContext took: (677.8 ms)
+INFO   | jvm 1    | main    | 2014/01/03 13:44:43.177 | [m[0;32mINFO  [WrapperSimpleAppMain] [EHCacheRegion] EHCacheRegion entityCacheRegion, eviction policy FIFO, size 100000
+INFO   | jvm 1    | main    | 2014/01/03 13:44:43.179 | [m[0;32mINFO  [WrapperSimpleAppMain] [EHCacheRegion] EHCacheRegion queryCacheRegion, eviction policy FIFO, size 20000
+INFO   | jvm 1    | main    | 2014/01/03 13:44:43.382 | [m[0;32mINFO  [WrapperSimpleAppMain] [DefaultCacheController] Regioncache initialized with region count 4
+INFO   | jvm 1    | main    | 2014/01/03 13:44:43.385 | [m[0;32mINFO  [WrapperSimpleAppMain] [DefaultCacheController] Cache region: Name: typesystemCacheRegion, size: 0, types: [81, 82, 83, 84, 87], statistics: true, class: class de.hybris.platform.regioncache.region.impl.UnlimitedCacheRegion
+INFO   | jvm 1    | main    | 2014/01/03 13:44:43.389 | [m[0;32mINFO  [WrapperSimpleAppMain] [DefaultCacheController] Cache region: Name: entityCacheRegion, size: 100000, types: [__ALL_TYPES__, __NO_QUERY__], exclusive computation: false, statistics: true, class: class de.hybris.platform.regioncache.region.impl.EHCacheRegion
+INFO   | jvm 1    | main    | 2014/01/03 13:44:43.392 | [m[0;32mINFO  [WrapperSimpleAppMain] [DefaultCacheController] Cache region: Name: queryCacheRegion, size: 20000, types: [__QUERY_CACHE__], exclusive computation: false, statistics: true, class: class de.hybris.platform.regioncache.region.impl.EHCacheRegion
+INFO   | jvm 1    | main    | 2014/01/03 13:44:43.395 | [m[0;32mINFO  [WrapperSimpleAppMain] [DefaultCacheController] Cache region: Name: defaultMediaCacheRegion, size: 0, types: [__MEDIA__cache], statistics: true, class: class de.hybris.platform.media.storage.impl.MediaCacheRegion
+INFO   | jvm 1    | main    | 2014/01/03 13:44:43.398 | [m[0;32mINFO  [WrapperSimpleAppMain] [DefaultCacheController] Registered Listener RegionCacheAdapter(1845421900) - <<master>> on cache controller. Currently registered 1
+INFO   | jvm 1    | main    | 2014/01/03 13:44:43.901 | [m
+INFO   | jvm 1    | main    | 2014/01/03 13:44:50.714 | [0;32mINFO  [WrapperSimpleAppMain] [HybrisContextFactory] Loading <<application>> spring config <master> from extension (core) located in (core-spring.xml,core-media-spring.xml,core-profiling-spring.xml,core-jmx-spring.xml,core-filter-spring.xml,servicelayer-spring.xml,user-spring.xml,security-spring.xml,media-spring.xml,i18n-spring.xml,interceptor-spring.xml,event-spring.xml) took: (355.1 ms)
+INFO   | jvm 1    | main    | 2014/01/03 13:44:50.818 | [m[0;32mINFO  [WrapperSimpleAppMain] [HybrisContextFactory] Loading <<application>> spring config <master> from extension (commons) located in (commons-spring.xml) took: (38.83 ms)
+INFO   | jvm 1    | main    | 2014/01/03 13:44:50.920 | [m[0;32mINFO  [WrapperSimpleAppMain] [HybrisContextFactory] Loading <<application>> spring config <master> from extension (processing) located in (processing-spring.xml,cronjob-spring.xml,task-spring.xml,processengine-spring.xml,processing-jmx-spring.xml) took: (96.71 ms)
+INFO   | jvm 1    | main    | 2014/01/03 13:44:50.924 | [m[0;32mINFO  [WrapperSimpleAppMain] [HybrisContextFactory] Loading <<application>> spring config <master> from extension (impex) located in (impex-spring.xml) took: (13.21 ms)
+INFO   | jvm 1    | main    | 2014/01/03 13:44:50.926 | [m[0;32mINFO  [WrapperSimpleAppMain] [HybrisContextFactory] Loading <<application>> spring config <master> from extension (validation) located in (validation-spring.xml) took: (31.46 ms)
+INFO   | jvm 1    | main    | 2014/01/03 13:44:51.130 | [m[0;32mINFO  [WrapperSimpleAppMain] [HybrisContextFactory] Loading <<application>> spring config <master> from extension (platformservices) located in (catalog-spring.xml,order-spring.xml,product-spring.xml,category-spring.xml,classification-spring.xml,jobs-spring.xml,converters-spring.xml) took: (168.5 ms)
+INFO   | jvm 1    | main    | 2014/01/03 13:44:51.134 | [m[0;32mINFO  [WrapperSimpleAppMain] [HybrisContextFactory] Loading <<application>> spring config <master> from extension (workflow) located in (workflow-spring.xml) took: (31.69 ms)
+INFO   | jvm 1    | main    | 2014/01/03 13:44:51.136 | [m[0;32mINFO  [WrapperSimpleAppMain] [HybrisContextFactory] Loading <<application>> spring config <master> from extension (comments) located in (comments-spring.xml) took: (12.91 ms)
+INFO   | jvm 1    | main    | 2014/01/03 13:44:51.138 | [m[0;32mINFO  [WrapperSimpleAppMain] [HybrisContextFactory] Loading <<application>> spring config <master> from extension (yempty) located in (yempty-spring.xml) took: (24.54 ms)
+INFO   | jvm 1    | main    | 2014/01/03 13:44:51.240 | [m[0;32mINFO  [WrapperSimpleAppMain] [HybrisContextFactory] Loading <<application>> spring config <master> from extension (solrfacetsearch) located in (solrfacetsearch-spring.xml,solrfacetsearch-converters.xml) took: (122.2 ms)
+INFO   | jvm 1    | main    | 2014/01/03 13:44:51.343 | [m[0;32mINFO  [WrapperSimpleAppMain] [HybrisContextFactory] Loading <<application>> spring config <master> from extension (ldap) located in (ldap-spring.xml) took: (23.06 ms)
+INFO   | jvm 1    | main    | 2014/01/03 13:44:51.345 | [m[0;32mINFO  [WrapperSimpleAppMain] [HybrisContextFactory] Loading <<application>> spring config <master> from extension (gridfsstorage) located in (gridfsstorage-spring.xml) took: (83.21 ms)
+INFO   | jvm 1    | main    | 2014/01/03 13:44:51.447 | [m[0;32mINFO  [WrapperSimpleAppMain] [HybrisContextFactory] Loading <<application>> spring config <master> from extension (azurecloud) located in (azurecloud-spring.xml) took: (11.12 ms)
+INFO   | jvm 1    | main    | 2014/01/03 13:44:51.450 | [m[0;32mINFO  [WrapperSimpleAppMain] [HybrisContextFactory] Loading <<application>> spring config <master> from extension (amazoncloud) located in (amazoncloud-spring.xml) took: (14.65 ms)
+INFO   | jvm 1    | main    | 2014/01/03 13:44:51.452 | [m[0;32mINFO  [WrapperSimpleAppMain] [HybrisContextFactory] Loading <<application>> spring config <master> from extension (yaddon) located in (yaddon-spring.xml) took: (19.66 ms)
+INFO   | jvm 1    | main    | 2014/01/03 13:44:51.453 | [m[0;32mINFO  [WrapperSimpleAppMain] [HybrisContextFactory] Loading <<application>> spring config <master> from extension (voucher) located in (voucher-spring.xml) took: (10.03 ms)
+INFO   | jvm 1    | main    | 2014/01/03 13:44:51.455 | [m[0;32mINFO  [WrapperSimpleAppMain] [HybrisContextFactory] Loading <<application>> spring config <master> from extension (solrfacetsearchhmc) located in (solrfacetsearchhmc-spring.xml) took: (24.11 ms)
+INFO   | jvm 1    | main    | 2014/01/03 13:44:51.458 | [m[0;32mINFO  [WrapperSimpleAppMain] [HybrisContextFactory] Loading <<application>> spring config <master> from extension (promotions) located in (promotions-spring.xml) took: (22.89 ms)
+INFO   | jvm 1    | main    | 2014/01/03 13:44:51.459 | [m[0;32mINFO  [WrapperSimpleAppMain] [HybrisContextFactory] Loading <<application>> spring config <master> from extension (customerreview) located in (customerreview-spring.xml) took: (11.59 ms)
+INFO   | jvm 1    | main    | 2014/01/03 13:44:51.561 | [m[0;32mINFO  [WrapperSimpleAppMain] [HybrisContextFactory] Loading <<application>> spring config <master> from extension (basecommerce) located in (basecommerce-spring.xml) took: (49.63 ms)
+INFO   | jvm 1    | main    | 2014/01/03 13:44:51.564 | [m[0;32mINFO  [WrapperSimpleAppMain] [HybrisContextFactory] Loading <<application>> spring config <master> from extension (cms2) located in (cms2-spring.xml) took: (45.92 ms)
+INFO   | jvm 1    | main    | 2014/01/03 13:44:51.566 | [m[0;32mINFO  [WrapperSimpleAppMain] [HybrisContextFactory] Loading <<application>> spring config <master> from extension (cms2lib) located in (cms2lib-spring.xml) took: (10.43 ms)
+INFO   | jvm 1    | main    | 2014/01/03 13:44:51.668 | [m[0;32mINFO  [WrapperSimpleAppMain] [HybrisContextFactory] Loading <<application>> spring config <master> from extension (btg) located in (btg-spring.xml) took: (52.23 ms)
+INFO   | jvm 1    | main    | 2014/01/03 13:44:51.770 | [m[0;32mINFO  [WrapperSimpleAppMain] [HybrisContextFactory] Loading <<application>> spring config <master> from extension (ticketsystem) located in (ticketsystem-spring.xml) took: (93.14 ms)
+INFO   | jvm 1    | main    | 2014/01/03 13:44:51.772 | [m[0;32mINFO  [WrapperSimpleAppMain] [HybrisContextFactory] Loading <<application>> spring config <master> from extension (payment) located in (payment-spring.xml) took: (25.69 ms)
+INFO   | jvm 1    | main    | 2014/01/03 13:44:51.774 | [m[0;32mINFO  [WrapperSimpleAppMain] [HybrisContextFactory] Loading <<application>> spring config <master> from extension (platformhmc) located in (platformhmc-spring.xml) took: (10.23 ms)
+INFO   | jvm 1    | main    | 2014/01/03 13:44:51.877 | [m[0;32mINFO  [WrapperSimpleAppMain] [HybrisContextFactory] Loading <<application>> spring config <master> from extension (commerceservices) located in (commerceservices-spring.xml) took: (75.50 ms)
+INFO   | jvm 1    | main    | 2014/01/03 13:44:52.179 | [m[0;32mINFO  [WrapperSimpleAppMain] [HybrisContextFactory] Loading <<application>> spring config <master> from extension (acceleratorservices) located in (acceleratorservices-spring.xml) took: (296.6 ms)
+INFO   | jvm 1    | main    | 2014/01/03 13:44:52.282 | [m[0;32mINFO  [WrapperSimpleAppMain] [HybrisContextFactory] Loading <<application>> spring config <master> from extension (yacceleratorfulfilmentprocess) located in (yacceleratorfulfilmentprocess-spring.xml) took: (81.01 ms)
+INFO   | jvm 1    | main    | 2014/01/03 13:44:52.297 | [m[0;32mINFO  [WrapperSimpleAppMain] [HybrisContextFactory] Loading <<application>> spring config <master> from extension (acceleratorsampledata) located in (acceleratorsampledata-spring.xml) took: (53.85 ms)
+INFO   | jvm 1    | main    | 2014/01/03 13:44:52.299 | [m[0;32mINFO  [WrapperSimpleAppMain] [HybrisContextFactory] Loading <<application>> spring config <master> from extension (acceleratorcms) located in (acceleratorcms-spring.xml) took: (16.72 ms)
+INFO   | jvm 1    | main    | 2014/01/03 13:44:52.501 | [m[0;32mINFO  [WrapperSimpleAppMain] [HybrisContextFactory] Loading <<application>> spring config <master> from extension (merchandisecore) located in (merchandisecore-spring.xml) took: (174.9 ms)
+INFO   | jvm 1    | main    | 2014/01/03 13:44:52.504 | [m[0;32mINFO  [WrapperSimpleAppMain] [HybrisContextFactory] Loading <<application>> spring config <master> from extension (merchandiseinitialdata) located in (merchandiseinitialdata-spring.xml) took: (20.49 ms)
+INFO   | jvm 1    | main    | 2014/01/03 13:44:53.007 | [m[0;32mINFO  [WrapperSimpleAppMain] [HybrisContextFactory] Loading <<application>> spring config <master> from extension (commercefacades) located in (commercefacades-spring.xml) took: (495.5 ms)
+INFO   | jvm 1    | main    | 2014/01/03 13:44:53.012 | [m[0;32mINFO  [WrapperSimpleAppMain] [HybrisContextFactory] Loading <<application>> spring config <master> from extension (ycommercewebservices) located in (ycommercewebservices-spring.xml) took: (12.45 ms)
+INFO   | jvm 1    | main    | 2014/01/03 13:44:53.014 | [m[0;32mINFO  [WrapperSimpleAppMain] [HybrisContextFactory] Loading <<application>> spring config <master> from extension (acceleratorfacades) located in (acceleratorfacades-spring.xml) took: (15.64 ms)
+INFO   | jvm 1    | main    | 2014/01/03 13:44:53.025 | [m[0;32mINFO  [WrapperSimpleAppMain] [HybrisContextFactory] Loading <<application>> spring config <master> from extension (merchandisefacades) located in (merchandisefacades-spring.xml) took: (31.22 ms)
+INFO   | jvm 1    | main    | 2014/01/03 13:44:53.127 | [m[0;32mINFO  [WrapperSimpleAppMain] [HybrisContextFactory] Loading <<application>> spring config <master> from extension (merchandisetest) located in (merchandisetest-spring.xml) took: (16.48 ms)
+INFO   | jvm 1    | main    | 2014/01/03 13:44:53.129 | [m[0;32mINFO  [WrapperSimpleAppMain] [HybrisContextFactory] Loading <<application>> spring config <master> from extension (addonsupport) located in (addonsupport-spring.xml) took: (9.754 ms)
+INFO   | jvm 1    | main    | 2014/01/03 13:44:53.131 | [m[0;32mINFO  [WrapperSimpleAppMain] [HybrisContextFactory] Loading <<application>> spring config <master> from extension (instore) located in (instore-spring.xml) took: (27.83 ms)
+INFO   | jvm 1    | main    | 2014/01/03 13:44:53.133 | [m[0;32mINFO  [WrapperSimpleAppMain] [HybrisContextFactory] Loading <<application>> spring config <master> from extension (yinstoreinitialdata) located in (yinstoreinitialdata-spring.xml) took: (23.15 ms)
+INFO   | jvm 1    | main    | 2014/01/03 13:44:53.135 | [m[0;32mINFO  [WrapperSimpleAppMain] [HybrisContextFactory] Loading <<application>> spring config <master> from extension (cockpit) located in (cockpit-spring.xml) took: (28.52 ms)
+INFO   | jvm 1    | main    | 2014/01/03 13:44:53.137 | [m[0;32mINFO  [WrapperSimpleAppMain] [HybrisContextFactory] Loading <<application>> spring config <master> from extension (cscockpit) located in (cscockpit-spring.xml) took: (11.24 ms)
+INFO   | jvm 1    | main    | 2014/01/03 13:44:53.241 | [m[0;32mINFO  [WrapperSimpleAppMain] [HybrisContextFactory] Loading <<application>> spring config <master> from extension (productcockpit) located in (productcockpit-spring.xml) took: (17.18 ms)
+INFO   | jvm 1    | main    | 2014/01/03 13:44:53.243 | [m[0;32mINFO  [WrapperSimpleAppMain] [HybrisContextFactory] Loading <<application>> spring config <master> from extension (cmscockpit) located in (cmscockpit-spring.xml) took: (24.28 ms)
+INFO   | jvm 1    | main    | 2014/01/03 13:44:53.245 | [m[0;32mINFO  [WrapperSimpleAppMain] [HybrisContextFactory] Loading <<application>> spring config <master> from extension (reportcockpit) located in (reportcockpit-spring.xml) took: (10.84 ms)
+INFO   | jvm 1    | main    | 2014/01/03 13:44:53.247 | [m[0;32mINFO  [WrapperSimpleAppMain] [HybrisContextFactory] Loading <<application>> spring config <master> from extension (merchandisecockpits) located in (merchandisecockpits-spring.xml) took: (30.47 ms)
+INFO   | jvm 1    | main    | 2014/01/03 13:44:53.349 | [m[0;32mINFO  [WrapperSimpleAppMain] [HybrisContextFactory] Loading <<application>> spring config <master> from extension (mcc) located in (mcc-spring.xml) took: (30.82 ms)
+INFO   | jvm 1    | main    | 2014/01/03 13:44:53.355 | [m[0;32mINFO  [WrapperSimpleAppMain] [HybrisContextFactory] Loading <<application>> spring config <master> from extension (backoffice) located in (backoffice-spring.xml) took: (10.54 ms)
+INFO   | jvm 1    | main    | 2014/01/03 13:44:53.361 | [m[0;32mINFO  [WrapperSimpleAppMain] [HybrisContextFactory] Loading <<application>> spring config <master> from extension (admincockpit) located in (admincockpit-spring.xml) took: (25.83 ms)
+INFO   | jvm 1    | main    | 2014/01/03 13:44:53.863 | [m
+INFO   | jvm 1    | main    | 2014/01/03 13:44:57.872 | [0;32mINFO  [WrapperSimpleAppMain] [DefaultCacheController] Registered Listener de.hybris.platform.media.storage.impl.DefaultLocalMediaFileCacheService$MediaCacheLifecycleCallback@34e1e2f1 on cache controller. Currently registered 2
+INFO   | jvm 1    | main    | 2014/01/03 13:44:58.377 | [m[0;32mINFO  [WrapperSimpleAppMain] [Reflections] Reflections took 114 ms to scan 1 urls, producing 3 keys and 7 values 
+INFO   | jvm 1    | main    | 2014/01/03 13:44:58.379 | [m[0;32mINFO  [WrapperSimpleAppMain] [Reflections] Reflections took 1 ms to scan 1 urls, producing 2 keys and 5 values 
+INFO   | jvm 1    | main    | 2014/01/03 13:44:58.882 | [m
+INFO   | jvm 1    | main    | 2014/01/03 13:45:01.987 | [0;33mWARN  [WrapperSimpleAppMain] [DefaultOrderService] Injecting deprecated Place Order Strategy!
+INFO   | jvm 1    | main    | 2014/01/03 13:45:01.988 | [m[0;33mWARN  [WrapperSimpleAppMain] [DefaultOrderService] Injecting deprecated OrderCalcuation strategy!
+INFO   | jvm 1    | main    | 2014/01/03 13:45:02.537 | [m
+INFO   | jvm 1    | main    | 2014/01/03 13:45:04.743 | [0;33mWARN  [WrapperSimpleAppMain] [AbstractEventListener] Found missing tenantService dependency for bean de.hybris.platform.solrfacetsearch.events.SolrConfigConversionEventListener$$EnhancerByCGLIB$$2d1154a7@4287efc3, please adjust spring configuration
+INFO   | jvm 1    | main    | 2014/01/03 13:45:04.746 | [m[0;33mWARN  [WrapperSimpleAppMain] [AbstractEventListener] Found missing clusterService dependency for bean de.hybris.platform.solrfacetsearch.events.SolrConfigConversionEventListener$$EnhancerByCGLIB$$2d1154a7@4287efc3, please adjust spring configuration
+INFO   | jvm 1    | main    | 2014/01/03 13:45:05.149 | [m[0;33mWARN  [WrapperSimpleAppMain] [DefaultOrderService] Injecting deprecated Place Order Strategy!
+INFO   | jvm 1    | main    | 2014/01/03 13:45:05.150 | [m[0;33mWARN  [WrapperSimpleAppMain] [DefaultOrderService] Injecting deprecated OrderCalcuation strategy!
+INFO   | jvm 1    | main    | 2014/01/03 13:45:05.652 | [m
+INFO   | jvm 1    | main    | 2014/01/03 13:45:06.304 | [0;33mWARN  [WrapperSimpleAppMain] [AbstractEventListener] Found missing tenantService dependency for bean de.hybris.platform.btg.events.ProductVisitedBTGRuleDataEventListener$$EnhancerByCGLIB$$31c7667@7df156c1, please adjust spring configuration
+INFO   | jvm 1    | main    | 2014/01/03 13:45:06.307 | [m[0;33mWARN  [WrapperSimpleAppMain] [AbstractEventListener] Found missing clusterService dependency for bean de.hybris.platform.btg.events.ProductVisitedBTGRuleDataEventListener$$EnhancerByCGLIB$$31c7667@7df156c1, please adjust spring configuration
+INFO   | jvm 1    | main    | 2014/01/03 13:45:06.310 | [m[0;33mWARN  [WrapperSimpleAppMain] [AbstractEventListener] Found missing tenantService dependency for bean de.hybris.platform.btg.events.ContentPageVisitedBTGRuleDataEventListener$$EnhancerByCGLIB$$e206ae83@4d3a4ba2, please adjust spring configuration
+INFO   | jvm 1    | main    | 2014/01/03 13:45:06.313 | [m[0;33mWARN  [WrapperSimpleAppMain] [AbstractEventListener] Found missing clusterService dependency for bean de.hybris.platform.btg.events.ContentPageVisitedBTGRuleDataEventListener$$EnhancerByCGLIB$$e206ae83@4d3a4ba2, please adjust spring configuration
+INFO   | jvm 1    | main    | 2014/01/03 13:45:06.315 | [m[0;33mWARN  [WrapperSimpleAppMain] [AbstractEventListener] Found missing tenantService dependency for bean de.hybris.platform.btg.events.CategoryVisitedBTGRuleDataEventListener$$EnhancerByCGLIB$$2f963cf3@110d1c3c, please adjust spring configuration
+INFO   | jvm 1    | main    | 2014/01/03 13:45:06.325 | [m[0;33mWARN  [WrapperSimpleAppMain] [AbstractEventListener] Found missing clusterService dependency for bean de.hybris.platform.btg.events.CategoryVisitedBTGRuleDataEventListener$$EnhancerByCGLIB$$2f963cf3@110d1c3c, please adjust spring configuration
+INFO   | jvm 1    | main    | 2014/01/03 13:45:06.328 | [m[0;33mWARN  [WrapperSimpleAppMain] [AbstractEventListener] Found missing tenantService dependency for bean de.hybris.platform.btg.events.RequestParametersUsedBTGRuleDataEventListener$$EnhancerByCGLIB$$b55eb69b@37481e6f, please adjust spring configuration
+INFO   | jvm 1    | main    | 2014/01/03 13:45:06.331 | [m[0;33mWARN  [WrapperSimpleAppMain] [AbstractEventListener] Found missing clusterService dependency for bean de.hybris.platform.btg.events.RequestParametersUsedBTGRuleDataEventListener$$EnhancerByCGLIB$$b55eb69b@37481e6f, please adjust spring configuration
+INFO   | jvm 1    | main    | 2014/01/03 13:45:06.342 | [m[0;33mWARN  [WrapperSimpleAppMain] [AbstractEventListener] Found missing tenantService dependency for bean de.hybris.platform.btg.events.RefererHeaderUsedBTGRuleDataEventListener$$EnhancerByCGLIB$$c54d161f@1af3a28e, please adjust spring configuration
+INFO   | jvm 1    | main    | 2014/01/03 13:45:06.345 | [m[0;33mWARN  [WrapperSimpleAppMain] [AbstractEventListener] Found missing clusterService dependency for bean de.hybris.platform.btg.events.RefererHeaderUsedBTGRuleDataEventListener$$EnhancerByCGLIB$$c54d161f@1af3a28e, please adjust spring configuration
+INFO   | jvm 1    | main    | 2014/01/03 13:45:06.648 | [m[0;33mWARN  [WrapperSimpleAppMain] [AbstractEventListener] Found missing tenantService dependency for bean de.hybris.platform.ticket.event.impl.DefaultOrderFraudEmployeeNotificationEventListener@50a3da60, please adjust spring configuration
+INFO   | jvm 1    | main    | 2014/01/03 13:45:06.651 | [m[0;33mWARN  [WrapperSimpleAppMain] [AbstractEventListener] Found missing clusterService dependency for bean de.hybris.platform.ticket.event.impl.DefaultOrderFraudEmployeeNotificationEventListener@50a3da60, please adjust spring configuration
+INFO   | jvm 1    | main    | 2014/01/03 13:45:07.154 | [m
+INFO   | jvm 1    | main    | 2014/01/03 13:45:08.758 | [0;32mINFO  [WrapperSimpleAppMain] [TenantScopeAspect] Configured tenant <<master>> for aspect
+INFO   | jvm 1    | main    | 2014/01/03 13:45:09.259 | [m
+INFO   | jvm 1    | main    | 2014/01/03 13:45:13.064 | [0;32mINFO  [WrapperSimpleAppMain] [DefaultWURFLModel] WURFLModel version: Root:Stream resource:2.3.4, db.scientiamobile.com - 2012-11-08 12:25:24; devices: 18306 root devices: 8258; families: 2
+INFO   | jvm 1    | main    | 2014/01/03 13:45:13.567 | [m
+INFO   | jvm 1    | main    | 2014/01/03 13:45:14.270 | [0;32mINFO  [WrapperSimpleAppMain] [DefaultWURFLService] DefaultWURFLService created
+INFO   | jvm 1    | main    | 2014/01/03 13:45:14.471 | [m[0;33mWARN  [WrapperSimpleAppMain] [DefaultAtsCommerceStockServiceFactoryBean] Could not find bean 'atsCommerceStockService', using fallback commerceStockService instead.
+INFO   | jvm 1    | main    | 2014/01/03 13:45:14.476 | [m[0;33mWARN  [WrapperSimpleAppMain] [AbstractEventListener] Found missing tenantService dependency for bean com.hybris.instore.yinstoreinitialdata.events.InstoreOnCoreDataImportEventListener@53ad0059, please adjust spring configuration
+INFO   | jvm 1    | main    | 2014/01/03 13:45:14.481 | [m[0;33mWARN  [WrapperSimpleAppMain] [AbstractEventListener] Found missing clusterService dependency for bean com.hybris.instore.yinstoreinitialdata.events.InstoreOnCoreDataImportEventListener@53ad0059, please adjust spring configuration
+INFO   | jvm 1    | main    | 2014/01/03 13:45:14.484 | [m[0;33mWARN  [WrapperSimpleAppMain] [AbstractEventListener] Found missing tenantService dependency for bean com.hybris.instore.yinstoreinitialdata.events.InstoreOnSampleDataImportEventListener@8b9ea09, please adjust spring configuration
+INFO   | jvm 1    | main    | 2014/01/03 13:45:14.487 | [m[0;33mWARN  [WrapperSimpleAppMain] [AbstractEventListener] Found missing clusterService dependency for bean com.hybris.instore.yinstoreinitialdata.events.InstoreOnSampleDataImportEventListener@8b9ea09, please adjust spring configuration
+INFO   | jvm 1    | main    | 2014/01/03 13:45:14.990 | [m[0;32mINFO  [WrapperSimpleAppMain] [HybrisContextFactory] - Refreshing SpringContext (hybris Application context - master) took: (21.66 s)
+INFO   | jvm 1    | main    | 2014/01/03 13:45:14.992 | [m[0;32mINFO  [WrapperSimpleAppMain] [HybrisContextFactory] Initializing application Spring ApplicationContext for tenant master  took: (24.63 s)
+INFO   | jvm 1    | main    | 2014/01/03 13:45:14.994 | [m[0;32mINFO  [WrapperSimpleAppMain] [DefaultBroadcastService] updating cluster island ID -1->15481895993514000
+INFO   | jvm 1    | main    | 2014/01/03 13:45:15.196 | [m[0;32mINFO  [WrapperSimpleAppMain] [VjdbcServerWrapper] VJDBC server established successfully 
+INFO   | jvm 1    | main    | 2014/01/03 13:45:15.298 | [m[0;32mINFO  [WrapperSimpleAppMain] [DefaultModelConverterRegistry] loading model converters: 
+INFO   | jvm 1    | main    | 2014/01/03 13:45:15.299 | [m[0;32mINFO  [WrapperSimpleAppMain] [DefaultModelConverterRegistry] 	pre-fetch mode:default
+INFO   | jvm 1    | main    | 2014/01/03 13:45:15.400 | [m[0;32mINFO  [AfterSaveEventPublisher-master] [SolrCoreRegistry] Initializing Solr core components
+INFO   | jvm 1    | main    | 2014/01/03 13:45:15.702 | [m[0;32mINFO  [AfterSaveEventPublisher-master] [TimerTaskUtils] Starting CronJob timer ...
+INFO   | jvm 1    | main    | 2014/01/03 13:45:15.704 | [m[0;32mINFO  [AfterSaveEventPublisher-master] [TimerTaskUtils] CronJob timer started (interval 30 sec)
+INFO   | jvm 1    | main    | 2014/01/03 13:45:15.805 | [m[0;32mINFO  [AfterSaveEventPublisher-master] [TimerTaskUtils] Starting CronJob timer ...
+INFO   | jvm 1    | main    | 2014/01/03 13:45:15.806 | [m[0;32mINFO  [AfterSaveEventPublisher-master] [TimerTaskUtils] CronJob timer already started!
+INFO   | jvm 1    | main    | 2014/01/03 13:45:15.907 | [m[0;32mINFO  [AfterSaveEventPublisher-master] [DefaultTaskService] Task engine starting up (min:10 max:10 idle:20s interval:10s)
+INFO   | jvm 1    | main    | 2014/01/03 13:45:15.909 | [m[0;32mINFO  [Task-master-poll] [DefaultTaskService] Polling thread started.
+INFO   | jvm 1    | main    | 2014/01/03 13:45:16.410 | [m
+INFO   | jvm 1    | main    | 2014/01/03 13:45:29.494 | [0;32mINFO  [WrapperSimpleAppMain] (junit) [AbstractTenant] Created master data source DataSourceImpl<<junit/master>>
+INFO   | jvm 1    | main    | 2014/01/03 13:45:29.496 | [m[0;32mINFO  [WrapperSimpleAppMain] (junit) [AbstractTenant] Created alternative data source "alt1"
+INFO   | jvm 1    | main    | 2014/01/03 13:45:29.497 | [m[0;32mINFO  [WrapperSimpleAppMain] (junit) [AbstractTenant] Created alternative data source "alt2"
+INFO   | jvm 1    | main    | 2014/01/03 13:45:29.498 | [m[0;32mINFO  [WrapperSimpleAppMain] (junit) [AbstractTenant] Created alternative data source "a"
+INFO   | jvm 1    | main    | 2014/01/03 13:45:29.499 | [m[0;32mINFO  [WrapperSimpleAppMain] (junit) [AbstractTenant] Created alternative data source "b"
+INFO   | jvm 1    | main    | 2014/01/03 13:45:29.500 | [m[0;32mINFO  [WrapperSimpleAppMain] (junit) [AbstractTenant] Created alternative data source "c"
+INFO   | jvm 1    | main    | 2014/01/03 13:45:30.001 | [m[0;33mWARN  [WrapperSimpleAppMain] (junit) [DefaultCacheController] Listener already registered: RegionCacheAdapter(1845421900) - <<junit>> : de.hybris.platform.cache.impl.RegionCacheAdapter
+INFO   | jvm 1    | main    | 2014/01/03 13:45:30.505 | [m
+INFO   | jvm 1    | main    | 2014/01/03 13:45:31.408 | [0;32mINFO  [WrapperSimpleAppMain] (junit) [HybrisContextFactory] Loading <<application>> spring config <junit> from extension (core) located in (core-spring.xml,core-media-spring.xml,core-profiling-spring.xml,core-jmx-spring.xml,core-filter-spring.xml,servicelayer-spring.xml,user-spring.xml,security-spring.xml,media-spring.xml,i18n-spring.xml,interceptor-spring.xml,event-spring.xml) took: (322.7 ms)
+INFO   | jvm 1    | main    | 2014/01/03 13:45:31.512 | [m[0;32mINFO  [WrapperSimpleAppMain] (junit) [HybrisContextFactory] Loading <<application>> spring config <junit> from extension (commons) located in (commons-spring.xml) took: (17.52 ms)
+INFO   | jvm 1    | main    | 2014/01/03 13:45:31.617 | [m[0;32mINFO  [WrapperSimpleAppMain] (junit) [HybrisContextFactory] Loading <<application>> spring config <junit> from extension (processing) located in (processing-spring.xml,cronjob-spring.xml,task-spring.xml,processengine-spring.xml,processing-jmx-spring.xml) took: (105.4 ms)
+INFO   | jvm 1    | main    | 2014/01/03 13:45:31.620 | [m[0;32mINFO  [WrapperSimpleAppMain] (junit) [HybrisContextFactory] Loading <<application>> spring config <junit> from extension (impex) located in (impex-spring.xml) took: (25.20 ms)
+INFO   | jvm 1    | main    | 2014/01/03 13:45:31.722 | [m[0;32mINFO  [WrapperSimpleAppMain] (junit) [HybrisContextFactory] Loading <<application>> spring config <junit> from extension (validation) located in (validation-spring.xml) took: (74.53 ms)
+INFO   | jvm 1    | main    | 2014/01/03 13:45:31.824 | [m[0;32mINFO  [WrapperSimpleAppMain] (junit) [HybrisContextFactory] Loading <<application>> spring config <junit> from extension (platformservices) located in (catalog-spring.xml,order-spring.xml,product-spring.xml,category-spring.xml,classification-spring.xml,jobs-spring.xml,converters-spring.xml) took: (188.4 ms)
+INFO   | jvm 1    | main    | 2014/01/03 13:45:31.927 | [m[0;32mINFO  [WrapperSimpleAppMain] (junit) [HybrisContextFactory] Loading <<application>> spring config <junit> from extension (workflow) located in (workflow-spring.xml) took: (20.42 ms)
+INFO   | jvm 1    | main    | 2014/01/03 13:45:31.929 | [m[0;32mINFO  [WrapperSimpleAppMain] (junit) [HybrisContextFactory] Loading <<application>> spring config <junit> from extension (comments) located in (comments-spring.xml) took: (10.01 ms)
+INFO   | jvm 1    | main    | 2014/01/03 13:45:31.931 | [m[0;32mINFO  [WrapperSimpleAppMain] (junit) [HybrisContextFactory] Loading <<application>> spring config <junit> from extension (yempty) located in (yempty-spring.xml) took: (9.371 ms)
+INFO   | jvm 1    | main    | 2014/01/03 13:45:32.087 | [m[0;32mINFO  [WrapperSimpleAppMain] (junit) [HybrisContextFactory] Loading <<application>> spring config <junit> from extension (solrfacetsearch) located in (solrfacetsearch-spring.xml,solrfacetsearch-converters.xml) took: (82.02 ms)
+INFO   | jvm 1    | main    | 2014/01/03 13:45:32.090 | [m[0;32mINFO  [WrapperSimpleAppMain] (junit) [HybrisContextFactory] Loading <<application>> spring config <junit> from extension (ldap) located in (ldap-spring.xml) took: (30.80 ms)
+INFO   | jvm 1    | main    | 2014/01/03 13:45:32.092 | [m[0;32mINFO  [WrapperSimpleAppMain] (junit) [HybrisContextFactory] Loading <<application>> spring config <junit> from extension (gridfsstorage) located in (gridfsstorage-spring.xml) took: (39.13 ms)
+INFO   | jvm 1    | main    | 2014/01/03 13:45:32.093 | [m[0;32mINFO  [WrapperSimpleAppMain] (junit) [HybrisContextFactory] Loading <<application>> spring config <junit> from extension (azurecloud) located in (azurecloud-spring.xml) took: (17.59 ms)
+INFO   | jvm 1    | main    | 2014/01/03 13:45:32.097 | [m[0;32mINFO  [WrapperSimpleAppMain] (junit) [HybrisContextFactory] Loading <<application>> spring config <junit> from extension (amazoncloud) located in (amazoncloud-spring.xml) took: (26.09 ms)
+INFO   | jvm 1    | main    | 2014/01/03 13:45:32.099 | [m[0;32mINFO  [WrapperSimpleAppMain] (junit) [HybrisContextFactory] Loading <<application>> spring config <junit> from extension (yaddon) located in (yaddon-spring.xml) took: (21.96 ms)
+INFO   | jvm 1    | main    | 2014/01/03 13:45:32.260 | [m[0;32mINFO  [WrapperSimpleAppMain] (junit) [HybrisContextFactory] Loading <<application>> spring config <junit> from extension (voucher) located in (voucher-spring.xml) took: (43.20 ms)
+INFO   | jvm 1    | main    | 2014/01/03 13:45:32.262 | [m[0;32mINFO  [WrapperSimpleAppMain] (junit) [HybrisContextFactory] Loading <<application>> spring config <junit> from extension (solrfacetsearchhmc) located in (solrfacetsearchhmc-spring.xml) took: (17.40 ms)
+INFO   | jvm 1    | main    | 2014/01/03 13:45:32.265 | [m[0;32mINFO  [WrapperSimpleAppMain] (junit) [HybrisContextFactory] Loading <<application>> spring config <junit> from extension (promotions) located in (promotions-spring.xml) took: (23.76 ms)
+INFO   | jvm 1    | main    | 2014/01/03 13:45:32.267 | [m[0;32mINFO  [WrapperSimpleAppMain] (junit) [HybrisContextFactory] Loading <<application>> spring config <junit> from extension (customerreview) located in (customerreview-spring.xml) took: (18.56 ms)
+INFO   | jvm 1    | main    | 2014/01/03 13:45:32.269 | [m[0;32mINFO  [WrapperSimpleAppMain] (junit) [HybrisContextFactory] Loading <<application>> spring config <junit> from extension (basecommerce) located in (basecommerce-spring.xml) took: (65.47 ms)
+INFO   | jvm 1    | main    | 2014/01/03 13:45:32.372 | [m[0;32mINFO  [WrapperSimpleAppMain] (junit) [HybrisContextFactory] Loading <<application>> spring config <junit> from extension (cms2) located in (cms2-spring.xml) took: (50.42 ms)
+INFO   | jvm 1    | main    | 2014/01/03 13:45:32.374 | [m[0;32mINFO  [WrapperSimpleAppMain] (junit) [HybrisContextFactory] Loading <<application>> spring config <junit> from extension (cms2lib) located in (cms2lib-spring.xml) took: (18.78 ms)
+INFO   | jvm 1    | main    | 2014/01/03 13:45:32.477 | [m[0;32mINFO  [WrapperSimpleAppMain] (junit) [HybrisContextFactory] Loading <<application>> spring config <junit> from extension (btg) located in (btg-spring.xml) took: (63.17 ms)
+INFO   | jvm 1    | main    | 2014/01/03 13:45:32.479 | [m[0;32mINFO  [WrapperSimpleAppMain] (junit) [HybrisContextFactory] Loading <<application>> spring config <junit> from extension (ticketsystem) located in (ticketsystem-spring.xml) took: (74.70 ms)
+INFO   | jvm 1    | main    | 2014/01/03 13:45:32.581 | [m[0;32mINFO  [WrapperSimpleAppMain] (junit) [HybrisContextFactory] Loading <<application>> spring config <junit> from extension (payment) located in (payment-spring.xml) took: (35.93 ms)
+INFO   | jvm 1    | main    | 2014/01/03 13:45:32.583 | [m[0;32mINFO  [WrapperSimpleAppMain] (junit) [HybrisContextFactory] Loading <<application>> spring config <junit> from extension (platformhmc) located in (platformhmc-spring.xml) took: (13.02 ms)
+INFO   | jvm 1    | main    | 2014/01/03 13:45:32.685 | [m[0;32mINFO  [WrapperSimpleAppMain] (junit) [HybrisContextFactory] Loading <<application>> spring config <junit> from extension (commerceservices) located in (commerceservices-spring.xml) took: (104.8 ms)
+INFO   | jvm 1    | main    | 2014/01/03 13:45:32.889 | [m[0;32mINFO  [WrapperSimpleAppMain] (junit) [HybrisContextFactory] Loading <<application>> spring config <junit> from extension (acceleratorservices) located in (acceleratorservices-spring.xml) took: (271.0 ms)
+INFO   | jvm 1    | main    | 2014/01/03 13:45:32.992 | [m[0;32mINFO  [WrapperSimpleAppMain] (junit) [HybrisContextFactory] Loading <<application>> spring config <junit> from extension (yacceleratorfulfilmentprocess) located in (yacceleratorfulfilmentprocess-spring.xml) took: (95.01 ms)
+INFO   | jvm 1    | main    | 2014/01/03 13:45:33.096 | [m[0;32mINFO  [WrapperSimpleAppMain] (junit) [HybrisContextFactory] Loading <<application>> spring config <junit> from extension (acceleratorsampledata) located in (acceleratorsampledata-spring.xml) took: (23.45 ms)
+INFO   | jvm 1    | main    | 2014/01/03 13:45:33.099 | [m[0;32mINFO  [WrapperSimpleAppMain] (junit) [HybrisContextFactory] Loading <<application>> spring config <junit> from extension (acceleratorcms) located in (acceleratorcms-spring.xml) took: (17.49 ms)
+INFO   | jvm 1    | main    | 2014/01/03 13:45:33.301 | [m[0;32mINFO  [WrapperSimpleAppMain] (junit) [HybrisContextFactory] Loading <<application>> spring config <junit> from extension (merchandisecore) located in (merchandisecore-spring.xml) took: (185.8 ms)
+INFO   | jvm 1    | main    | 2014/01/03 13:45:33.303 | [m[0;32mINFO  [WrapperSimpleAppMain] (junit) [HybrisContextFactory] Loading <<application>> spring config <junit> from extension (merchandiseinitialdata) located in (merchandiseinitialdata-spring.xml) took: (25.11 ms)
+INFO   | jvm 1    | main    | 2014/01/03 13:45:33.506 | [m[0;32mINFO  [WrapperSimpleAppMain] (junit) [HybrisContextFactory] Loading <<application>> spring config <junit> from extension (commercefacades) located in (commercefacades-spring.xml) took: (180.3 ms)
+INFO   | jvm 1    | main    | 2014/01/03 13:45:33.509 | [m[0;32mINFO  [WrapperSimpleAppMain] (junit) [HybrisContextFactory] Loading <<application>> spring config <junit> from extension (ycommercewebservices) located in (ycommercewebservices-spring.xml) took: (28.35 ms)
+INFO   | jvm 1    | main    | 2014/01/03 13:45:33.512 | [m[0;32mINFO  [WrapperSimpleAppMain] (junit) [HybrisContextFactory] Loading <<application>> spring config <junit> from extension (acceleratorfacades) located in (acceleratorfacades-spring.xml) took: (31.35 ms)
+INFO   | jvm 1    | main    | 2014/01/03 13:45:33.619 | [m[0;32mINFO  [WrapperSimpleAppMain] (junit) [HybrisContextFactory] Loading <<application>> spring config <junit> from extension (merchandisefacades) located in (merchandisefacades-spring.xml) took: (60.88 ms)
+INFO   | jvm 1    | main    | 2014/01/03 13:45:33.623 | [m[0;32mINFO  [WrapperSimpleAppMain] (junit) [HybrisContextFactory] Loading <<application>> spring config <junit> from extension (merchandisetest) located in (merchandisetest-spring.xml) took: (24.92 ms)
+INFO   | jvm 1    | main    | 2014/01/03 13:45:33.625 | [m[0;32mINFO  [WrapperSimpleAppMain] (junit) [HybrisContextFactory] Loading <<application>> spring config <junit> from extension (addonsupport) located in (addonsupport-spring.xml) took: (38.97 ms)
+INFO   | jvm 1    | main    | 2014/01/03 13:45:33.727 | [m[0;32mINFO  [WrapperSimpleAppMain] (junit) [HybrisContextFactory] Loading <<application>> spring config <junit> from extension (instore) located in (instore-spring.xml) took: (33.16 ms)
+INFO   | jvm 1    | main    | 2014/01/03 13:45:33.729 | [m[0;32mINFO  [WrapperSimpleAppMain] (junit) [HybrisContextFactory] Loading <<application>> spring config <junit> from extension (yinstoreinitialdata) located in (yinstoreinitialdata-spring.xml) took: (17.35 ms)
+INFO   | jvm 1    | main    | 2014/01/03 13:45:33.732 | [m[0;32mINFO  [WrapperSimpleAppMain] (junit) [HybrisContextFactory] Loading <<application>> spring config <junit> from extension (cockpit) located in (cockpit-spring.xml) took: (39.79 ms)
+INFO   | jvm 1    | main    | 2014/01/03 13:45:33.834 | [m[0;32mINFO  [WrapperSimpleAppMain] (junit) [HybrisContextFactory] Loading <<application>> spring config <junit> from extension (cscockpit) located in (cscockpit-spring.xml) took: (34.41 ms)
+INFO   | jvm 1    | main    | 2014/01/03 13:45:33.836 | [m[0;32mINFO  [WrapperSimpleAppMain] (junit) [HybrisContextFactory] Loading <<application>> spring config <junit> from extension (productcockpit) located in (productcockpit-spring.xml) took: (15.04 ms)
+INFO   | jvm 1    | main    | 2014/01/03 13:45:33.838 | [m[0;32mINFO  [WrapperSimpleAppMain] (junit) [HybrisContextFactory] Loading <<application>> spring config <junit> from extension (cmscockpit) located in (cmscockpit-spring.xml) took: (26.70 ms)
+INFO   | jvm 1    | main    | 2014/01/03 13:45:33.840 | [m[0;32mINFO  [WrapperSimpleAppMain] (junit) [HybrisContextFactory] Loading <<application>> spring config <junit> from extension (reportcockpit) located in (reportcockpit-spring.xml) took: (11.60 ms)
+INFO   | jvm 1    | main    | 2014/01/03 13:45:33.848 | [m[0;32mINFO  [WrapperSimpleAppMain] (junit) [HybrisContextFactory] Loading <<application>> spring config <junit> from extension (merchandisecockpits) located in (merchandisecockpits-spring.xml) took: (14.96 ms)
+INFO   | jvm 1    | main    | 2014/01/03 13:45:33.851 | [m[0;32mINFO  [WrapperSimpleAppMain] (junit) [HybrisContextFactory] Loading <<application>> spring config <junit> from extension (mcc) located in (mcc-spring.xml) took: (9.181 ms)
+INFO   | jvm 1    | main    | 2014/01/03 13:45:33.853 | [m[0;32mINFO  [WrapperSimpleAppMain] (junit) [HybrisContextFactory] Loading <<application>> spring config <junit> from extension (backoffice) located in (backoffice-spring.xml) took: (17.68 ms)
+INFO   | jvm 1    | main    | 2014/01/03 13:45:33.971 | [m[0;32mINFO  [WrapperSimpleAppMain] (junit) [HybrisContextFactory] Loading <<application>> spring config <junit> from extension (admincockpit) located in (admincockpit-spring.xml) took: (39.28 ms)
+INFO   | jvm 1    | main    | 2014/01/03 13:45:34.474 | [m
+INFO   | jvm 1    | main    | 2014/01/03 13:45:34.981 | [0;32mINFO  [WrapperSimpleAppMain] (junit) [DefaultCacheController] Registered Listener de.hybris.platform.media.storage.impl.DefaultLocalMediaFileCacheService$MediaCacheLifecycleCallback@4db202ba on cache controller. Currently registered 3
+INFO   | jvm 1    | main    | 2014/01/03 13:45:35.485 | [m
+INFO   | jvm 1    | main    | 2014/01/03 13:45:36.387 | [0;33mWARN  [WrapperSimpleAppMain] (junit) [DefaultOrderService] Injecting deprecated Place Order Strategy!
+INFO   | jvm 1    | main    | 2014/01/03 13:45:36.389 | [m[0;33mWARN  [WrapperSimpleAppMain] (junit) [DefaultOrderService] Injecting deprecated OrderCalcuation strategy!
+INFO   | jvm 1    | main    | 2014/01/03 13:45:36.894 | [m
+INFO   | jvm 1    | main    | 2014/01/03 13:45:37.196 | [0;33mWARN  [WrapperSimpleAppMain] (junit) [AbstractEventListener] Found missing tenantService dependency for bean de.hybris.platform.solrfacetsearch.events.SolrConfigConversionEventListener$$EnhancerByCGLIB$$2d1154a7_2@2916cab7, please adjust spring configuration
+INFO   | jvm 1    | main    | 2014/01/03 13:45:37.199 | [m[0;33mWARN  [WrapperSimpleAppMain] (junit) [AbstractEventListener] Found missing clusterService dependency for bean de.hybris.platform.solrfacetsearch.events.SolrConfigConversionEventListener$$EnhancerByCGLIB$$2d1154a7_2@2916cab7, please adjust spring configuration
+INFO   | jvm 1    | main    | 2014/01/03 13:45:37.402 | [m[0;33mWARN  [WrapperSimpleAppMain] (junit) [DefaultOrderService] Injecting deprecated Place Order Strategy!
+INFO   | jvm 1    | main    | 2014/01/03 13:45:37.404 | [m[0;33mWARN  [WrapperSimpleAppMain] (junit) [DefaultOrderService] Injecting deprecated OrderCalcuation strategy!
+INFO   | jvm 1    | main    | 2014/01/03 13:45:37.609 | [m[0;33mWARN  [WrapperSimpleAppMain] (junit) [AbstractEventListener] Found missing tenantService dependency for bean de.hybris.platform.btg.events.ProductVisitedBTGRuleDataEventListener$$EnhancerByCGLIB$$31c7667_2@732733d, please adjust spring configuration
+INFO   | jvm 1    | main    | 2014/01/03 13:45:37.612 | [m[0;33mWARN  [WrapperSimpleAppMain] (junit) [AbstractEventListener] Found missing clusterService dependency for bean de.hybris.platform.btg.events.ProductVisitedBTGRuleDataEventListener$$EnhancerByCGLIB$$31c7667_2@732733d, please adjust spring configuration
+INFO   | jvm 1    | main    | 2014/01/03 13:45:37.615 | [m[0;33mWARN  [WrapperSimpleAppMain] (junit) [AbstractEventListener] Found missing tenantService dependency for bean de.hybris.platform.btg.events.ContentPageVisitedBTGRuleDataEventListener$$EnhancerByCGLIB$$e206ae83_2@764f4766, please adjust spring configuration
+INFO   | jvm 1    | main    | 2014/01/03 13:45:37.623 | [m[0;33mWARN  [WrapperSimpleAppMain] (junit) [AbstractEventListener] Found missing clusterService dependency for bean de.hybris.platform.btg.events.ContentPageVisitedBTGRuleDataEventListener$$EnhancerByCGLIB$$e206ae83_2@764f4766, please adjust spring configuration
+INFO   | jvm 1    | main    | 2014/01/03 13:45:37.726 | [m[0;33mWARN  [WrapperSimpleAppMain] (junit) [AbstractEventListener] Found missing tenantService dependency for bean de.hybris.platform.btg.events.CategoryVisitedBTGRuleDataEventListener$$EnhancerByCGLIB$$2f963cf3_2@3cc47192, please adjust spring configuration
+INFO   | jvm 1    | main    | 2014/01/03 13:45:37.729 | [m[0;33mWARN  [WrapperSimpleAppMain] (junit) [AbstractEventListener] Found missing clusterService dependency for bean de.hybris.platform.btg.events.CategoryVisitedBTGRuleDataEventListener$$EnhancerByCGLIB$$2f963cf3_2@3cc47192, please adjust spring configuration
+INFO   | jvm 1    | main    | 2014/01/03 13:45:37.832 | [m[0;33mWARN  [WrapperSimpleAppMain] (junit) [AbstractEventListener] Found missing tenantService dependency for bean de.hybris.platform.btg.events.RequestParametersUsedBTGRuleDataEventListener$$EnhancerByCGLIB$$b55eb69b_2@45505622, please adjust spring configuration
+INFO   | jvm 1    | main    | 2014/01/03 13:45:37.835 | [m[0;33mWARN  [WrapperSimpleAppMain] (junit) [AbstractEventListener] Found missing clusterService dependency for bean de.hybris.platform.btg.events.RequestParametersUsedBTGRuleDataEventListener$$EnhancerByCGLIB$$b55eb69b_2@45505622, please adjust spring configuration
+INFO   | jvm 1    | main    | 2014/01/03 13:45:37.838 | [m[0;33mWARN  [WrapperSimpleAppMain] (junit) [AbstractEventListener] Found missing tenantService dependency for bean de.hybris.platform.btg.events.RefererHeaderUsedBTGRuleDataEventListener$$EnhancerByCGLIB$$c54d161f_2@d4517f0, please adjust spring configuration
+INFO   | jvm 1    | main    | 2014/01/03 13:45:37.841 | [m[0;33mWARN  [WrapperSimpleAppMain] (junit) [AbstractEventListener] Found missing clusterService dependency for bean de.hybris.platform.btg.events.RefererHeaderUsedBTGRuleDataEventListener$$EnhancerByCGLIB$$c54d161f_2@d4517f0, please adjust spring configuration
+INFO   | jvm 1    | main    | 2014/01/03 13:45:37.944 | [m[0;33mWARN  [WrapperSimpleAppMain] (junit) [AbstractEventListener] Found missing tenantService dependency for bean de.hybris.platform.ticket.event.impl.DefaultOrderFraudEmployeeNotificationEventListener@75e82f87, please adjust spring configuration
+INFO   | jvm 1    | main    | 2014/01/03 13:45:37.947 | [m[0;33mWARN  [WrapperSimpleAppMain] (junit) [AbstractEventListener] Found missing clusterService dependency for bean de.hybris.platform.ticket.event.impl.DefaultOrderFraudEmployeeNotificationEventListener@75e82f87, please adjust spring configuration
+INFO   | jvm 1    | main    | 2014/01/03 13:45:38.459 | [m
+INFO   | jvm 1    | main    | 2014/01/03 13:45:38.761 | [0;32mINFO  [WrapperSimpleAppMain] (junit) [TenantScopeAspect] Configured tenant <<junit>>[1065311657] for aspect
+INFO   | jvm 1    | main    | 2014/01/03 13:45:39.264 | [m
+INFO   | jvm 1    | main    | 2014/01/03 13:45:45.373 | [0;32mINFO  [WrapperSimpleAppMain] (junit) [DefaultWURFLModel] WURFLModel version: Root:Stream resource:2.3.4, db.scientiamobile.com - 2012-11-08 12:25:24; devices: 18306 root devices: 8258; families: 2
+INFO   | jvm 1    | main    | 2014/01/03 13:45:45.877 | [m
+INFO   | jvm 1    | main    | 2014/01/03 13:45:48.081 | [0;32mINFO  [WrapperSimpleAppMain] (junit) [DefaultWURFLService] DefaultWURFLService created
+INFO   | jvm 1    | main    | 2014/01/03 13:45:48.182 | [m[0;33mWARN  [WrapperSimpleAppMain] (junit) [DefaultAtsCommerceStockServiceFactoryBean] Could not find bean 'atsCommerceStockService', using fallback commerceStockService instead.
+INFO   | jvm 1    | main    | 2014/01/03 13:45:48.285 | [m[0;33mWARN  [WrapperSimpleAppMain] (junit) [AbstractEventListener] Found missing tenantService dependency for bean com.hybris.instore.yinstoreinitialdata.events.InstoreOnCoreDataImportEventListener@158c499e, please adjust spring configuration
+INFO   | jvm 1    | main    | 2014/01/03 13:45:48.288 | [m[0;33mWARN  [WrapperSimpleAppMain] (junit) [AbstractEventListener] Found missing clusterService dependency for bean com.hybris.instore.yinstoreinitialdata.events.InstoreOnCoreDataImportEventListener@158c499e, please adjust spring configuration
+INFO   | jvm 1    | main    | 2014/01/03 13:45:48.291 | [m[0;33mWARN  [WrapperSimpleAppMain] (junit) [AbstractEventListener] Found missing tenantService dependency for bean com.hybris.instore.yinstoreinitialdata.events.InstoreOnSampleDataImportEventListener@2d352f1f, please adjust spring configuration
+INFO   | jvm 1    | main    | 2014/01/03 13:45:48.293 | [m[0;33mWARN  [WrapperSimpleAppMain] (junit) [AbstractEventListener] Found missing clusterService dependency for bean com.hybris.instore.yinstoreinitialdata.events.InstoreOnSampleDataImportEventListener@2d352f1f, please adjust spring configuration
+INFO   | jvm 1    | main    | 2014/01/03 13:45:48.296 | [m[0;32mINFO  [WrapperSimpleAppMain] (junit) [HybrisContextFactory] - Refreshing SpringContext (hybris Application context - junit) took: (14.40 s)
+INFO   | jvm 1    | main    | 2014/01/03 13:45:48.298 | [m[0;32mINFO  [WrapperSimpleAppMain] (junit) [HybrisContextFactory] Initializing application Spring ApplicationContext for tenant junit  took: (17.22 s)
+INFO   | jvm 1    | main    | 2014/01/03 13:45:48.300 | [m[0;33mWARN  [AfterSaveEventPublisher-junit] (junit) [DefaultTaskService] System not initialized. Not starting task module.
+INFO   | jvm 1    | main    | 2014/01/03 13:45:48.302 | [m[0;33mWARN  [AfterSaveEventPublisher-junit] (junit) [DefaultSolrCoresService] System not initialized. Not initializing solr instances.
+INFO   | jvm 1    | main    | 2014/01/03 13:45:48.304 | [m[0;33mWARN  [AfterSaveEventPublisher-junit] (junit) [DefaultTaskService] System not initialized. Not starting task module.
+INFO   | jvm 1    | main    | 2014/01/03 13:45:48.306 | [m[0;33mWARN  [AfterSaveEventPublisher-junit] (junit) [DefaultSolrCoresService] System not initialized. Not initializing solr instances.
+INFO   | jvm 1    | main    | 2014/01/03 13:45:48.809 | [m
+INFO   | jvm 1    | main    | 2014/01/03 13:45:51.522 | [0;32mINFO  [WrapperSimpleAppMain] [HybrisContextLoaderListener] *************************************************************
+INFO   | jvm 1    | main    | 2014/01/03 13:45:51.525 | [m[0;32mINFO  [WrapperSimpleAppMain] [HybrisContextLoaderListener] adding custom config locations [classpath:productcockpit/productcockpit-spring-configs.xml,classpath:/merchandisecockpits/productcockpit/spring/import.xml] for ctx Root WebApplicationContext - /productcockpit: startup date [Thu Jan 01 05:30:00 IST 1970]; parent: hybris Application context - master
+INFO   | jvm 1    | main    | 2014/01/03 13:45:51.529 | [m[0;32mINFO  [WrapperSimpleAppMain] [HybrisContextLoaderListener] *************************************************************
+INFO   | jvm 1    | main    | 2014/01/03 13:45:52.039 | [m
+INFO   | jvm 1    | main    | 2014/01/03 13:46:09.873 | [0;32mINFO  [WrapperSimpleAppMain] [HybrisContextLoaderListener] *************************************************************
+INFO   | jvm 1    | main    | 2014/01/03 13:46:09.876 | [m[0;32mINFO  [WrapperSimpleAppMain] [HybrisContextLoaderListener] adding custom config locations [classpath:cscockpit/cscockpit-spring-configs.xml,classpath:/merchandisecockpits/cscockpit/spring/import.xml] for ctx Root WebApplicationContext - /cscockpit: startup date [Thu Jan 01 05:30:00 IST 1970]; parent: hybris Application context - master
+INFO   | jvm 1    | main    | 2014/01/03 13:46:09.879 | [m[0;32mINFO  [WrapperSimpleAppMain] [HybrisContextLoaderListener] *************************************************************
+INFO   | jvm 1    | main    | 2014/01/03 13:46:10.391 | [m
+INFO   | jvm 1    | main    | 2014/01/03 13:46:13.596 | [0;32mINFO  [WrapperSimpleAppMain] [HybrisContextLoaderListener] *************************************************************
+INFO   | jvm 1    | main    | 2014/01/03 13:46:13.599 | [m[0;32mINFO  [WrapperSimpleAppMain] [HybrisContextLoaderListener] adding custom config locations [classpath:btgcockpit/btgcockpit-spring-configs.xml,classpath:/merchandisecockpits/cmscockpit/spring/import.xml] for ctx Root WebApplicationContext - /cmscockpit: startup date [Thu Jan 01 05:30:00 IST 1970]; parent: hybris Application context - master
+INFO   | jvm 1    | main    | 2014/01/03 13:46:13.602 | [m[0;32mINFO  [WrapperSimpleAppMain] [HybrisContextLoaderListener] *************************************************************
+INFO   | jvm 1    | main    | 2014/01/03 13:46:14.109 | [m
+INFO   | jvm 1    | main    | 2014/01/03 13:46:19.220 | [0;32mINFO  [WrapperSimpleAppMain] [HybrisContextLoaderListener] *************************************************************
+INFO   | jvm 1    | main    | 2014/01/03 13:46:19.222 | [m[0;32mINFO  [WrapperSimpleAppMain] [HybrisContextLoaderListener] adding custom config locations [classpath:cmscockpit/cmscockpit-spring-configs.xml,classpath:/merchandisecockpits/cmscockpit/spring/import.xml] for ctx Root WebApplicationContext - /cmscockpitRegular: startup date [Thu Jan 01 05:30:00 IST 1970]; parent: hybris Application context - master
+INFO   | jvm 1    | main    | 2014/01/03 13:46:19.225 | [m[0;32mINFO  [WrapperSimpleAppMain] [HybrisContextLoaderListener] *************************************************************
+INFO   | jvm 1    | main    | 2014/01/03 13:46:19.728 | [m
+INFO   | jvm 1    | main    | 2014/01/03 13:46:21.932 | [0;32mINFO  [WrapperSimpleAppMain] [HybrisContextLoaderListener] *************************************************************
+INFO   | jvm 1    | main    | 2014/01/03 13:46:21.934 | [m[0;32mINFO  [WrapperSimpleAppMain] [HybrisContextLoaderListener] adding custom config locations [classpath:reportcockpit/reportcockpit-spring-configs.xml,classpath:/merchandisecockpits/reportcockpit/spring/import.xml] for ctx Root WebApplicationContext - /reportcockpit: startup date [Thu Jan 01 05:30:00 IST 1970]; parent: hybris Application context - master
+INFO   | jvm 1    | main    | 2014/01/03 13:46:21.944 | [m[0;32mINFO  [WrapperSimpleAppMain] [HybrisContextLoaderListener] *************************************************************
+INFO   | jvm 1    | main    | 2014/01/03 13:46:22.451 | [m
+INFO   | jvm 1    | main    | 2014/01/03 13:46:25.355 | [0;32mINFO  [WrapperSimpleAppMain] [CompressServlet] Granule 1.0.9 Started
+INFO   | jvm 1    | main    | 2014/01/03 13:46:25.857 | [m
+INFO   | jvm 1    | main    | 2014/01/03 13:46:26.459 | Jan 03, 2014 1:46:26 PM org.apache.coyote.http11.Http11Protocol start
+INFO   | jvm 1    | main    | 2014/01/03 13:46:26.460 | INFO: Starting Coyote HTTP/1.1 on http-9001
+INFO   | jvm 1    | main    | 2014/01/03 13:46:26.561 | Jan 03, 2014 1:46:26 PM org.apache.coyote.http11.Http11Protocol start
+INFO   | jvm 1    | main    | 2014/01/03 13:46:26.562 | INFO: Starting Coyote HTTP/1.1 on http-9002
+INFO   | jvm 1    | main    | 2014/01/03 13:46:26.563 | Jan 03, 2014 1:46:26 PM org.apache.jk.common.ChannelSocket init
+INFO   | jvm 1    | main    | 2014/01/03 13:46:26.564 | INFO: JK: ajp13 listening on /0.0.0.0:8009
+INFO   | jvm 1    | main    | 2014/01/03 13:46:26.565 | Jan 03, 2014 1:46:26 PM org.apache.jk.server.JkMain start
+INFO   | jvm 1    | main    | 2014/01/03 13:46:26.566 | INFO: Jk running ID=0 time=0/14  config=null
+INFO   | jvm 1    | main    | 2014/01/03 13:46:26.567 | Jan 03, 2014 1:46:26 PM org.apache.catalina.startup.Catalina start
+INFO   | jvm 1    | main    | 2014/01/03 13:46:26.568 | INFO: Server startup in 119645 ms
+INFO   | jvm 1    | main    | 2014/01/03 13:47:32.766 | [0;33mWARN  [hybrisHTTP18] [192.168.1.30] [DefaultFindDeliveryCostStrategy] Could not find deliveryCost for order [00002000] due to : null... skipping!
+INFO   | jvm 1    | main    | 2014/01/03 13:47:32.768 | [m[0;33mWARN  [hybrisHTTP18] [192.168.1.30] [DefaultFindPaymentCostStrategy] Could not find paymentCost for order [00002000] due to : null... skipping!
+INFO   | jvm 1    | main    | 2014/01/03 13:47:33.270 | [m
+INFO   | jvm 1    | main    | 2014/01/03 13:52:59.913 | [0;33mWARN  [Thread-32] [192.168.1.30] [AbstractNavigationAreaModel] SavedQueryUserRightsService interface was initially intended for use in product cockpit and print cockpit.
+INFO   | jvm 1    | main    | 2014/01/03 13:53:00.216 | [m[0;33mWARN  [Thread-32] [192.168.1.30] [AbstractNavigationAreaModel] SavedQueryUserRightsService interface was initially intended for use in product cockpit and print cockpit.
+INFO   | jvm 1    | main    | 2014/01/03 13:53:00.719 | [m
+INFO   | jvm 1    | main    | 2014/01/03 13:53:13.238 | [0;33mWARN  [Thread-32] [192.168.1.30] [AbstractNavigationAreaModel] SavedQueryUserRightsService interface was initially intended for use in product cockpit and print cockpit.
+INFO   | jvm 1    | main    | 2014/01/03 13:53:13.240 | [m[0;33mWARN  [Thread-32] [192.168.1.30] [AbstractNavigationAreaModel] SavedQueryUserRightsService interface was initially intended for use in product cockpit and print cockpit.
+INFO   | jvm 1    | main    | 2014/01/03 13:53:13.745 | [m
+INFO   | jvm 1    | main    | 2014/01/03 13:53:19.054 | [0;33mWARN  [Thread-32] [192.168.1.30] [AbstractNavigationAreaModel] SavedQueryUserRightsService interface was initially intended for use in product cockpit and print cockpit.
+INFO   | jvm 1    | main    | 2014/01/03 13:53:19.056 | [m[0;33mWARN  [Thread-32] [192.168.1.30] [AbstractNavigationAreaModel] SavedQueryUserRightsService interface was initially intended for use in product cockpit and print cockpit.
+INFO   | jvm 1    | main    | 2014/01/03 13:53:19.158 | [m[0;32mINFO  [Thread-32] [192.168.1.30] [CmsPageBrowserModel] Structure view is available for current page.
+INFO   | jvm 1    | main    | 2014/01/03 13:53:19.660 | [m
+INFO   | jvm 1    | main    | 2014/01/03 13:53:19.861 | [0;33mWARN  [Thread-32] [192.168.1.30] [CmsListBrowserSectionComponent] Section groupbox is not an instance of LockableGroupbox
+INFO   | jvm 1    | main    | 2014/01/03 13:53:20.164 | [m[0;33mWARN  [Thread-32] [192.168.1.30] [CmsListBrowserSectionComponent] Section groupbox is not an instance of LockableGroupbox
+INFO   | jvm 1    | main    | 2014/01/03 13:53:20.466 | [m[0;33mWARN  [Thread-32] [192.168.1.30] [CmsListBrowserSectionComponent] Section groupbox is not an instance of LockableGroupbox
+INFO   | jvm 1    | main    | 2014/01/03 13:53:20.869 | [m[0;33mWARN  [Thread-32] [192.168.1.30] [CmsListBrowserSectionComponent] Section groupbox is not an instance of LockableGroupbox
+INFO   | jvm 1    | main    | 2014/01/03 13:53:21.171 | [m[0;33mWARN  [Thread-32] [192.168.1.30] [CmsListBrowserSectionComponent] Section groupbox is not an instance of LockableGroupbox
+INFO   | jvm 1    | main    | 2014/01/03 13:53:21.674 | [m[0;33mWARN  [Thread-32] [192.168.1.30] [CmsListBrowserSectionComponent] Section groupbox is not an instance of LockableGroupbox
+INFO   | jvm 1    | main    | 2014/01/03 13:53:21.976 | [m[0;33mWARN  [Thread-32] [192.168.1.30] [CmsListBrowserSectionComponent] Section groupbox is not an instance of LockableGroupbox
+INFO   | jvm 1    | main    | 2014/01/03 13:53:22.279 | [m[0;33mWARN  [Thread-32] [192.168.1.30] [CmsListBrowserSectionComponent] Section groupbox is not an instance of LockableGroupbox
+INFO   | jvm 1    | main    | 2014/01/03 13:53:22.782 | [m
+INFO   | jvm 1    | main    | 2014/01/03 13:53:26.790 | [0;33mWARN  [Thread-32] [192.168.1.30] [CmsListBrowserSectionComponent] Section groupbox is not an instance of LockableGroupbox
+INFO   | jvm 1    | main    | 2014/01/03 13:53:27.293 | [m
+INFO   | jvm 1    | main    | 2014/01/03 13:53:37.508 | [0;33mWARN  [Thread-32] [192.168.1.30] [AbstractBrowserArea] Can not update browser area. Reason: Browser area has not been initialized yet.
+INFO   | jvm 1    | main    | 2014/01/03 13:53:38.011 | [m
+INFO   | jvm 1    | main    | 2014/01/03 13:53:43.195 | [0;33mWARN  [Thread-32] [192.168.1.30] [AbstractBrowserArea] Can not update browser area. Reason: Browser area has not been initialized yet.
+INFO   | jvm 1    | main    | 2014/01/03 13:53:43.700 | [m
+INFO   | jvm 1    | main    | 2014/01/03 13:53:45.905 | [0;32mINFO  [Thread-32] [192.168.1.30] (000001JK) [CatalogVersionSyncJob] Starting configuration ...
+INFO   | jvm 1    | main    | 2014/01/03 13:53:45.907 | [m[0;32mINFO  [Thread-32] [192.168.1.30] (000001JK) [SynchronizationServiceImpl] Default Synch Configuration
+INFO   | jvm 1    | main    | 2014/01/03 13:53:45.908 | [m[0;32mINFO  [Thread-32] [192.168.1.30] (000001JK) [CatalogVersionSyncJob] Finished configuration in 0d 00h:00m:00s:001ms.
+INFO   | jvm 1    | main    | 2014/01/03 13:53:45.909 | [m[0;32mINFO  [Thread-32] [192.168.1.30] (000001JK) [CatalogVersionSyncJob] Starting synchronization ...
+INFO   | jvm 1    | main    | 2014/01/03 13:53:46.311 | [m[0;32mINFO  [Thread-32] [192.168.1.30] (000001JK) [CatalogVersionSyncMaster] 1. pass, 9 (+9) of 0 items processed (0 %),  26.01 items/sec, 0 (+0) items dumped.
+INFO   | jvm 1    | main    | 2014/01/03 13:53:46.316 | [m[0;32mINFO  [Thread-32] [192.168.1.30] (000001JK) [CatalogVersionSyncJob] Finished synchronization in 0d 00h:00m:00s:359ms. No errors.
+INFO   | jvm 1    | main    | 2014/01/03 13:53:46.818 | [m  ()-> slots:de.hybris.platform.cockpit.components.sectionpanel.SectionPanel.MyModelListener = 0.002
+INFO   | jvm 1    | main    | 2014/01/03 13:53:46.820 | [0;33mWARN  [Thread-32] [192.168.1.30] [AbstractBrowserArea] Can not update browser area. Reason: Browser area has not been initialized yet.
+INFO   | jvm 1    | main    | 2014/01/03 13:53:46.922 | [m[0;33mWARN  [Thread-32] [192.168.1.30] [AbstractBrowserArea] Can not update browser area. Reason: Browser area has not been initialized yet.
+INFO   | jvm 1    | main    | 2014/01/03 13:53:46.924 | [m[0;33mWARN  [Thread-32] [192.168.1.30] [AbstractBrowserArea] Can not update browser area. Reason: Browser area has not been initialized yet.
+INFO   | jvm 1    | main    | 2014/01/03 13:53:47.026 | [m[0;33mWARN  [Thread-32] [192.168.1.30] [AbstractBrowserArea] Can not update browser area. Reason: Browser area has not been initialized yet.
+INFO   | jvm 1    | main    | 2014/01/03 13:53:47.128 | [m[0;33mWARN  [Thread-32] [192.168.1.30] [AbstractBrowserArea] Can not update browser area. Reason: Browser area has not been initialized yet.
+INFO   | jvm 1    | main    | 2014/01/03 13:53:47.230 | [m[0;33mWARN  [Thread-32] [192.168.1.30] [AbstractBrowserArea] Can not update browser area. Reason: Browser area has not been initialized yet.
+INFO   | jvm 1    | main    | 2014/01/03 13:53:47.232 | [m[0;33mWARN  [Thread-32] [192.168.1.30] [AbstractBrowserArea] Can not update browser area. Reason: Browser area has not been initialized yet.
+INFO   | jvm 1    | main    | 2014/01/03 13:53:47.334 | [m  ()-> slots:de.hybris.platform.cockpit.components.sectionpanel.SectionPanel.MyModelListener = 0.0
+INFO   | jvm 1    | main    | 2014/01/03 13:53:47.335 | [0;33mWARN  [Thread-32] [192.168.1.30] [AbstractBrowserArea] Can not update browser area. Reason: Browser area has not been initialized yet.
+INFO   | jvm 1    | main    | 2014/01/03 13:53:47.337 | [m[0;33mWARN  [Thread-32] [192.168.1.30] [AbstractBrowserArea] Can not update browser area. Reason: Browser area has not been initialized yet.
+INFO   | jvm 1    | main    | 2014/01/03 13:53:47.439 | [m  ()-> slots:de.hybris.platform.cockpit.components.sectionpanel.SectionPanel.MyModelListener = 0.0
+INFO   | jvm 1    | main    | 2014/01/03 13:53:47.442 | [0;33mWARN  [Thread-32] [192.168.1.30] [AbstractBrowserArea] Can not update browser area. Reason: Browser area has not been initialized yet.
+INFO   | jvm 1    | main    | 2014/01/03 13:53:47.949 | [m
+INFO   | jvm 1    | main    | 2014/01/03 13:55:12.364 | [0;33mWARN  [Thread-32] [192.168.1.30] [AbstractBrowserArea] Can not update browser area. Reason: Browser area has not been initialized yet.
+INFO   | jvm 1    | main    | 2014/01/03 13:55:12.867 | [m
+INFO   | jvm 1    | main    | 2014/01/03 13:55:15.372 | [0;32mINFO  [Thread-32] [192.168.1.30] (000001JL) [CatalogVersionSyncJob] Starting configuration ...
+INFO   | jvm 1    | main    | 2014/01/03 13:55:15.373 | [m[0;32mINFO  [Thread-32] [192.168.1.30] (000001JL) [SynchronizationServiceImpl] Default Synch Configuration
+INFO   | jvm 1    | main    | 2014/01/03 13:55:15.374 | [m[0;32mINFO  [Thread-32] [192.168.1.30] (000001JL) [CatalogVersionSyncJob] Finished configuration in 0d 00h:00m:00s:000ms.
+INFO   | jvm 1    | main    | 2014/01/03 13:55:15.376 | [m[0;32mINFO  [Thread-32] [192.168.1.30] (000001JL) [CatalogVersionSyncJob] Starting synchronization ...
+INFO   | jvm 1    | main    | 2014/01/03 13:55:15.477 | [m[0;32mINFO  [Thread-32] [192.168.1.30] (000001JL) [CatalogVersionSyncMaster] 1. pass, 0 (+0) of 0 items processed (0 %),  0.00 items/sec, 0 (+0) items dumped.
+INFO   | jvm 1    | main    | 2014/01/03 13:55:15.479 | [m[0;32mINFO  [Thread-32] [192.168.1.30] (000001JL) [CatalogVersionSyncJob] Finished synchronization in 0d 00h:00m:00s:022ms. No errors.
+INFO   | jvm 1    | main    | 2014/01/03 13:55:15.482 | [m[0;33mWARN  [Thread-32] [192.168.1.30] [AbstractBrowserArea] Can not update browser area. Reason: Browser area has not been initialized yet.
+INFO   | jvm 1    | main    | 2014/01/03 13:55:15.985 | [m
+INFO   | jvm 1    | main    | 2014/01/03 13:55:21.701 | [0;33mWARN  [Thread-32] [192.168.1.30] [AbstractBrowserArea] Can not update browser area. Reason: Browser area has not been initialized yet.
+INFO   | jvm 1    | main    | 2014/01/03 13:55:22.204 | [m
+INFO   | jvm 1    | main    | 2014/01/03 13:55:24.009 | [0;32mINFO  [Thread-32] [192.168.1.30] (000001JM) [CatalogVersionSyncJob] Starting configuration ...
+INFO   | jvm 1    | main    | 2014/01/03 13:55:24.010 | [m[0;32mINFO  [Thread-32] [192.168.1.30] (000001JM) [SynchronizationServiceImpl] Default Synch Configuration
+INFO   | jvm 1    | main    | 2014/01/03 13:55:24.011 | [m[0;32mINFO  [Thread-32] [192.168.1.30] (000001JM) [CatalogVersionSyncJob] Finished configuration in 0d 00h:00m:00s:000ms.
+INFO   | jvm 1    | main    | 2014/01/03 13:55:24.013 | [m[0;32mINFO  [Thread-32] [192.168.1.30] (000001JM) [CatalogVersionSyncJob] Starting synchronization ...
+INFO   | jvm 1    | main    | 2014/01/03 13:55:24.014 | [m[0;32mINFO  [Thread-32] [192.168.1.30] (000001JM) [CatalogVersionSyncMaster] 1. pass, 0 (+0) of 0 items processed (0 %),  0.00 items/sec, 0 (+0) items dumped.
+INFO   | jvm 1    | main    | 2014/01/03 13:55:24.015 | [m[0;32mINFO  [Thread-32] [192.168.1.30] (000001JM) [CatalogVersionSyncJob] Finished synchronization in 0d 00h:00m:00s:029ms. No errors.
+INFO   | jvm 1    | main    | 2014/01/03 13:55:24.117 | [m[0;33mWARN  [Thread-32] [192.168.1.30] [AbstractBrowserArea] Can not update browser area. Reason: Browser area has not been initialized yet.
+INFO   | jvm 1    | main    | 2014/01/03 13:55:24.622 | [m
+INFO   | jvm 1    | main    | 2014/01/03 13:58:03.339 | [0;32mINFO  [hybrisHTTP16] [192.168.1.30] [JaloSession] transfering session to user admin: forced to switch currency to EUR
+INFO   | jvm 1    | main    | 2014/01/03 13:58:03.844 | [m
+INFO   | jvm 1    | main    | 2014/01/03 14:47:04.977 | [0;33mWARN  [hybrisHTTP1] [192.168.1.30] [DefaultFindDeliveryCostStrategy] Could not find deliveryCost for order [00002000] due to : null... skipping!
+INFO   | jvm 1    | main    | 2014/01/03 14:47:04.980 | [m[0;33mWARN  [hybrisHTTP1] [192.168.1.30] [DefaultFindPaymentCostStrategy] Could not find paymentCost for order [00002000] due to : null... skipping!
+INFO   | jvm 1    | main    | 2014/01/03 14:47:05.482 | [m
+INFO   | jvm 1    | main    | 2014/01/03 14:50:41.566 | [0;33mWARN  [Thread-32] [192.168.1.30] [AbstractNavigationAreaModel] SavedQueryUserRightsService interface was initially intended for use in product cockpit and print cockpit.
+INFO   | jvm 1    | main    | 2014/01/03 14:50:41.568 | [m[0;33mWARN  [Thread-32] [192.168.1.30] [AbstractNavigationAreaModel] SavedQueryUserRightsService interface was initially intended for use in product cockpit and print cockpit.
+INFO   | jvm 1    | main    | 2014/01/03 14:50:42.070 | [m
+INFO   | jvm 1    | main    | 2014/01/03 14:51:27.629 | [0;33mWARN  [Thread-32] [192.168.1.30] [AbstractNavigationAreaModel] SavedQueryUserRightsService interface was initially intended for use in product cockpit and print cockpit.
+INFO   | jvm 1    | main    | 2014/01/03 14:51:27.630 | [m[0;33mWARN  [Thread-32] [192.168.1.30] [AbstractNavigationAreaModel] SavedQueryUserRightsService interface was initially intended for use in product cockpit and print cockpit.
+INFO   | jvm 1    | main    | 2014/01/03 14:51:28.133 | [m
+INFO   | jvm 1    | main    | 2014/01/03 14:51:56.674 | [0;33mWARN  [Thread-32] [192.168.1.30] [AbstractNavigationAreaModel] SavedQueryUserRightsService interface was initially intended for use in product cockpit and print cockpit.
+INFO   | jvm 1    | main    | 2014/01/03 14:51:56.676 | [m[0;33mWARN  [Thread-32] [192.168.1.30] [AbstractNavigationAreaModel] SavedQueryUserRightsService interface was initially intended for use in product cockpit and print cockpit.
+INFO   | jvm 1    | main    | 2014/01/03 14:51:56.777 | [m[0;32mINFO  [Thread-32] [192.168.1.30] [CmsPageBrowserModel] Structure view is available for current page.
+INFO   | jvm 1    | main    | 2014/01/03 14:51:56.778 | [m[0;33mWARN  [Thread-32] [192.168.1.30] [CmsListBrowserSectionComponent] Section groupbox is not an instance of LockableGroupbox
+INFO   | jvm 1    | main    | 2014/01/03 14:51:56.780 | [m[0;33mWARN  [Thread-32] [192.168.1.30] [CmsListBrowserSectionComponent] Section groupbox is not an instance of LockableGroupbox
+INFO   | jvm 1    | main    | 2014/01/03 14:51:56.782 | [m[0;33mWARN  [Thread-32] [192.168.1.30] [CmsListBrowserSectionComponent] Section groupbox is not an instance of LockableGroupbox
+INFO   | jvm 1    | main    | 2014/01/03 14:51:56.884 | [m[0;33mWARN  [Thread-32] [192.168.1.30] [CmsListBrowserSectionComponent] Section groupbox is not an instance of LockableGroupbox
+INFO   | jvm 1    | main    | 2014/01/03 14:51:57.186 | [m[0;33mWARN  [Thread-32] [192.168.1.30] [CmsListBrowserSectionComponent] Section groupbox is not an instance of LockableGroupbox
+INFO   | jvm 1    | main    | 2014/01/03 14:51:57.488 | [m[0;33mWARN  [Thread-32] [192.168.1.30] [CmsListBrowserSectionComponent] Section groupbox is not an instance of LockableGroupbox
+INFO   | jvm 1    | main    | 2014/01/03 14:51:57.790 | [m[0;33mWARN  [Thread-32] [192.168.1.30] [CmsListBrowserSectionComponent] Section groupbox is not an instance of LockableGroupbox
+INFO   | jvm 1    | main    | 2014/01/03 14:51:58.073 | [m[0;33mWARN  [Thread-32] [192.168.1.30] [CmsListBrowserSectionComponent] Section groupbox is not an instance of LockableGroupbox
+INFO   | jvm 1    | main    | 2014/01/03 14:51:58.476 | [m[0;33mWARN  [Thread-32] [192.168.1.30] [CmsListBrowserSectionComponent] Section groupbox is not an instance of LockableGroupbox
+INFO   | jvm 1    | main    | 2014/01/03 14:51:58.779 | [m[0;33mWARN  [Thread-32] [192.168.1.30] [CmsListBrowserSectionComponent] Section groupbox is not an instance of LockableGroupbox
+INFO   | jvm 1    | main    | 2014/01/03 14:51:59.081 | [m[0;33mWARN  [Thread-32] [192.168.1.30] [CmsListBrowserSectionComponent] Section groupbox is not an instance of LockableGroupbox
+INFO   | jvm 1    | main    | 2014/01/03 14:51:59.086 | [m[0;33mWARN  [Thread-32] [192.168.1.30] [CmsListBrowserSectionComponent] Section groupbox is not an instance of LockableGroupbox
+INFO   | jvm 1    | main    | 2014/01/03 14:51:59.591 | [m
+INFO   | jvm 1    | main    | 2014/01/03 14:52:24.226 | [0;33mWARN  [Thread-39] [192.168.1.30] [CmsListBrowserSectionComponent] Section groupbox is not an instance of LockableGroupbox
+INFO   | jvm 1    | main    | 2014/01/03 14:52:24.729 | [m
+INFO   | jvm 1    | main    | 2014/01/03 14:52:32.140 | [0;33mWARN  [Thread-39] [192.168.1.30] [AbstractBrowserArea] Can not update browser area. Reason: Browser area has not been initialized yet.
+INFO   | jvm 1    | main    | 2014/01/03 14:52:32.646 | [m
+INFO   | jvm 1    | main    | 2014/01/03 14:52:35.151 | [0;32mINFO  [Thread-39] [192.168.1.30] (000001JN) [CatalogVersionSyncJob] Starting configuration ...
+INFO   | jvm 1    | main    | 2014/01/03 14:52:35.152 | [m[0;32mINFO  [Thread-39] [192.168.1.30] (000001JN) [SynchronizationServiceImpl] Default Synch Configuration
+INFO   | jvm 1    | main    | 2014/01/03 14:52:35.153 | [m[0;32mINFO  [Thread-39] [192.168.1.30] (000001JN) [CatalogVersionSyncJob] Finished configuration in 0d 00h:00m:00s:001ms.
+INFO   | jvm 1    | main    | 2014/01/03 14:52:35.155 | [m[0;32mINFO  [Thread-39] [192.168.1.30] (000001JN) [CatalogVersionSyncJob] Starting synchronization ...
+INFO   | jvm 1    | main    | 2014/01/03 14:52:35.657 | [m
+INFO   | jvm 1    | main    | 2014/01/03 14:52:35.758 | [0;32mINFO  [Thread-39] [192.168.1.30] (000001JN) [CatalogVersionSyncMaster] 1. pass, 0 (+0) of 0 items processed (0 %),  0.00 items/sec, 0 (+0) items dumped.
+INFO   | jvm 1    | main    | 2014/01/03 14:52:35.760 | [m[0;32mINFO  [Thread-39] [192.168.1.30] (000001JN) [CatalogVersionSyncJob] Finished synchronization in 0d 00h:00m:00s:559ms. No errors.
+INFO   | jvm 1    | main    | 2014/01/03 14:52:35.861 | [m[0;33mWARN  [Thread-32] [192.168.1.30] [AbstractBrowserArea] Can not update browser area. Reason: Browser area has not been initialized yet.
+INFO   | jvm 1    | main    | 2014/01/03 14:52:36.364 | [m
+INFO   | jvm 1    | main    | 2014/01/03 14:52:37.768 | [0;33mWARN  [hybrisHTTP22] [192.168.1.30] [DefaultFindDeliveryCostStrategy] Could not find deliveryCost for order [00002000] due to : null... skipping!
+INFO   | jvm 1    | main    | 2014/01/03 14:52:37.770 | [m[0;33mWARN  [hybrisHTTP22] [192.168.1.30] [DefaultFindPaymentCostStrategy] Could not find paymentCost for order [00002000] due to : null... skipping!
+INFO   | jvm 1    | main    | 2014/01/03 14:52:38.272 | [m
+INFO   | jvm 1    | main    | 2014/01/03 14:52:43.381 | [0;33mWARN  [Thread-32] [192.168.1.30] [AbstractBrowserArea] Can not update browser area. Reason: Browser area has not been initialized yet.
+INFO   | jvm 1    | main    | 2014/01/03 14:52:43.934 | [m
+INFO   | jvm 1    | main    | 2014/01/03 14:52:45.138 | [0;32mINFO  [Thread-39] [192.168.1.30] (000001JO) [CatalogVersionSyncJob] Starting configuration ...
+INFO   | jvm 1    | main    | 2014/01/03 14:52:45.139 | [m[0;32mINFO  [Thread-39] [192.168.1.30] (000001JO) [SynchronizationServiceImpl] Default Synch Configuration
+INFO   | jvm 1    | main    | 2014/01/03 14:52:45.140 | [m[0;32mINFO  [Thread-39] [192.168.1.30] (000001JO) [CatalogVersionSyncJob] Finished configuration in 0d 00h:00m:00s:000ms.
+INFO   | jvm 1    | main    | 2014/01/03 14:52:45.142 | [m[0;32mINFO  [Thread-39] [192.168.1.30] (000001JO) [CatalogVersionSyncJob] Starting synchronization ...
+INFO   | jvm 1    | main    | 2014/01/03 14:52:45.343 | [m[0;32mINFO  [Thread-39] [192.168.1.30] (000001JO) [CatalogVersionSyncMaster] 1. pass, 0 (+0) of 0 items processed (0 %),  0.00 items/sec, 0 (+0) items dumped.
+INFO   | jvm 1    | main    | 2014/01/03 14:52:45.344 | [m[0;32mINFO  [Thread-39] [192.168.1.30] (000001JO) [CatalogVersionSyncJob] Finished synchronization in 0d 00h:00m:00s:170ms. No errors.
+INFO   | jvm 1    | main    | 2014/01/03 14:52:45.446 | [m[0;33mWARN  [Thread-32] [192.168.1.30] [AbstractBrowserArea] Can not update browser area. Reason: Browser area has not been initialized yet.
+INFO   | jvm 1    | main    | 2014/01/03 14:52:45.952 | [m
+INFO   | jvm 1    | main    | 2014/01/03 14:53:48.537 | [0;33mWARN  [Thread-39] [192.168.1.30] [AbstractAdvancedBrowserModel] Listener not registered (Reason: Not of type 'AdvancedBrowserModelListener').
+INFO   | jvm 1    | main    | 2014/01/03 14:53:49.041 | [m
+INFO   | jvm 1    | main    | 2014/01/03 14:53:50.544 | [0;32mINFO  [Thread-39] [192.168.1.30] [DefaultLiveEditViewModel] Change current url to : http://192.168.1.111:9001/store/
+INFO   | jvm 1    | main    | 2014/01/03 14:53:51.046 | [m
+INFO   | jvm 1    | main    | 2014/01/03 14:54:02.666 | [0;32mINFO  [Thread-32] [192.168.1.30] [LiveEditView] Received callback event (show popup editor) from element [id = ContactInfo]
+INFO   | jvm 1    | main    | 2014/01/03 14:54:03.168 | [m
+INFO   | jvm 1    | main    | 2014/01/03 14:54:10.981 | [0;31mERROR [Thread-32] [192.168.1.30] [BaseUICockpitPerspective] Could not dispatch cockpit event 'ItemChangedEvent[source='null']'.
+INFO   | jvm 1    | main    | 2014/01/03 14:54:10.985 | [morg.zkoss.zk.ui.UiException: You cannot access components belong to other desktop
+INFO   | jvm 1    | main    | 2014/01/03 14:54:10.992 | 	at org.zkoss.zk.ui.AbstractComponent.checkDetach(AbstractComponent.java:500)
+INFO   | jvm 1    | main    | 2014/01/03 14:54:10.993 | 	at org.zkoss.zk.ui.AbstractComponent.checkParentChild(AbstractComponent.java:954)
+INFO   | jvm 1    | main    | 2014/01/03 14:54:10.993 | 	at org.zkoss.zk.ui.AbstractComponent.setParent(AbstractComponent.java:810)
+INFO   | jvm 1    | main    | 2014/01/03 14:54:10.994 | 	at org.zkoss.zk.ui.AbstractComponent.removeChild(AbstractComponent.java:1060)
+INFO   | jvm 1    | main    | 2014/01/03 14:54:10.995 | 	at org.zkoss.zk.ui.AbstractComponent$ChildIter.remove(AbstractComponent.java:1952)
+INFO   | jvm 1    | main    | 2014/01/03 14:54:10.996 | 	at java.util.AbstractList.removeRange(AbstractList.java:571)
+INFO   | jvm 1    | main    | 2014/01/03 14:54:10.996 | 	at java.util.AbstractList.clear(AbstractList.java:234)
+INFO   | jvm 1    | main    | 2014/01/03 14:54:10.998 | 	at de.hybris.platform.cockpit.model.listview.impl.ListView.updateCell(ListView.java:972)
+INFO   | jvm 1    | main    | 2014/01/03 14:54:10.998 | 	at de.hybris.platform.cockpit.model.listview.impl.ListView.updateRow(ListView.java:1070)
+INFO   | jvm 1    | main    | 2014/01/03 14:54:10.999 | 	at de.hybris.platform.cockpit.model.listview.impl.ListView.updateItemInternal(ListView.java:2732)
+INFO   | jvm 1    | main    | 2014/01/03 14:54:11.000 | 	at de.hybris.platform.cockpit.model.listview.impl.ListView.updateItem(ListView.java:1028)
+INFO   | jvm 1    | main    | 2014/01/03 14:54:11.001 | 	at de.hybris.platform.cockpit.components.contentbrowser.ListSectionComponent.updateItem(ListSectionComponent.java:327)
+INFO   | jvm 1    | main    | 2014/01/03 14:54:11.002 | 	at de.hybris.platform.cockpit.components.contentbrowser.AbstractSectionMainAreaBrowserComponent.updateItem(AbstractSectionMainAreaBrowserComponent.java:204)
+INFO   | jvm 1    | main    | 2014/01/03 14:54:11.004 | 	at de.hybris.platform.cockpit.components.contentbrowser.DefaultAdvancedContentBrowser.updateItem(DefaultAdvancedContentBrowser.java:329)
+INFO   | jvm 1    | main    | 2014/01/03 14:54:11.005 | 	at de.hybris.platform.cmscockpit.components.contentbrowser.CmsPageContentBrowser.updateItem(CmsPageContentBrowser.java:212)
+INFO   | jvm 1    | main    | 2014/01/03 14:54:11.007 | 	at de.hybris.merchandise.cockpits.cmscockpit.components.contentbrowser.DefaultCmsPageContentBrowser.updateItem(DefaultCmsPageContentBrowser.java:177)
+INFO   | jvm 1    | main    | 2014/01/03 14:54:11.008 | 	at de.hybris.platform.cockpit.session.impl.AbstractBrowserArea.onCockpitEvent(AbstractBrowserArea.java:1956)
+INFO   | jvm 1    | main    | 2014/01/03 14:54:11.010 | 	at de.hybris.platform.cmscockpit.session.impl.CatalogBrowserArea.onCockpitEvent(CatalogBrowserArea.java:221)
+INFO   | jvm 1    | main    | 2014/01/03 14:54:11.011 | 	at de.hybris.platform.cockpit.session.impl.BaseUICockpitPerspective.onCockpitEvent(BaseUICockpitPerspective.java:820)
+INFO   | jvm 1    | main    | 2014/01/03 14:54:11.013 | 	at de.hybris.platform.cockpit.session.impl.UISessionImpl$1.onEvent(UISessionImpl.java:132)
+INFO   | jvm 1    | main    | 2014/01/03 14:54:11.013 | 	at org.zkoss.zk.ui.impl.EventProcessor.process0(EventProcessor.java:197)
+INFO   | jvm 1    | main    | 2014/01/03 14:54:11.014 | 	at org.zkoss.zk.ui.impl.EventProcessor.process(EventProcessor.java:141)
+INFO   | jvm 1    | main    | 2014/01/03 14:54:11.015 | 	at org.zkoss.zk.ui.impl.EventProcessingThreadImpl.process0(EventProcessingThreadImpl.java:519)
+INFO   | jvm 1    | main    | 2014/01/03 14:54:11.016 | 	at org.zkoss.zk.ui.impl.EventProcessingThreadImpl.run(EventProcessingThreadImpl.java:446)
+INFO   | jvm 1    | main    | 2014/01/03 14:54:11.017 | [0;33mWARN  [Thread-32] [192.168.1.30] [AbstractBrowserArea] Can not update browser area. Reason: Browser area has not been initialized yet.
+INFO   | jvm 1    | main    | 2014/01/03 14:54:11.524 | [m
+INFO   | jvm 1    | main    | 2014/01/03 14:54:48.372 | [0;32mINFO  [Thread-39] [192.168.1.30] [BaseUICockpitNavigationArea] Ignoring updating of info slot. Reason: Info slot container has not been correctly initialized since the desktop was created.
+INFO   | jvm 1    | main    | 2014/01/03 14:54:48.373 | [m[0;33mWARN  [Thread-39] [192.168.1.30] [AbstractNavigationAreaModel] SavedQueryUserRightsService interface was initially intended for use in product cockpit and print cockpit.
+INFO   | jvm 1    | main    | 2014/01/03 14:54:48.475 | [m[0;32mINFO  [Thread-39] [192.168.1.30] [CmsPageBrowserModel] Structure view is available for current page.
+INFO   | jvm 1    | main    | 2014/01/03 14:54:48.576 | [m[0;33mWARN  [Thread-39] [192.168.1.30] [CmsListBrowserSectionComponent] Section groupbox is not an instance of LockableGroupbox
+INFO   | jvm 1    | main    | 2014/01/03 14:54:48.578 | [m[0;33mWARN  [Thread-39] [192.168.1.30] [CmsListBrowserSectionComponent] Section groupbox is not an instance of LockableGroupbox
+INFO   | jvm 1    | main    | 2014/01/03 14:54:48.580 | [m[0;33mWARN  [Thread-39] [192.168.1.30] [CmsListBrowserSectionComponent] Section groupbox is not an instance of LockableGroupbox
+INFO   | jvm 1    | main    | 2014/01/03 14:54:48.582 | [m[0;33mWARN  [Thread-39] [192.168.1.30] [CmsListBrowserSectionComponent] Section groupbox is not an instance of LockableGroupbox
+INFO   | jvm 1    | main    | 2014/01/03 14:54:48.583 | [m[0;33mWARN  [Thread-39] [192.168.1.30] [CmsListBrowserSectionComponent] Section groupbox is not an instance of LockableGroupbox
+INFO   | jvm 1    | main    | 2014/01/03 14:54:48.693 | [m[0;33mWARN  [Thread-39] [192.168.1.30] [CmsListBrowserSectionComponent] Section groupbox is not an instance of LockableGroupbox
+INFO   | jvm 1    | main    | 2014/01/03 14:54:48.695 | [m[0;33mWARN  [Thread-39] [192.168.1.30] [CmsListBrowserSectionComponent] Section groupbox is not an instance of LockableGroupbox
+INFO   | jvm 1    | main    | 2014/01/03 14:54:48.697 | [m[0;33mWARN  [Thread-39] [192.168.1.30] [CmsListBrowserSectionComponent] Section groupbox is not an instance of LockableGroupbox
+INFO   | jvm 1    | main    | 2014/01/03 14:54:48.699 | [m[0;33mWARN  [Thread-39] [192.168.1.30] [CmsListBrowserSectionComponent] Section groupbox is not an instance of LockableGroupbox
+INFO   | jvm 1    | main    | 2014/01/03 14:54:48.701 | [m[0;33mWARN  [Thread-39] [192.168.1.30] [CmsListBrowserSectionComponent] Section groupbox is not an instance of LockableGroupbox
+INFO   | jvm 1    | main    | 2014/01/03 14:54:48.714 | [m[0;33mWARN  [Thread-39] [192.168.1.30] [CmsListBrowserSectionComponent] Section groupbox is not an instance of LockableGroupbox
+INFO   | jvm 1    | main    | 2014/01/03 14:54:48.716 | [m[0;33mWARN  [Thread-39] [192.168.1.30] [CmsListBrowserSectionComponent] Section groupbox is not an instance of LockableGroupbox
+INFO   | jvm 1    | main    | 2014/01/03 14:54:48.718 | [m[0;33mWARN  [Thread-39] [192.168.1.30] [CmsListBrowserSectionComponent] Section groupbox is not an instance of LockableGroupbox
+INFO   | jvm 1    | main    | 2014/01/03 14:54:49.221 | [m
+INFO   | jvm 1    | main    | 2014/01/03 14:54:50.224 | [0;33mWARN  [Thread-32] [192.168.1.30] [AbstractNavigationAreaModel] SavedQueryUserRightsService interface was initially intended for use in product cockpit and print cockpit.
+INFO   | jvm 1    | main    | 2014/01/03 14:54:50.331 | [m[0;33mWARN  [Thread-32] [192.168.1.30] [AbstractNavigationAreaModel] SavedQueryUserRightsService interface was initially intended for use in product cockpit and print cockpit.
+INFO   | jvm 1    | main    | 2014/01/03 14:54:50.334 | [m[0;33mWARN  [Thread-32] [192.168.1.30] [AbstractNavigationAreaModel] SavedQueryUserRightsService interface was initially intended for use in product cockpit and print cockpit.
+INFO   | jvm 1    | main    | 2014/01/03 14:54:50.337 | [m[0;33mWARN  [Thread-32] [192.168.1.30] [AbstractNavigationAreaModel] SavedQueryUserRightsService interface was initially intended for use in product cockpit and print cockpit.
+INFO   | jvm 1    | main    | 2014/01/03 14:54:50.340 | [m[0;33mWARN  [Thread-32] [192.168.1.30] [AbstractNavigationAreaModel] SavedQueryUserRightsService interface was initially intended for use in product cockpit and print cockpit.
+INFO   | jvm 1    | main    | 2014/01/03 14:54:50.342 | [m[0;33mWARN  [Thread-32] [192.168.1.30] [AbstractNavigationAreaModel] SavedQueryUserRightsService interface was initially intended for use in product cockpit and print cockpit.
+INFO   | jvm 1    | main    | 2014/01/03 14:54:50.344 | [m[0;32mINFO  [Thread-32] [192.168.1.30] [CmsPageBrowserModel] Structure view is available for current page.
+INFO   | jvm 1    | main    | 2014/01/03 14:54:50.445 | [m[0;33mWARN  [Thread-39] [192.168.1.30] [CmsListBrowserSectionComponent] Section groupbox is not an instance of LockableGroupbox
+INFO   | jvm 1    | main    | 2014/01/03 14:54:50.447 | [m[0;33mWARN  [Thread-32] [192.168.1.30] [CmsListBrowserSectionComponent] Section groupbox is not an instance of LockableGroupbox
+INFO   | jvm 1    | main    | 2014/01/03 14:54:50.449 | [m[0;33mWARN  [Thread-39] [192.168.1.30] [CmsListBrowserSectionComponent] Section groupbox is not an instance of LockableGroupbox
+INFO   | jvm 1    | main    | 2014/01/03 14:54:50.451 | [m[0;33mWARN  [Thread-32] [192.168.1.30] [CmsListBrowserSectionComponent] Section groupbox is not an instance of LockableGroupbox
+INFO   | jvm 1    | main    | 2014/01/03 14:54:50.553 | [m[0;33mWARN  [Thread-39] [192.168.1.30] [CmsListBrowserSectionComponent] Section groupbox is not an instance of LockableGroupbox
+INFO   | jvm 1    | main    | 2014/01/03 14:54:50.555 | [m[0;33mWARN  [Thread-32] [192.168.1.30] [CmsListBrowserSectionComponent] Section groupbox is not an instance of LockableGroupbox
+INFO   | jvm 1    | main    | 2014/01/03 14:54:50.556 | [m[0;33mWARN  [Thread-39] [192.168.1.30] [CmsListBrowserSectionComponent] Section groupbox is not an instance of LockableGroupbox
+INFO   | jvm 1    | main    | 2014/01/03 14:54:50.558 | [m[0;33mWARN  [Thread-32] [192.168.1.30] [CmsListBrowserSectionComponent] Section groupbox is not an instance of LockableGroupbox
+INFO   | jvm 1    | main    | 2014/01/03 14:54:50.560 | [m[0;33mWARN  [Thread-39] [192.168.1.30] [CmsListBrowserSectionComponent] Section groupbox is not an instance of LockableGroupbox
+INFO   | jvm 1    | main    | 2014/01/03 14:54:50.663 | [m[0;33mWARN  [Thread-32] [192.168.1.30] [CmsListBrowserSectionComponent] Section groupbox is not an instance of LockableGroupbox
+INFO   | jvm 1    | main    | 2014/01/03 14:54:50.668 | [m[0;33mWARN  [Thread-39] [192.168.1.30] [CmsListBrowserSectionComponent] Section groupbox is not an instance of LockableGroupbox
+INFO   | jvm 1    | main    | 2014/01/03 14:54:50.672 | [m[0;33mWARN  [Thread-32] [192.168.1.30] [CmsListBrowserSectionComponent] Section groupbox is not an instance of LockableGroupbox
+INFO   | jvm 1    | main    | 2014/01/03 14:54:51.174 | [m
+INFO   | jvm 1    | main    | 2014/01/03 14:55:10.102 | [0;33mWARN  [Thread-39] [192.168.1.30] [CmsListBrowserSectionComponent] Section groupbox is not an instance of LockableGroupbox
+INFO   | jvm 1    | main    | 2014/01/03 14:55:10.605 | [m
+INFO   | jvm 1    | main    | 2014/01/03 14:55:38.444 | [0;31mERROR [Thread-39] [192.168.1.30] [BaseUICockpitPerspective] Could not dispatch cockpit event 'ItemChangedEvent[source='de.hybris.platform.cockpit.session.impl.EditorArea@6653ef98']'.
+INFO   | jvm 1    | main    | 2014/01/03 14:55:38.446 | [morg.zkoss.zk.ui.UiException: You cannot access components belong to other desktop
+INFO   | jvm 1    | main    | 2014/01/03 14:55:38.447 | 	at org.zkoss.zk.ui.AbstractComponent.checkDetach(AbstractComponent.java:500)
+INFO   | jvm 1    | main    | 2014/01/03 14:55:38.448 | 	at org.zkoss.zk.ui.AbstractComponent.checkParentChild(AbstractComponent.java:954)
+INFO   | jvm 1    | main    | 2014/01/03 14:55:38.448 | 	at org.zkoss.zk.ui.AbstractComponent.setParent(AbstractComponent.java:810)
+INFO   | jvm 1    | main    | 2014/01/03 14:55:38.449 | 	at org.zkoss.zk.ui.AbstractComponent.removeChild(AbstractComponent.java:1060)
+INFO   | jvm 1    | main    | 2014/01/03 14:55:38.450 | 	at org.zkoss.zk.ui.AbstractComponent$ChildIter.remove(AbstractComponent.java:1952)
+INFO   | jvm 1    | main    | 2014/01/03 14:55:38.451 | 	at java.util.AbstractList.removeRange(AbstractList.java:571)
+INFO   | jvm 1    | main    | 2014/01/03 14:55:38.452 | 	at java.util.AbstractList.clear(AbstractList.java:234)
+INFO   | jvm 1    | main    | 2014/01/03 14:55:38.453 | 	at de.hybris.platform.cockpit.components.contentbrowser.CaptionBrowserComponent.updateLabels(CaptionBrowserComponent.java:123)
+INFO   | jvm 1    | main    | 2014/01/03 14:55:38.455 | 	at de.hybris.platform.cockpit.components.contentbrowser.CaptionBrowserComponent.updateItem(CaptionBrowserComponent.java:110)
+INFO   | jvm 1    | main    | 2014/01/03 14:55:38.457 | 	at de.hybris.platform.cockpit.components.contentbrowser.DefaultAdvancedContentBrowser.updateItem(DefaultAdvancedContentBrowser.java:325)
+INFO   | jvm 1    | main    | 2014/01/03 14:55:38.458 | 	at de.hybris.platform.cockpit.session.impl.AbstractBrowserArea.onCockpitEvent(AbstractBrowserArea.java:1956)
+INFO   | jvm 1    | main    | 2014/01/03 14:55:38.460 | 	at de.hybris.platform.cmscockpit.session.impl.LiveEditBrowserArea.onCockpitEvent(LiveEditBrowserArea.java:224)
+INFO   | jvm 1    | main    | 2014/01/03 14:55:38.462 | 	at de.hybris.merchandise.cockpits.cmscockpit.session.impl.DefaultLiveEditBrowserArea.onCockpitEvent(DefaultLiveEditBrowserArea.java:224)
+INFO   | jvm 1    | main    | 2014/01/03 14:55:38.463 | 	at de.hybris.platform.cockpit.session.impl.BaseUICockpitPerspective.onCockpitEvent(BaseUICockpitPerspective.java:820)
+INFO   | jvm 1    | main    | 2014/01/03 14:55:38.465 | 	at de.hybris.platform.cockpit.session.impl.UISessionImpl$1.onEvent(UISessionImpl.java:132)
+INFO   | jvm 1    | main    | 2014/01/03 14:55:38.466 | 	at org.zkoss.zk.ui.impl.EventProcessor.process0(EventProcessor.java:197)
+INFO   | jvm 1    | main    | 2014/01/03 14:55:38.467 | 	at org.zkoss.zk.ui.impl.EventProcessor.process(EventProcessor.java:141)
+INFO   | jvm 1    | main    | 2014/01/03 14:55:38.467 | 	at org.zkoss.zk.ui.impl.EventProcessingThreadImpl.process0(EventProcessingThreadImpl.java:519)
+INFO   | jvm 1    | main    | 2014/01/03 14:55:38.469 | 	at org.zkoss.zk.ui.impl.EventProcessingThreadImpl.run(EventProcessingThreadImpl.java:446)
+INFO   | jvm 1    | main    | 2014/01/03 14:55:38.470 | [0;33mWARN  [Thread-39] [192.168.1.30] [AbstractBrowserArea] Can not update browser area. Reason: Browser area has not been initialized yet.
+INFO   | jvm 1    | main    | 2014/01/03 14:55:38.972 | [m
+INFO   | jvm 1    | main    | 2014/01/03 15:02:15.097 | [0;32mINFO  [hybrisHTTP20] [192.168.1.30] [JaloSession] transfering session to user admin: forced to switch currency to EUR
+INFO   | jvm 1    | main    | 2014/01/03 15:02:15.600 | [m
+INFO   | jvm 1    | main    | 2014/01/03 15:06:22.921 | [0;33mWARN  [hybrisHTTP16] [192.168.1.30] [DefaultFindDeliveryCostStrategy] Could not find deliveryCost for order [00002000] due to : null... skipping!
+INFO   | jvm 1    | main    | 2014/01/03 15:06:22.923 | [m[0;33mWARN  [hybrisHTTP16] [192.168.1.30] [DefaultFindPaymentCostStrategy] Could not find paymentCost for order [00002000] due to : null... skipping!
+INFO   | jvm 1    | main    | 2014/01/03 15:06:23.425 | [m
+INFO   | jvm 1    | main    | 2014/01/03 15:27:00.446 | [0;33mWARN  [hybrisHTTP22] [192.168.1.30] [DefaultFindDeliveryCostStrategy] Could not find deliveryCost for order [00002000] due to : null... skipping!
+INFO   | jvm 1    | main    | 2014/01/03 15:27:00.447 | [m[0;33mWARN  [hybrisHTTP22] [192.168.1.30] [DefaultFindPaymentCostStrategy] Could not find paymentCost for order [00002000] due to : null... skipping!
+INFO   | jvm 1    | main    | 2014/01/03 15:27:00.950 | [m

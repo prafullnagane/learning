@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<testclasses>
+  <gridfsstorage>
+    <testclass>de.hybris.platform.gridfs.media.storage.GridFSMediaStorageCleanerTest</testclass>
+    <testclass>de.hybris.platform.gridfs.media.storage.GridFSMediaStorageStrategyTest</testclass>
+  </gridfsstorage>
+</testclasses>

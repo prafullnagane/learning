@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<testclasses>
+  <addonsupport>
+    <testclass>de.hybris.platform.addonsupport.jalo.AddonsupportTest</testclass>
+  </addonsupport>
+</testclasses>

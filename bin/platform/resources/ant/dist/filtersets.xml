@@ -1,0 +1,139 @@
+<project name="distfiltersets">
+
+	<patternset id="extension.filter">
+		<exclude name="**/.svn/**" />
+		<exclude name="**/external-dependencies.xml" />
+		<exclude name="**/*-testclasses.xml" />
+		<exclude name="**/gensrc/**" />
+		<exclude name="*.log" />
+		<exclude name="build.xml" />
+		<exclude name="doc/*-sources.jar" />
+		<exclude name="doc/*-src.zip" />
+		<exclude name="eclipsebin/**" />
+		<exclude name="extensioninfo.xsd" />
+		<exclude name="hmc/resources/hmc.xsd" />
+		<exclude name="platformhome.properties" />
+		<exclude name="resources-lang/**" />
+		<exclude name="resources/beans.xsd" />
+		<exclude name="resources/confidential" />
+		<exclude name="resources/cybs.properties" />
+		<exclude name="resources/items.xsd" />
+		<exclude name="resources/security/thertz.p12" />
+		<exclude name="temp/**" />
+		<exclude name="tutorials/**" />
+		<exclude name="workspace/**" />
+	</patternset>
+
+	<patternset id="extension.binary.filter">
+		<patternset refid="extension.filter" />
+
+		<!-- root files -->
+		<exclude name=".externalToolBuilders/HybrisCodeGeneration.launch" />
+		<exclude name=".project" />
+
+		<!-- excluded doc files -->
+		<exclude name="doc/install.xml" />
+		<exclude name="doc/resources/*.mdl" />
+
+		<!-- exclude src folders -->
+		<exclude name="web/src/**" />
+		<exclude name="src/**" />
+		<exclude name="hmc/src/**" />
+		
+		<!-- exclude backoffice folders -->
+		<exclude name="backoffice/classes/**" />
+		<exclude name="backoffice/resources/**" />
+		<exclude name="backoffice/src/**" />
+
+		<!-- exculde root classes folder -->
+		<exclude name="classes/**" />
+
+		<!-- specials for web folder -->
+		<exclude name="web/webroot/WEB-INF/lib/**/*hmc.jar" />
+		<exclude name="web/webroot/ext/**" />
+	</patternset>
+
+	<patternset id="extension.source.filter">
+		<patternset refid="extension.filter" />
+		<exclude name="bin/**" />
+
+		<!-- exclude all classes folders -->
+		<exclude name="**/classes/**" />
+		
+		<!-- exclude backoffice folders -->
+		<exclude name="backoffice/classes/**" />
+		<exclude name="resources/backoffice/*bof.jar" />
+
+		<exclude name="hmc/bin/**" />
+	</patternset>
+
+	<patternset id="platform.filter">
+		<!-- hybris code generator and eclipse settings -->
+		<include name=".externalToolBuilders/HybrisCodeGeneration.launch" />
+		<include name=".externalToolBuilders/org.eclipse*" />
+		<include name=".settings/org.eclipse*" />
+		<include name=".settings/org.springframework*" />
+
+		<!-- ant -->
+		<include name="apache-ant-*/**" />
+
+		<!-- bootstrap -->
+		<include name="bootstrap/bin/y*.jar" />
+		<include name="bootstrap/resources/y*.properties" />
+		<include name="bootstrap/resources/pojo/**" />
+
+		<!-- yempty, could we move it out? or treat it as an extension? -->
+		<include name="extgen/**" />
+
+		<!-- platform libraries -->
+		<include name="lib/**/*.jar" />
+
+		<!-- resources -->
+		<include name="resources/**/*" />
+
+		<!-- embedded tomcat -->
+		<include name="tomcat-*/**" />
+		<exclude name="tomcat-*/bin/velocity.log" />
+		<exclude name="tomcat-*/bin/wrapper.log" />
+		<exclude name="tomcat-*/conf/server.xml" />
+		<exclude name="tomcat-*/conf/wrapper-debug.conf" />
+		<exclude name="tomcat-*/conf/wrapper-jprofiler.conf" />
+		<exclude name="tomcat-*/conf/wrapper-yourkitprofiler.conf" />
+		<exclude name="tomcat-*/conf/wrapper.conf" />
+		<exclude name="tomcat-*/logs/**" />
+		<exclude name="tomcat-*/lib/y*" />
+		<exclude name="tomcat-*/temp/**" />
+		<exclude name="tomcat-*/webapps/**" />
+		<exclude name="tomcat-*/work/**" />
+
+		<!-- embedded tcserver -->
+		<include name="tcServer-6*/**" />
+		<exclude name="tcServer-6*/bash_completion/**" />
+		<exclude name="tcServer-6*/licenses/**" />
+
+		<!-- root files -->
+		<!-- will be generated during dist process
+		<include name=".classpath" />
+		<include name="build.number" />
+		<include name="extensions.xml" />
+		 -->
+		<include name=".fbprefs" />
+		<include name=".pmd" />
+		<include name=".project" />
+		<include name=".ruleset" />
+		<include name="build.xml" />
+		<include name="env.properties" />
+		<include name="hybrisadmin.*" />
+		<include name="hybrisserver.*" />
+		<include name="tcserver.*" />
+		<include name="project.properties" />
+		<include name="setantenv.*" />
+		<include name="tenant_*.properties" />
+
+		<!-- general excludes -->
+		<exclude name="**/REDEPLOY" />
+		<exclude name="**/build.number" />
+		<exclude name="**/docgen/**" />
+		<exclude name="**/extgen/temp/**" />
+	</patternset>
+</project>

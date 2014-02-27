@@ -1,0 +1,11 @@
+#Wed, 27 Mar 2013 15:29:13 +0100
+#Ant properties
+#Wed Mar 27 15:29:13 CET 2013
+builddate=20130327 1523
+description=hmc
+name=hmc
+vendor=hybris
+version=5.0.0.0
+
+revision=68171
+svnurl=https\://svn.hybris.com/ebusiness/branches/5.0.0/bin/ext-platform/hmc

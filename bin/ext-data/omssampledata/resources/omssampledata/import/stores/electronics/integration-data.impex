@@ -1,0 +1,130 @@
+$siteUid=electronics
+$paymentProvider=cisCybersource
+
+
+INSERT_UPDATE BaseStore; uid[unique=true];submitorderprocesscode;externaltaxenabled;net;taxGroup(code);
+;$siteUid;oms-submitorder-process;true;true;;
+
+INSERT_UPDATE OndemandTenantPreference;tenantId[unique=true]
+;hybristest
+
+INSERT_UPDATE OndemandTenantBaseStorePreference;baseStore(uid)[unique=true];ondemandTenantPreference(tenantId)[unique=true];atsFormula
+;$siteUid;hybristest;ON_HAND;
+
+#
+# Modify the base stores delivery countries.
+#
+$supportedAddressVerificationCountries=CA,CN,DE,GB,JP,US
+$deliveryCountries=$supportedAddressVerificationCountries
+
+# Base Store
+INSERT_UPDATE BaseStore;uid[unique=true];deliveryCountries(isocode);paymentProvider;
+;$siteUid;$deliveryCountries;$paymentProvider;
+
+# update pos addresses to be in the use
+
+INSERT_UPDATE PointOfService;name[unique=true];address(&addrID)
+;Nakano;Nakano
+;Shinbashi;Shinbashi
+;Koto;Koto
+;Misato;Misato
+;Matsudo;Matsudo
+;Ichikawa;Ichikawa
+;Choshi;Choshi
+;Chiba;Chiba
+;Yokosuka;Yokosuka
+;Tokio Cerulean Tower Tokyu Hotel;Tokio Cerulean Tower Tokyu Hotel
+;Tokio Flexstay Nippori Inn;Tokio Flexstay Nippori Inn
+;Tokio Hotel Metropolitan Tokyo;Tokio Hotel Metropolitan Tokyo
+;Tokio Dormy Inn Tokyo Hatchobori;Tokio Dormy Inn Tokyo Hatchobori
+;Tokio Park Hotel Tokyo;Tokio Park Hotel Tokyo
+;Yokohama Sakuragicho Washington Hotel;Yokohama Sakuragicho Washington Hotel
+;Yokohama Shin Yokohama Prince Hotel;Yokohama Shin Yokohama Prince Hotel
+;Yokohama Comfort Hotel Yokohama Kannai;Yokohama Comfort Hotel Yokohama Kannai
+;Yokohama Hotel New Grand;Yokohama Hotel New Grand
+;Yokohama Hotel JAL City Kannai Yokohama;Yokohama Hotel JAL City Kannai Yokohama
+;Osaka Hilton Osaka Hotel;Osaka Hilton Osaka Hotel
+;Osaka Crowne Plaza Hotel Ana Osaka;Osaka Crowne Plaza Hotel Ana Osaka
+;Osaka Ramada Osaka;Osaka Ramada Osaka
+;Osaka Cross Hotel Osaka;Osaka Cross Hotel Osaka
+;Osaka Best Western Hotel Fino Osaka Shinsaibashi;Osaka Best Western Hotel Fino Osaka Shinsaibashi
+;Nagoya Hilton Nagoya Hotel;Nagoya Hilton Nagoya Hotel
+;Nagoya Marriott Nagoya;Nagoya Marriott Nagoya
+;Nagoya Crowne Plaza Ana Grand Court Nagoya;Nagoya Crowne Plaza Ana Grand Court Nagoya
+;Nagoya The Westin Nagoya Castle;Nagoya The Westin Nagoya Castle
+;Nagoya Royal Park Inn Nagoya;Nagoya Royal Park Inn Nagoya
+;Sapporo Ana Hotel Sapporo;Sapporo Ana Hotel Sapporo
+;Sapporo Best Western Hotel Sapporo Nakajima Koen;Sapporo Best Western Hotel Sapporo Nakajima Koen
+;Sapporo Sheraton Sapporo Hotel;Sapporo Sheraton Sapporo Hotel
+;Sapporo Hotel Resol Trinity Sapporo;Sapporo Hotel Resol Trinity Sapporo
+;Sapporo Hotel Sunroute Sapporo;Sapporo Hotel Sunroute Sapporo
+;Kobe Hotel Monterey Amalie;Kobe Hotel Monterey Amalie
+;Kobe Hotel Monterey Kobe;Kobe Hotel Monterey Kobe
+;Kobe Sannomiya Terminal Hotel;Kobe Sannomiya Terminal Hotel
+;Kobe Bay Sheraton Hotel and Towers;Kobe Bay Sheraton Hotel and Towers
+;Kobe the b;Kobe the b
+;Fukuoka Hotel Monterey La Soeur Fukuoka;Fukuoka Hotel Monterey La Soeur Fukuoka
+;Fukuoka Hilton Fukuoka Sea Hawk;Fukuoka Hilton Fukuoka Sea Hawk
+;Fukuoka Best Western Fukuoka Nakasu Inn;Fukuoka Best Western Fukuoka Nakasu Inn
+;Fukuoka Canal City Fukuoka Washington Hotel;Fukuoka Canal City Fukuoka Washington Hotel
+;Fukuoka Hotel Nikko Fukuoka;Fukuoka Hotel Nikko Fukuoka
+;Kawasaki Mets Kawasaki Hotel;Kawasaki Mets Kawasaki Hotel
+;Kawasaki Mets Mizonokuchi Hotel;Kawasaki Mets Mizonokuchi Hotel
+;Kawasaki Hotel Sunroute Kawasaki;Kawasaki Hotel Sunroute Kawasaki
+;Kawasaki Pearl Hotel Kawasaki;Kawasaki Pearl Hotel Kawasaki
+;Kawasaki Grand Hotel;Kawasaki Grand Hotel
+
+INSERT_UPDATE Address;&addrID;streetname;streetnumber;region(isocode);postalcode;town;country(isocode);phone1;owner(PointOfService.name)[unique=true];company
+;Nakano;1700 Broadway ;;US-NY;10019; New York ;	US	;2125551212;Nakano;Nakano Company
+;Shinbashi;1700 Broadway ;;US-NY;10019; New York ;	US	;2125551212;Shinbashi;Shinbashi Company
+;Koto;1700 Broadway ;;US-NY;10019; New York ;	US	;2125551212;Koto;Koto Company
+;Misato;1700 Broadway ;;US-NY;10019; New York ;	US	;2125551212;Misato;Misato Company
+;Matsudo;1700 Broadway ;;US-NY;10019; New York ;	US	;2125551212;Matsudo;Matsudo Company
+;Ichikawa;1700 Broadway ;;US-NY;10019; New York ;	US	;2125551212;Ichikawa;Ichikawa Company
+;Choshi;1700 Broadway ;;US-NY;10019; New York ;	US	;2125551212;Choshi;Choshi Company
+;Chiba;1700 Broadway ;;US-NY;10019; New York ;	US	;2125551212;Chiba;Chiba Company
+;Yokosuka;1700 Broadway ;;US-NY;10019; New York ;	US	;2125551212;Yokosuka;Yokosuka Company
+;Tokio Cerulean Tower Tokyu Hotel;1700 Broadway ;;US-NY;10019; New York ;	US	;2125551212;Tokio Cerulean Tower Tokyu Hotel;Tokio Cerulean Tower Tokyu Hotel Company
+;Tokio Flexstay Nippori Inn;1700 Broadway ;;US-NY;10019; New York ;	US	;2125551212;Tokio Flexstay Nippori Inn;Tokio Flexstay Nippori Inn Company
+;Tokio Hotel Metropolitan Tokyo;1700 Broadway ;;US-NY;10019; New York ;	US	;2125551212;Tokio Hotel Metropolitan Tokyo;Tokio Hotel Metropolitan Tokyo Company
+;Tokio Dormy Inn Tokyo Hatchobori;1700 Broadway ;;US-NY;10019; New York ;	US	;2125551212;Tokio Dormy Inn Tokyo Hatchobori;Tokio Dormy Inn Tokyo Hatchobori Company
+;Tokio Park Hotel Tokyo;1700 Broadway ;;US-NY;10019; New York ;	US	;2125551212;Tokio Park Hotel Tokyo;Tokio Park Hotel Tokyo Company
+;Yokohama Sakuragicho Washington Hotel;1700 Broadway ;;US-NY;10019; New York ;	US	;2125551212;Yokohama Sakuragicho Washington Hotel;Yokohama Sakuragicho Washington Hotel Company
+;Yokohama Shin Yokohama Prince Hotel;1700 Broadway ;;US-NY;10019; New York ;	US	;2125551212;Yokohama Shin Yokohama Prince Hotel;Yokohama Shin Yokohama Prince Hotel Company
+;Yokohama Comfort Hotel Yokohama Kannai;1700 Broadway ;;US-NY;10019; New York ;	US	;2125551212;Yokohama Comfort Hotel Yokohama Kannai;Yokohama Comfort Hotel Yokohama Kannai Company
+;Yokohama Hotel New Grand;1700 Broadway ;;US-NY;10019; New York ;	US	;2125551212;Yokohama Hotel New Grand;Yokohama Hotel New Grand Company
+;Yokohama Hotel JAL City Kannai Yokohama;1700 Broadway ;;US-NY;10019; New York ;	US	;2125551212;Yokohama Hotel JAL City Kannai Yokohama;Yokohama Hotel JAL City Kannai Yokohama Company
+;Osaka Hilton Osaka Hotel;1700 Broadway ;;US-NY;10019; New York ;	US	;2125551212;Osaka Hilton Osaka Hotel;Osaka Hilton Osaka Hotel Company
+;Osaka Crowne Plaza Hotel Ana Osaka;1700 Broadway ;;US-NY;10019; New York ;	US	;2125551212;Osaka Crowne Plaza Hotel Ana Osaka;Osaka Crowne Plaza Hotel Ana Osaka Company
+;Osaka Ramada Osaka;1700 Broadway ;;US-NY;10019; New York ;	US	;2125551212;Osaka Ramada Osaka;Osaka Ramada Osaka Company
+;Osaka Cross Hotel Osaka;1700 Broadway ;;US-NY;10019; New York ;	US	;2125551212;Osaka Cross Hotel Osaka;Osaka Cross Hotel Osaka Company
+;Osaka Best Western Hotel Fino Osaka Shinsaibashi;1700 Broadway ;;US-NY;10019; New York ;	US	;2125551212;Osaka Best Western Hotel Fino Osaka Shinsaibashi;Osaka Best Western Hotel Fino Osaka Shinsaibashi Company
+;Nagoya Hilton Nagoya Hotel;1700 Broadway ;;US-NY;10019; New York ;	US	;2125551212;Nagoya Hilton Nagoya Hotel;Nagoya Hilton Nagoya Hotel Company
+;Nagoya Marriott Nagoya;1700 Broadway ;;US-NY;10019; New York ;	US	;2125551212;Nagoya Marriott Nagoya;Nagoya Marriott Nagoya Company
+;Nagoya Crowne Plaza Ana Grand Court Nagoya;1700 Broadway ;;US-NY;10019; New York ;	US	;2125551212;Nagoya Crowne Plaza Ana Grand Court Nagoya;Nagoya Crowne Plaza Ana Grand Court Nagoya Company
+;Nagoya The Westin Nagoya Castle;1700 Broadway ;;US-NY;10019; New York ;	US	;2125551212;Nagoya The Westin Nagoya Castle;Nagoya The Westin Nagoya Castle Company
+;Nagoya Royal Park Inn Nagoya;1700 Broadway ;;US-NY;10019; New York ;	US	;2125551212;Nagoya Royal Park Inn Nagoya;Nagoya Royal Park Inn Nagoya Company
+;Sapporo Ana Hotel Sapporo;1700 Broadway ;;US-NY;10019; New York ;	US	;2125551212;Sapporo Ana Hotel Sapporo;Sapporo Ana Hotel Sapporo Company
+;Sapporo Best Western Hotel Sapporo Nakajima Koen;1700 Broadway ;;US-NY;10019; New York ;	US	;2125551212;Sapporo Best Western Hotel Sapporo Nakajima Koen;Sapporo Best Western Hotel Sapporo Nakajima Koen Company
+;Sapporo Sheraton Sapporo Hotel;1700 Broadway ;;US-NY;10019; New York ;	US	;2125551212;Sapporo Sheraton Sapporo Hotel;Sapporo Sheraton Sapporo Hotel Company
+;Sapporo Hotel Resol Trinity Sapporo;1700 Broadway ;;US-NY;10019; New York ;	US	;2125551212;Sapporo Hotel Resol Trinity Sapporo;Sapporo Hotel Resol Trinity Sapporo Company
+;Sapporo Hotel Sunroute Sapporo;1700 Broadway ;;US-NY;10019; New York ;	US	;2125551212;Sapporo Hotel Sunroute Sapporo;Sapporo Hotel Sunroute Sapporo Company
+;Kobe Hotel Monterey Amalie;1700 Broadway ;;US-NY;10019; New York ;	US	;2125551212;Kobe Hotel Monterey Amalie;Kobe Hotel Monterey Amalie Company
+;Kobe Hotel Monterey Kobe;1700 Broadway ;;US-NY;10019; New York ;	US	;2125551212;Kobe Hotel Monterey Kobe;Kobe Hotel Monterey Kobe Company
+;Kobe Sannomiya Terminal Hotel;1700 Broadway ;;US-NY;10019; New York ;	US	;2125551212;Kobe Sannomiya Terminal Hotel;Kobe Sannomiya Terminal Hotel Company
+;Kobe Bay Sheraton Hotel and Towers;1700 Broadway ;;US-NY;10019; New York ;	US	;2125551212;Kobe Bay Sheraton Hotel and Towers;Kobe Bay Sheraton Hotel and Towers Company
+;Kobe the b;1700 Broadway ;;US-NY;10019; New York ;	US	;2125551212;Kobe the b;Kobe the b Company
+;Fukuoka Hotel Monterey La Soeur Fukuoka;1700 Broadway ;;US-NY;10019; New York ;	US	;2125551212;Fukuoka Hotel Monterey La Soeur Fukuoka;Fukuoka Hotel Monterey La Soeur Fukuoka Company
+;Fukuoka Hilton Fukuoka Sea Hawk;1700 Broadway ;;US-NY;10019; New York ;	US	;2125551212;Fukuoka Hilton Fukuoka Sea Hawk;Fukuoka Hilton Fukuoka Sea Hawk Company
+;Fukuoka Best Western Fukuoka Nakasu Inn;1700 Broadway ;;US-NY;10019; New York ;	US	;2125551212;Fukuoka Best Western Fukuoka Nakasu Inn;Fukuoka Best Western Fukuoka Nakasu Inn Company
+;Fukuoka Canal City Fukuoka Washington Hotel;1700 Broadway ;;US-NY;10019; New York ;	US	;2125551212;Fukuoka Canal City Fukuoka Washington Hotel;Fukuoka Canal City Fukuoka Washington Hotel Company
+;Fukuoka Hotel Nikko Fukuoka;1700 Broadway ;;US-NY;10019; New York ;	US	;2125551212;Fukuoka Hotel Nikko Fukuoka;Fukuoka Hotel Nikko Fukuoka Company
+;Kawasaki Mets Kawasaki Hotel;1700 Broadway ;;US-NY;10019; New York ;	US	;2125551212;Kawasaki Mets Kawasaki Hotel;Kawasaki Mets Kawasaki Hotel Company
+;Kawasaki Mets Mizonokuchi Hotel;1700 Broadway ;;US-NY;10019; New York ;	US	;2125551212;Kawasaki Mets Mizonokuchi Hotel;Kawasaki Mets Mizonokuchi Hotel Company
+;Kawasaki Hotel Sunroute Kawasaki;1700 Broadway ;;US-NY;10019; New York ;	US	;2125551212;Kawasaki Hotel Sunroute Kawasaki;Kawasaki Hotel Sunroute Kawasaki Company
+;Kawasaki Pearl Hotel Kawasaki;1700 Broadway ;;US-NY;10019; New York ;	US	;2125551212;Kawasaki Pearl Hotel Kawasaki;Kawasaki Pearl Hotel Kawasaki Company
+;Kawasaki Grand Hotel;1700 Broadway ;;US-NY;10019; New York ;	US	;2125551212;Kawasaki Grand Hotel;Kawasaki Grand Hotel Company
+;warehouse_s;1700 Broadway ;;US-NY;10019; New York ;	US	;2125551212;warehouse_s;Warehouse South Company
+;warehouse_n;1700 Broadway ;;US-NY;10019; New York ;	US	;2125551212;warehouse_n;Warehouse North Company
+;warehouse_e;1700 Broadway ;;US-NY;10019; New York ;	US	;2125551212;warehouse_e;Warehouse East Company
+;warehouse_w;1700 Broadway ;;US-NY;10019; New York ;	US	;2125551212;warehouse_w;Warehouse West Company

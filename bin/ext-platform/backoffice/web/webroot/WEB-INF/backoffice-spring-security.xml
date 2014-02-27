@@ -1,0 +1,41 @@
+<beans:beans xmlns="http://www.springframework.org/schema/security"
+	xmlns:beans="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+                    http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+                    http://www.springframework.org/schema/security 
+                    http://www.springframework.org/schema/security/spring-security-3.1.xsd">
+
+	<beans:import resource="classpath:/META-INF/backoffice-core-spring-security.xml" />
+
+	<http use-expressions="true" security="none" pattern="/zkau/**" />
+	<http use-expressions="true" security="none" pattern="/login.zul" />
+	<http use-expressions="true" security="none" pattern="/cng/**" />
+	<http use-expressions="true" security="none" pattern="/css/**" />
+	<http use-expressions="true">
+		<intercept-url pattern="/admin/**" access="hasRole('ROLE_ADMINGROUP')" />
+		<intercept-url pattern="/**" access="isAuthenticated()" />
+		<form-login authentication-details-source-ref="backofficeAuthenticationDetailsSource"
+			always-use-default-target="false" 
+			login-page="/login.zul"
+			authentication-success-handler-ref="backofficeAuthenticationSuccessHandler"
+			authentication-failure-url="/login.zul?login_error=1" />
+		<logout />
+	</http>
+
+	<authentication-manager>
+		<authentication-provider ref="backofficeAuthenticationProvider" />
+	</authentication-manager>
+
+	<beans:bean id="fixation"
+		class="de.hybris.platform.servicelayer.security.spring.HybrisSessionFixationProtectionStrategy" />
+
+	<!-- <bean id="rememberMeServices" class="de.hybris.platform.spring.security.CoreRememberMeService"> -->
+	<!-- <property name="userDetailsService" ref="coreUserDetailsService" /> -->
+	<!-- <property name="key" value="backoffice" /> -->
+	<!-- <property name="cookieName" value="LoginToken" /> -->
+	<!-- </bean> -->
+
+	<beans:bean id="loginFormModel" class="java.util.concurrent.ConcurrentHashMap"
+		scope="session" />
+
+</beans:beans>  

@@ -1,0 +1,38 @@
+# Do not translate; Do not translate; To be translated; To be translated;
+# ImpEx for Importing (brazilian) Portuguese Localisations for the MCC;;;;
+
+$lang=bp;;;;
+$catalogVersion=catalogVersion(catalog(id[default='Default']),version[default='Online'])[unique=true,default='Default:Online'];;;;
+
+UPDATE Catalog;id[unique=true];Name[lang=$lang];;
+;Default;Catálogo padrão;;
+
+UPDATE CatalogVersion;catalog(id)[unique=true];version[unique=true];languages(isocode)[mode=append];
+;Default;Online;$lang;
+;Default;Staged;$lang;
+
+UPDATE StaticLink;code[unique=true];title[lang=$lang];description[lang=$lang];
+;reportCockpit;Cockpit de relatório;Ativa para criar relatórios complexos, os quais são totalmente personalizáveis e exibíveis com flexibilidade.;
+;admincockpit;Cockpit de administração;administração do sistema hybris e manipulação de regras de validação.;
+;hmc2;Gerenciamento de usuário e grupo de usuário (hMC);Gerenciamento de usuário flexível e explícito.;
+;hmc;Console de gerenciamento (hMC);Administre todos os componentes de núcleo básico de seu sistema hybris.;
+;hac;Console de administração;Apresentar uma visão geral de ferramentas úteis para administração de sistema.;
+;productcockpit;Cockpit de produto (PCM);Simplifica gerenciamento de catálogo e produto por sua interface de usuário intuitiva e facilita gerenciamento de dados de massa eficiente.;
+;importcockit;Cockpit de importação;Reduzir complexidade de importação e consolidar dados de produto a partir de vários repositórios com uma ferramenta de importação intuitiva e gráfica.;
+#;mam;Servidor DAM hybris (Celum);Caso instalado, vá diretamente para o servidor de gerenciamento de ativo digital hybris , baseado no Celum;
+;hmc3;Ferramentas de marketing (hMC);Gerenciar campanhas de marketing centralmente para todos os canais.;
+;hmc4;Gerenciamento de pedido (hMC);Gerenciar seus pedidos, pagamento e modos de entrega.;
+
+"#% if: !de.hybris.platform.jalo.extension.ExtensionManager.getInstance().isExtensionInstalled(""btgcockpit"")";;;;
+;cmscockpit;Módulo de gerenciamento de conteúdo da internet (WCMS);Criar gerenciar e publicar on-line e conteúdo móvel com uma interface integrada de gerenciamento de conteúdo de internet.;
+#% endif:;;;;
+
+"#% if: de.hybris.platform.jalo.extension.ExtensionManager.getInstance().isExtensionInstalled(""btgcockpit"")";;;;
+;cmscockpit;Cockpit com personalização avançada WCMS;Sistema de publicação de conteúdo da internet para sites de manutenção, incluindo funcionalidades de personalização avançadas para segmentação de cliente.;
+#% endif:;;;;
+
+;cscockpit;Cockpit de serviço do cliente (CS);Serviço de cliente de entrega e suporte de vendas em um UI integrado.;
+;printcockpit;Print Cockpit;Criar publicações de impressão (semi)automaticamente e publicá-las em programas de DTP.;
+;webfrontends;Frontends de internet:;;
+;storetemplate;StoreTemplate;Exemplo de frontend de uma loja da internet, entregue como código fonte.;
+;mobiletemplate;MobileTemplate;Frontend móvel. Atente para o fato de que esse modelo contém 3 diferentes apresentações visuais dependendo da funcionalidade do telefone celular utilizado. As versões são: WAP 1, WAP 2 e HTML5. Visualize no dispositivo móvel adequado.;

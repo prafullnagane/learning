@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<testclasses>
+  <virtualjdbc>
+    <testclass>de.hybris.platform.virtualjdbc.jalo.AbstractVjdbcSqlTest</testclass>
+    <testclass>de.hybris.platform.virtualjdbc.jalo.VjdbcTest</testclass>
+    <testclass>de.hybris.platform.virtualjdbc.jalo.VjdbcSqlHttpTest</testclass>
+    <testclass>de.hybris.platform.virtualjdbc.jalo.AbstractVjdbcTest</testclass>
+    <testclass>de.hybris.platform.virtualjdbc.jalo.VjdbcFlexScopedTest</testclass>
+    <testclass>de.hybris.platform.virtualjdbc.jalo.LoginVjdbcTest</testclass>
+    <testclass>de.hybris.platform.virtualjdbc.jalo.VjdbcConnectionsTest</testclass>
+    <testclass>de.hybris.platform.virtualjdbc.jalo.VjdbcFlexHttpTest</testclass>
+    <testclass>de.hybris.platform.virtualjdbc.jalo.AbstractVjdbcFlexTest</testclass>
+  </virtualjdbc>
+</testclasses>

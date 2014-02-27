@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ [y] hybris Platform
+
+ Copyright (c) 2000-2013 hybris AG
+ All rights reserved.
+
+ This software is the confidential and proprietary information of hybris
+ ("Confidential Information"). You shall not disclose such Confidential
+ Information and shall use it only in accordance with the terms of the
+ license agreement you entered into with hybris.
+-->
+
+<!--
+ Spring bean definitions that should be loaded in the application context
+ of the web application.
+-->
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+			http://www.springframework.org/schema/beans/spring-beans-3.1.xsd">
+
+
+	<!--
+	 cmsPageContextService
+	 Tenant scoped bean to support CMS component rendering.
+	-->
+	<alias alias="cmsPageContextService" name="defaultCMSPageContextService" />
+	<bean id="defaultCMSPageContextService" class="de.hybris.platform.acceleratorcms.services.impl.DefaultCMSPageContextService" scope="tenant">
+		<property name="cmsPreviewService" ref="cmsPreviewService"/>
+		<property name="cmsPageService" ref="cmsPageService"/>
+		<property name="sessionService" ref="sessionService"/>
+		<property name="userService" ref="userService"/>
+	</bean>
+
+
+	<!--
+	 cmsPageRequestContextData
+	 Request scoped spring bean that holds contextual information about the CMS for the current request.
+	-->
+	<alias alias="cmsPageRequestContextData" name="defaultCmsPageRequestContextData" />
+	<bean id="defaultCmsPageRequestContextData" class="de.hybris.platform.acceleratorcms.data.CmsPageRequestContextData" scope="request"/>
+
+
+	<!--
+	 cmsPageContextService
+	 Tenant scoped bean to support CMS component rendering.
+	-->
+	<alias alias="cmsPageSlotComponentService" name="defaultCMSPageSlotComponentService" />
+	<bean id="defaultCMSPageSlotComponentService" class="de.hybris.platform.acceleratorcms.component.slot.impl.DefaultCMSPageSlotComponentService" scope="tenant">
+		<property name="cmsRestrictionService" ref="cmsRestrictionService"/>
+		<property name="cmsContentSlotService" ref="cmsContentSlotService"/>
+		<property name="cmsComponentService" ref="cmsComponentService"/>
+		<property name="cmsComponentRenderer" ref="cmsComponentRendererRegistry"/>
+		<property name="cmsComponentContainerStrategy" ref="cmsComponentContainerStrategyRegistry"/>
+	</bean>
+
+
+	<!--
+	 componentContainerStrategyRegistry
+	 Registry of CMSComponentContainerStrategy for specific component types.
+	-->
+	<alias alias="cmsComponentContainerStrategyRegistry" name="defaultCMSComponentContainerStrategyRegistry" />
+	<bean id="defaultCMSComponentContainerStrategyRegistry" class="de.hybris.platform.acceleratorcms.component.container.impl.DefaultCMSComponentContainerStrategyRegistry" scope="tenant">
+		<property name="strategies">
+			<map>
+				<!--<entry key="" value=""/>-->
+			</map>
+		</property>
+		<property name="defaultCMSComponentContainerStrategy" ref="legacyCMSComponentContainerStrategy"/>
+		<property name="typeService" ref="typeService"/>
+	</bean>
+
+	<!--
+	 legacyCMSComponentContainerStrategy
+	 Strategy that calls the deprecated AbstractCMSComponentContainer.currentCMSComponents
+	-->
+	<alias alias="legacyCMSComponentContainerStrategy" name="defaultLegacyCMSComponentContainerStrategy" />
+	<bean id="defaultLegacyCMSComponentContainerStrategy" class="de.hybris.platform.acceleratorcms.component.container.impl.LegacyCMSComponentContainerStrategy" scope="tenant"/>
+
+	<!--
+	 identityCMSComponentContainerStrategy
+	 Strategy that returns the container itself.
+	-->
+	<alias alias="identityCMSComponentContainerStrategy" name="defaultIdentityCMSComponentContainerStrategy" />
+	<bean id="defaultIdentityCMSComponentContainerStrategy" class="de.hybris.platform.acceleratorcms.component.container.impl.IdentityCMSComponentContainerStrategy" scope="tenant"/>
+
+
+	<!--
+	 cmsComponentRendererRegistry
+	 Registry of CmsComponentRenderers for specific component types.
+	-->
+	<alias alias="cmsComponentRendererRegistry" name="defaultCMSComponentRendererRegistry" />
+	<bean id="defaultCMSComponentRendererRegistry" class="de.hybris.platform.acceleratorcms.component.renderer.impl.DefaultCMSComponentRendererRegistry" scope="tenant">
+		<property name="typeService" ref="typeService"/>
+		<property name="defaultCmsComponentRenderer" ref="genericViewCMSComponentRenderer"/>
+		<property name="renderers">
+			<map>
+				<entry key="CMSParagraphComponent" value-ref="cmsParagraphComponentRenderer"/>
+			</map>
+		</property>
+	</bean>
+
+
+	<!--
+	 cmsComponentRendererRegistry
+	 Registry of CmsComponentRenderers for specific component types.
+	-->
+	<alias alias="genericViewCMSComponentRenderer" name="defaultGenericViewCMSComponentRenderer" />
+	<bean id="defaultGenericViewCMSComponentRenderer" class="de.hybris.platform.acceleratorcms.component.renderer.impl.GenericViewCMSComponentRenderer" scope="tenant"/>
+
+
+	<!-- Custom CMS Component Renderers -->
+
+	<alias alias="cmsParagraphComponentRenderer" name="defaultCMSParagraphComponentRenderer" />
+	<bean id="defaultCMSParagraphComponentRenderer" class="de.hybris.platform.acceleratorcms.component.renderer.impl.CMSParagraphComponentRenderer" scope="tenant"/>
+
+
+	<!--
+	 htmlElementHelper
+	 Simple helper bean that support writing tags.
+	-->
+	<bean id="htmlElementHelper" class="de.hybris.platform.acceleratorcms.utils.HtmlElementHelper" scope="tenant"/>
+
+</beans>

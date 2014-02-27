@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<!--
+ [y] hybris Platform
+
+ Copyright (c) 2000-2013 hybris AG
+ All rights reserved.
+
+ This software is the confidential and proprietary information of hybris
+ ("Confidential Information"). You shall not disclose such Confidential
+ Information and shall use it only in accordance with the terms of the
+ license agreement you entered into with hybris.
+
+  
+-->
+<extensioninfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="extensioninfo.xsd">
+
+   <extension  name="productcockpit"
+               abstractclassprefix="Generated"
+               classprefix="Productcockpit"
+               managername="ProductcockpitManager"
+               managersuperclass="de.hybris.platform.jalo.extension.Extension"
+	           description="productcockpit extension">
+
+	  <requires-extension name="cockpit" version="5.0.0.0-SNAPSHOT"/>
+	  <requires-extension name="hmc"/>
+
+      <coremodule packageroot="de.hybris.platform.productcockpit"
+                  manager="de.hybris.platform.jalo.extension.GenericManager"
+                  generated="true"
+                  />
+
+      <webmodule  jspcompile="false" webroot="/productcockpit"
+                  />
+
+      <hmcmodule   extensionclassname="de.hybris.platform.productcockpit.hmc.ProductcockpitHMCExtension"
+                   />
+
+   </extension>
+
+</extensioninfo>

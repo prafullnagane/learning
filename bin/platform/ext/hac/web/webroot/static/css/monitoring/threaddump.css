@@ -1,0 +1,10 @@
+#dump {
+	width: 915px;
+	height: 500px;
+}
+
+#content {
+	margin-left: 5px !important;
+	margin-right: 5px !important;
+	width: 940px;
+}

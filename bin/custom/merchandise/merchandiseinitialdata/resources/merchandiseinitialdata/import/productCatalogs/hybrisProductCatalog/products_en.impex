@@ -1,0 +1,29 @@
+# ImpEx for Importing Product Localisations into Merchandise store
+ 
+# Macros / Replacement Parameter definitions
+$productCatalog=hybrisProductCatalog
+ 
+$catalogVersion=catalogversion(catalog(id[default=$productCatalog]),version[default='Staged'])[unique=true,default=$productCatalog:Staged]
+ 
+# Language
+$lang=en
+ 
+UPDATE Product;$catalogVersion;code[unique=true];name[lang=$lang];summary[lang=$lang];description[lang=$lang]
+;;0001;Hybris Mug;A mug for drinks or pens;<ol><li>A mug</li><li>a pen holder</li></ol>;
+;;0002;Hybris pen;A pen for writing;<ol><li>A pen</li><li>A desktop spade</li></ol>;
+;;0003;Hybris A5 notepad;An A5 notepad for writing;<ol><li>A notepad for writing with the Hybris pen</li><li>Little oragami paper</li></ol>;
+;;0004;Hybris A4 notepad;An A4 notepad for writing;<ol><li>A notepad for writing with the Hybris pen</li><li>Medium oragami paper</li></ol>;
+;;0005;Hybris lanyard;Hybris lanyard;Never lose your keys again;
+;;0006;Hybris USB-stick;USB-stick; 2GB USB-stick;
+;;0100;Hybris Shirt;Hybris Shirt for males;<ol><li>A small shirt</li><li></li></ol>;
+;;0101;Hybris Shirt;Hybris Shirt for males;<ol><li>A medium shirt</li><li></li></ol>;
+;;0102;Hybris Shirt;Hybris Shirt for males;<ol><li>A large shirt</li><li></li></ol>;
+;;0110;Hybris Shirt;Hybris Shirt for females;<ol><li>A small shirt</li><li></li></ol>;
+;;0111;Hybris Shirt;Hybris Shirt for females;<ol><li>A medium shirt</li><li></li></ol>;
+;;0112;Hybris Shirt;Hybris Shirt for females;<ol><li>A large shirt</li><li></li></ol>;
+;;0200;Hybris Sweat Shirt;Hybris Sweat Shirt for males;<ol><li>A small sweat shirt</li><li></li></ol>;
+;;0201;Hybris Sweat Shirt;Hybris Sweat Shirt for males;<ol><li>A medium sweat shirt</li><li></li></ol>;
+;;0202;Hybris Sweat Shirt;Hybris Sweat Shirt for males;<ol><li>A large sweat shirt</li><li></li></ol>;
+;;0210;Hybris Sweat Shirt;Hybris Sweat Shirt for females;<ol><li>A small sweat shirt</li><li></li></ol>;
+;;0211;Hybris Sweat Shirt;Hybris Sweat Shirt for females;<ol><li>A medium sweat shirt</li><li></li></ol>;
+;;0212;Hybris Sweat Shirt;Hybris Sweat Shirt for females;<ol><li>A large sweat shirt</li><li></li></ol>;

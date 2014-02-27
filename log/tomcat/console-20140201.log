@@ -1,0 +1,22 @@
+STATUS | wrapper  | main    | 2014/02/01 11:40:05.260 | INT trapped.  Shutting down.
+INFO   | jvm 1    | main    | 2014/02/01 11:40:07.090 | shutting down hybris registry..
+INFO   | jvm 1    | main    | 2014/02/01 11:40:07.092 | [0;32mINFO  [Thread-1] [TimerTaskUtils] Stopping CronJob timer ...
+INFO   | jvm 1    | main    | 2014/02/01 11:40:07.092 | [m[0;32mINFO  [Thread-1] [TimerTaskUtils] CronJob timer stopped
+INFO   | jvm 1    | main    | 2014/02/01 11:40:07.093 | [m[0;32mINFO  [Thread-1] [DefaultTaskService] Shutting down task engine for tenant master.
+INFO   | jvm 1    | main    | 2014/02/01 11:40:07.094 | [m[0;32mINFO  [Thread-1] [DefaultTaskService] Terminating task polling thread.
+INFO   | jvm 1    | main    | 2014/02/01 11:40:07.094 | [m[0;32mINFO  [Thread-1] [DefaultTaskService] Stopped task engine for tenant master.
+INFO   | jvm 1    | main    | 2014/02/01 11:40:07.095 | [m[0;32mINFO  [Thread-1] [TimerTaskUtils] Stopping CronJob timer ...
+INFO   | jvm 1    | main    | 2014/02/01 11:40:07.095 | [m[0;32mINFO  [Thread-1] [DefaultTaskService] Shutting down task engine for tenant master.
+INFO   | jvm 1    | main    | 2014/02/01 11:40:07.096 | [m[0;32mINFO  [Thread-1] [DefaultTaskService] Stopped task engine for tenant master.
+INFO   | jvm 1    | main    | 2014/02/01 11:40:07.197 | [m[0;33mWARN  [AfterSaveEventPublisher-master] [DefaultAfterSaveListenerRegistry] AfterSaveEventPublisher-master has been interrupted - stopping now: sleep interrupted
+INFO   | jvm 1    | main    | 2014/02/01 11:40:07.199 | [m[0;32mINFO  [AfterSaveEventPublisher-master] [DefaultAfterSaveListenerRegistry] AfterSaveEventPublisher-master has been interrupted/terminated but without InterruptedException - stopping now.
+INFO   | jvm 1    | main    | 2014/02/01 11:40:07.202 | [m[0;32mINFO  [Thread-1] (junit) [DefaultTaskService] Shutting down task engine for tenant junit.
+INFO   | jvm 1    | main    | 2014/02/01 11:40:07.203 | [m[0;32mINFO  [Thread-1] (junit) [DefaultTaskService] Stopped task engine for tenant junit.
+INFO   | jvm 1    | main    | 2014/02/01 11:40:07.204 | [m[0;32mINFO  [Thread-1] (junit) [DefaultTaskService] Shutting down task engine for tenant junit.
+INFO   | jvm 1    | main    | 2014/02/01 11:40:07.204 | [m[0;32mINFO  [Thread-1] (junit) [DefaultTaskService] Stopped task engine for tenant junit.
+INFO   | jvm 1    | main    | 2014/02/01 11:40:07.305 | [m[0;33mWARN  [AfterSaveEventPublisher-junit] (junit) [DefaultAfterSaveListenerRegistry] AfterSaveEventPublisher-junit has been interrupted - stopping now: sleep interrupted
+INFO   | jvm 1    | main    | 2014/02/01 11:40:07.309 | [m[0;32mINFO  [AfterSaveEventPublisher-junit] (junit) [DefaultAfterSaveListenerRegistry] AfterSaveEventPublisher-junit has been interrupted/terminated but without InterruptedException - stopping now.
+INFO   | jvm 1    | main    | 2014/02/01 11:40:07.613 | [m[0;32mINFO  [Thread-1] (junit) [DefaultCacheController] Removed listener from cache controller. Currently registered 2
+INFO   | jvm 1    | main    | 2014/02/01 11:40:08.015 | [m[0;33mWARN  [Thread-1] [DefaultCacheController] Listener not un-registered (not found): RegionCacheAdapter(1924203399) - <<master>> : de.hybris.platform.cache.impl.RegionCacheAdapter
+INFO   | jvm 1    | main    | 2014/02/01 11:40:08.520 | [m
+STATUS | wrapper  | main    | 2014/02/01 11:40:09.622 | <-- Wrapper Stopped

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<testclasses>
+  <mediaweb>
+    <testclass>de.hybris.platform.mediaweb.MediaFilterTest</testclass>
+    <testclass>de.hybris.platform.mediaweb.SecureResponseWrapperTest</testclass>
+  </mediaweb>
+</testclasses>

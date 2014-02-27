@@ -1,0 +1,65 @@
+#
+# Update Delivery Modes 
+#
+
+# Currencies
+$ukCurrency=GBP
+$jpCurrency=JPY
+$usCurrency=USD
+$europeCurrency=EUR
+
+# Zone Delivery Modes
+
+
+#UPS
+UPDATE ZoneDeliveryMode;code[unique=true];specificCarrierShippingMethod
+;premium-net;07
+;standard-net;03
+;premium-gross;07
+;standard-gross;03
+
+#Canadapost
+#UPDATE ZoneDeliveryMode;code[unique=true];specificCarrierShippingMethod
+#;premium-net;DOM.EP
+#;standard-net;DOM.RP
+#;premium-gross;DOM.EP
+#;standard-gross;DOM.RP
+
+#Fedex
+#UPDATE ZoneDeliveryMode;code[unique=true];specificCarrierShippingMethod
+#;premium-net;STANDARD_OVERNIGHT
+#;standard-net;FEDEX_GROUND
+#;premium-gross;STANDARD_OVERNIGHT
+#;standard-gross;FEDEX_GROUND
+
+#USPS
+#UPDATE ZoneDeliveryMode;code[unique=true];specificCarrierShippingMethod
+#;premium-net;EXPRESS
+#;standard-net;DELIVERY_CONFIRMATION_PARCEL_POST
+#;premium-gross;EXPRESS
+#;standard-gross;DELIVERY_CONFIRMATION_PARCEL_POST
+
+# UK
+INSERT_UPDATE ZoneDeliveryModeValue;deliveryMode(code)[unique=true];zone(code)[default='uk'][unique=true];currency(isocode)[unique=true];value;minimum[unique=true]
+;premium-net;;$usCurrency;14,99;0,00
+;standard-net;;$usCurrency;7,99;0,00
+
+# Continental Europe
+INSERT_UPDATE ZoneDeliveryModeValue;deliveryMode(code)[unique=true];zone(code)[default='continentalEurope'][unique=true];currency(isocode)[unique=true];value;minimum[unique=true]
+;premium-net;;$usCurrency;15,99;0,00
+;standard-net;;$usCurrency;8,99;0,00
+
+# Canada
+INSERT_UPDATE ZoneDeliveryModeValue;deliveryMode(code)[unique=true];zone(code)[default='ca'][unique=true];currency(isocode)[unique=true];value;minimum[unique=true]
+;premium-net;;$usCurrency;14,49;0,00
+;standard-net;;$usCurrency;7,49;0,00
+
+# Japan
+INSERT_UPDATE ZoneDeliveryModeValue;deliveryMode(code)[unique=true];zone(code)[default='japan'][unique=true];currency(isocode)[unique=true];value;minimum[unique=true]
+;premium-net;;$usCurrency;14,49;0,00
+;standard-net;;$usCurrency;7,49;0,00
+
+# China
+INSERT_UPDATE ZoneDeliveryModeValue;deliveryMode(code)[unique=true];zone(code)[default='china'][unique=true];currency(isocode)[unique=true];value;minimum[unique=true]
+;premium-net;;$usCurrency;14,49;0,00
+;standard-net;;$usCurrency;7,49;0,00

@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ [y] hybris Platform
+  ~
+  ~ Copyright (c) 2000-2013 hybris AG
+  ~ All rights reserved.
+  ~
+  ~ This software is the confidential and proprietary information of hybris
+  ~ ("Confidential Information"). You shall not disclose such Confidential
+  ~ Information and shall use it only in accordance with the terms of the
+  ~ license agreement you entered into with hybris.
+  -->
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans-3.1.xsd">
+
+	<!-- Processes -->
+	<bean id="omsSubmitOrderProcessDefinitionResource" class="de.hybris.platform.processengine.definition.ProcessDefinitionResource" scope="tenant">
+		<property name="resource" value="classpath:/omsorders/process/oms-submitorder-process.xml"/>
+	</bean>
+
+	<!-- Rest Clients -->
+	<alias name="defaultOrderRestClient" alias="orderRestClient"/>
+	<bean name="defaultOrderRestClient" class="com.hybris.oms.rest.client.order.OrderRestClient" scope="tenant"/>
+
+	<alias name="defaultOmsSourceSimulationRestClient" alias="omsSourceSimulationRestClient"/>
+	<bean name="defaultOmsSourceSimulationRestClient" class="com.hybris.oms.rest.client.fulfillment.simulation.FulfillmentSimulationRestClient" scope="tenant"/>
+
+	<!-- Converters -->
+	<alias name="defaultOmsOrderConverter" alias="omsOrderConverter"/>
+	<bean id="defaultOmsOrderConverter" parent="abstractPopulatingConverter" scope="tenant">
+		<lookup-method name="createTarget" bean="order"/>
+		<property name="populators">
+			<list>
+				<ref bean="omsOrderPopulator"/>
+			</list>
+		</property>
+	</bean>
+
+	<alias name="defaultOmsOrderLineConverter" alias="omsOrderLineConverter"/>
+	<bean id="defaultOmsOrderLineConverter" parent="abstractPopulatingConverter" scope="tenant">
+		<lookup-method name="createTarget" bean="orderLine"/>
+		<property name="populators">
+			<list>
+				<ref bean="omsOrderLinePopulator"/>
+			</list>
+		</property>
+	</bean>
+
+	<alias name="defaultOmsPaymentInfoConverter" alias="omsPaymentInfoConverter"/>
+	<bean id="defaultOmsPaymentInfoConverter" parent="abstractPopulatingConverter" scope="tenant">
+		<lookup-method name="createTarget" bean="paymentInfo"/>
+		<property name="populators">
+			<list>
+				<ref bean="omsPaymentInfoPopulator"/>
+			</list>
+		</property>
+	</bean>
+
+	<alias name="defaultOmsAddressConverter" alias="omsAddressConverter"/>
+	<bean id="defaultOmsAddressConverter" parent="abstractPopulatingConverter" scope="tenant">
+		<lookup-method name="createTarget" bean="omsAddress"/>
+		<property name="populators">
+			<list>
+				<ref bean="omsAddressPopulator"/>
+			</list>
+		</property>
+	</bean>
+	<!-- Populators -->
+
+	<alias name="defaultOmsOrderPopulator" alias="omsOrderPopulator"/>
+	<bean id="defaultOmsOrderPopulator" class="de.hybris.platform.integration.oms.order.populators.OmsOrderPopulator" scope="tenant">
+		<property name="orderLineConverter" ref="omsOrderLineConverter"/>
+		<property name="paymentInfoConverter" ref="omsPaymentInfoConverter"/>
+		<property name="addressConverter" ref="omsAddressConverter"/>
+		<property name="customerNameStrategy" ref="customerNameStrategy"/>
+		<property name="customerEmailResolutionService" ref="customerEmailResolutionService"/>
+		<property name="ondemandPromotionService" ref="onDemandPromotionService"/>
+		<property name="ondemandTaxCalculationService" ref="ondemandTaxCalculationService"/>
+		<property name="ondemandDeliveryAddressStrategy" ref="ondemandDeliveryAddressStrategy"/>
+		<property name="shippingAttributeStrategy" ref="shippingAttributeStrategy"/>
+		<property name="impersonationService" ref="impersonationService"/>
+		<property name="commerceCommonI18NService" ref="commerceCommonI18NService"/>
+		<property name="commonI18NService" ref="commonI18NService"/>
+	</bean>
+
+	<alias name="defaultOmsOrderLinePopulator" alias="omsOrderLinePopulator"/>
+	<bean id="defaultOmsOrderLinePopulator" class="de.hybris.platform.integration.oms.order.populators.OmsOrderLinePopulator" scope="tenant">
+		<property name="taxCodeStrategy" ref="taxCodeStrategy"/>
+		<property name="productAttributeStrategy" ref="omsProductAttributeStrategy"/>
+		<property name="ondemandTaxCalculationService" ref="ondemandTaxCalculationService"/>
+	</bean>
+
+	<alias name="defaultOmsAddressPopulator" alias="omsAddressPopulator"/>
+	<bean id="defaultOmsAddressPopulator" class="de.hybris.platform.integration.oms.order.populators.OmsAddressPopulator" scope="tenant">
+		<property name="customerNameStrategy" ref="customerNameStrategy"/>
+	</bean>
+
+	<alias name="defaultOmsPaymentInfoPopulator" alias="omsPaymentInfoPopulator"/>
+	<bean id="defaultOmsPaymentInfoPopulator" class="de.hybris.platform.integration.oms.order.populators.OmsPaymentInfoPopulator" scope="tenant">
+		<property name="addressConverter" ref="omsAddressConverter"/>
+	</bean>
+
+	<!-- Services -->
+	<alias name="defaultOmsOrderService" alias="omsOrderService"/>
+	<bean name="defaultOmsOrderService" class="de.hybris.platform.integration.oms.order.service.impl.DefaultOmsOrderService" scope="tenant">
+		<property name="orderConverter" ref="omsOrderConverter"/>
+		<property name="restClient" ref="orderRestClient"/>
+		<property name="ticketBusinessService" ref="ticketBusinessService"/>
+		<property name="modelService" ref="modelService"/>
+	</bean>
+
+	<bean name="order" class="com.hybris.oms.domain.order.Order" scope="prototype"/>
+	<bean name="orderLine" class="com.hybris.oms.domain.order.OrderLine" scope="prototype"/>
+	<bean name="orderModel" class="de.hybris.platform.core.model.order.OrderModel" scope="prototype"/>
+	<bean name="abstractOrderEntryModel" class="de.hybris.platform.core.model.order.AbstractOrderEntryModel" scope="prototype"/>
+	<bean name="paymentInfo" class="com.hybris.oms.domain.order.PaymentInfo" scope="prototype"/>
+	<bean name="omsAddress" class="com.hybris.oms.domain.address.Address" scope="prototype"/>
+	<bean name="skuQuantity" class="com.hybris.oms.domain.inventory.SkuQuantity" scope="prototype"/>
+	<bean name="sourceSimulationParameter" class="com.hybris.oms.domain.order.jaxb.SourceSimulationParameter" scope="prototype"/>
+
+	<bean id="addressModel" factory-bean="modelService" factory-method="create" scope="prototype">
+		<constructor-arg type="java.lang.Class" value="de.hybris.platform.core.model.user.AddressModel"/>
+	</bean>
+
+	<alias name="defaultSourceSimulationParameterConverter" alias="sourceSimulationParameterConverter"/>
+	<bean id="defaultSourceSimulationParameterConverter" parent="abstractPopulatingConverter" scope="tenant">
+		<lookup-method name="createTarget" bean="sourceSimulationParameter"/>
+		<property name="populators">
+			<list>
+				<ref bean="sourceSimulationParameterPopulator"/>
+			</list>
+		</property>
+	</bean>
+
+	<alias name="defaultSourceSimulationParameterPopulator" alias="sourceSimulationParameterPopulator"/>
+	<bean id="defaultSourceSimulationParameterPopulator" class="de.hybris.platform.integration.oms.order.populators.SourceSimulationParameterPopulator" scope="tenant">
+		<property name="skuQuantityConverter" ref="skuQuantityConverter"/>
+		<property name="addressConverter" ref="omsAddressConverter"/>
+		<property name="ondemandDeliveryAddressStrategy" ref="ondemandDeliveryAddressStrategy"/>
+		<property name="ondemandTenantPreferenceSelectorStrategy" ref="ondemandTenantPreferenceSelectorStrategy"/>
+		<property name="modelService" ref="modelService"/>
+	</bean>
+
+	<alias name="defaultSkuQuantityConverter" alias="skuQuantityConverter"/>
+	<bean id="defaultSkuQuantityConverter" parent="abstractPopulatingConverter" scope="tenant">
+		<lookup-method name="createTarget" bean="skuQuantity"/>
+		<property name="populators">
+			<list>
+				<ref bean="skuQuantityPopulator"/>
+			</list>
+		</property>
+	</bean>
+
+	<alias name="defaultSkuQuantityPopulator" alias="skuQuantityPopulator"/>
+	<bean id="defaultSkuQuantityPopulator" class="de.hybris.platform.integration.oms.order.populators.SkuQuantityPopulator" scope="tenant"/>
+
+	<alias name="defaultOmsAddressReverseConverter" alias="omsAddressReverseConverter"/>
+	<bean id="defaultOmsAddressReverseConverter" parent="abstractPopulatingConverter" scope="tenant">
+		<lookup-method name="createTarget" bean="addressModel"/>
+		<property name="populators">
+			<list>
+				<ref bean="omsAddressReversePopulator"/>
+			</list>
+		</property>
+	</bean>
+
+	<alias name="defaultOmsAddressReversePopulator" alias="omsAddressReversePopulator"/>
+	<bean id="defaultOmsAddressReversePopulator" class="de.hybris.platform.integration.oms.order.populators.OmsAddressReversePopulator" scope="tenant">
+		<property name="commonI18NService" ref="commonI18NService"/>
+		<property name="customerNameStrategy" ref="customerNameStrategy"/>
+	</bean>
+
+	<alias alias="warehouseSourcingCommandConfig" name="defaultWarehouseSourcingCommandConfig"/>
+	<bean id="defaultWarehouseSourcingCommandConfig" class="de.hybris.platform.integration.commons.hystrix.OndemandHystrixCommandConfiguration" scope="tenant">
+		<property name="groupKey" value="${omsorders.warehouseSourcing.groupKey}"/>
+		<property name="threadTimeout" value="${omsorders.warehouseSourcing.threadTimeout}"/>
+		<property name="threadPoolSize" value="${omsorders.warehouseSourcing.threadPoolSize}"/>
+		<property name="sessionService" ref="sessionService"/>
+		<property name="supportedChannels">
+			<list>
+				<value>B2C</value>
+			</list>
+		</property>
+		<property name="baseSiteService" ref="baseSiteService"/>
+		<property name="configurationService" ref="configurationService"/>
+	</bean>
+
+	<alias name="defaultOmsShipFromAddressStrategy" alias="shipFromAddressStrategy"/>
+	<bean id="defaultOmsShipFromAddressStrategy" class="de.hybris.platform.integration.oms.order.service.impl.DefaultOmsShipFromAddressStrategy" scope="tenant">
+		<property name="omsSourceSimulationRestClient" ref="omsSourceSimulationRestClient"/>
+		<property name="sourceSimulationParameterConverter" ref="sourceSimulationParameterConverter"/>
+		<property name="omsAddressReverseConverter" ref="omsAddressReverseConverter"/>
+		<property name="fallbackShipFromAddressStrategy" ref="defaultShipFromAddressStrategy"/>
+		<property name="hystrixCommandConfig" ref="warehouseSourcingCommandConfig"/>
+		<property name="modelService" ref="modelService"/>
+	</bean>
+
+	<alias name="defaultOmsCheckOrderService" alias="omsCheckOrderService"/>
+	<bean id="defaultOmsCheckOrderService" class="de.hybris.platform.integration.oms.order.service.impl.DefaultOmsCheckOrderService" scope="tenant"/>
+
+	<alias name="defaultOmsProductAttributeStrategy" alias="omsProductAttributeStrategy"/>
+	<bean id="defaultOmsProductAttributeStrategy" class="de.hybris.platform.integration.oms.order.service.impl.DefaultProductAttributeStrategy" scope="tenant">
+		<property name="delimiter" value="#{configurationService.configuration.getProperty('hybris.omsorders.productattributes.delimiter')}"/>
+		<property name="configurationService" ref="configurationService"/>
+		<property name="modelService" ref="modelService"/>
+		<property name="sessionService" ref="sessionService"/>
+		<property name="commonI18NService" ref="commonI18NService"/>
+		<property name="i18nService" ref="i18nService"/>
+	</bean>
+
+	<alias name="defaultOmsShippingStrategy" alias="shippingAttributeStrategy"/>
+	<bean id="defaultOmsShippingStrategy" class="de.hybris.platform.integration.oms.order.service.impl.DefaultOmsShippingAttributeStrategy" scope="tenant">
+		<property name="configurationService" ref="configurationService"/>
+	</bean>
+
+	<!-- Import the bean definitions used in our oms-submitorder-process.xml -->
+	<import resource="omsorders-spring-process.xml"/>
+</beans>
+

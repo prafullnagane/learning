@@ -1,0 +1,242 @@
+<?xml version="1.0"?>
+<project name="acc.ant.addons">
+
+	<!--
+	Copies a given resource to any extension inheriting from addOnExtension.
+	The example addon resource might be :
+		addon.folder=/webroot/_ui;/webroot/WEB-INF
+	There is separate rule for _ui subfolders and for WEB-INF subfolders
+	-->
+	<macrodef name="copyAddOnToExtension">
+		<attribute name="addOnExtension" />
+		<attribute name="addOnResource" />
+		<attribute name="target" />
+		<sequential>
+			<echo message="copyAddOnToExtension addOnExtension=@{addOnExtension} addOnResource=@{addOnResource} target=@{target}" />
+			<foreachext>
+				<do>
+					<containsExact string="${required.extensions.for.@{extname}}" substring="@{addOnExtension}">
+						<do>
+							<if>
+								<available file="${ext.@{extname}.path}/web/webroot" />
+								<then>
+									<processAddOn addonextension="@{addOnExtension}" addonresource="@{addOnResource}">
+										<doTags>
+											<echo message="Synchronizing &lt;@{addOnExtension}&gt;/acceleratoraddon@{addOnResource}/${mainDirVar} with &lt;@{extname}&gt;/web@{addOnResource}/${mainDirVar}/addons/@{addOnExtension}/" />
+											<sync todir="${ext.@{extname}.path}/@{addOnResource}/${mainDirVar}/addons/@{addOnExtension}/" overwrite="true">
+												<fileset dir="${ext.@{addOnExtension}.path}/acceleratoraddon/@{addOnResource}/${mainDirVar}" />
+											</sync>
+										</doTags>
+										<doOthers>
+											<echo message="Synchronizing &lt;@{addOnExtension}&gt;/acceleratoraddon@{addOnResource} with &lt;@{extname}&gt;/web@{addOnResource}/addons/@{addOnExtension}/" />
+											<sync todir="${ext.@{extname}.path}/@{addOnResource}/addons/@{addOnExtension}" overwrite="true">
+												<fileset dir="${ext.@{addOnExtension}.path}/acceleratoraddon/@{addOnResource}" />
+											</sync>
+										</doOthers>
+										<doSrc>
+											<sequential>
+
+												<echo message="Synchronizing &lt;@{addOnExtension}&gt;/acceleratoraddon with &lt;@{extname}&gt;/web/webroot/WEB-INF/addons/lib/" />
+												<sync todir="${ext.@{extname}.path}/web/webroot/WEB-INF/addons/lib/" overwrite="true">
+													<fileset dir="${ext.@{addOnExtension}.path}/lib/" includes="**/*.jar" />
+												</sync>
+
+
+												<echo message="Synchronizing &lt;@{addOnExtension}&gt;/acceleratoraddon with &lt;@{extname}&gt;/web/addonsrc/" />
+												<sync todir="${ext.@{extname}.path}/web/addonsrc/@{addOnExtension}/" overwrite="true">
+													<fileset dir="${ext.@{addOnExtension}.path}/acceleratoraddon/web/src" includes="**/*.java" />
+												</sync>
+
+												<!-- Compile AddOn Files -->
+												<!-- <outofdate> -->
+													<!--
+													<sourcefiles>
+														<fileset dir="${ext.@{addOnExtension}.path}">
+															<include name="acceleratoraddon/web/src/**" />
+														</fileset>
+													</sourcefiles>
+													-->
+													<!--
+													<targetfiles path="${HYBRIS_TEMP_DIR}/touch/@{target}_addon_@{addOnExtension}srctouch" />
+													-->
+													<sequential>
+														<compileAddOn extname="@{target}" addOnExtension="@{addOnExtension}" />
+														<mkdir dir="${HYBRIS_TEMP_DIR}/touch" />
+														<touch file="${HYBRIS_TEMP_DIR}/touch/@{target}_addon_@{addOnExtension}srctouch" />
+													</sequential>
+												<!-- </outofdate> -->
+											</sequential>
+										</doSrc>
+									</processAddOn>
+								</then>
+							</if>
+						</do>
+					</containsExact>
+				</do>
+			</foreachext>
+		</sequential>
+	</macrodef>
+
+
+	<!--
+	Compiles addon src from predefined source to /WEB-INF/classes
+	-->
+	<macrodef name="compileAddOn">
+		<attribute name="extname" />
+		<attribute name="addOnExtension" />
+		<sequential>
+			<echo message="KOMP @{extname} - @{addOnExtension}" />
+			<if>
+				<and>
+					<available file="${ext.@{addOnExtension}.path}/acceleratoraddon" />
+					<available file="${ext.@{extname}.path}/web/addonsrc/@{addOnExtension}" />
+				</and>
+				<then>
+					<mkdir dir="${ext.@{extname}.path}/web/webroot/WEB-INF/classes" />
+					<javacompile destdir="${ext.@{extname}.path}/web/webroot/WEB-INF/classes">
+						<source>
+							<!--
+							<dirset dir="${ext.@{extname}.path}/web/webroot/addons/@{addOnExtension}">
+								<include name="src" />
+							</dirset>
+							-->
+							<pathelement path="${ext.@{extname}.path}/web/addonsrc/@{addOnExtension}" />
+						</source>
+						<additionalclasspath>
+							<fileset dir="${ext.@{extname}.path}/web/webroot">
+								<include name="WEB-INF/lib/**.jar" />
+							</fileset>
+							<fileset dir="${ext.@{extname}.path}">
+								<include name="bin/*.jar" />
+							</fileset>
+						</additionalclasspath>
+					</javacompile>
+
+					<!-- TODO: needed... copy resources to classes/ -->
+					<!--
+					<copy todir="${ext.@{extname}.path}/web/webroot/WEB-INF/classes">
+						<fileset dir="${ext.@{extname}.path}/web/webroot/addons/@{addOnExtension}/src">
+							<exclude name="**/*.java" />
+						</fileset>
+					</copy>
+					-->
+				</then>
+			</if>
+		</sequential>
+	</macrodef>
+
+
+	<!--
+	Deleting the given resource to any extension not inheriting from addOnExtension, but having its addons copied.
+	The example addon resource might be :
+		addon.folder=/webroot/_ui;/webroot/WEB-INF
+	There is separate rule for _ui subfolders and for WEB-INF subfolders
+	-->
+	<macrodef name="deleteAddOnFromExtension">
+		<attribute name="addOnExtension" />
+		<attribute name="addOnResource" />
+		<sequential>
+			<foreachext>
+				<do>
+					<containsExact string="${required.extensions.for.@{extname}}" substring="@{addOnExtension}">
+						<do>
+							<if>
+								<available file="${ext.@{extname}.path}/web/webroot" />
+								<then>
+									<echo message="Clearing add-on resource(@{addOnResource}) for the extension &lt;@{extname}&gt;" />
+
+									<processAddOn addonextension="@{addOnExtension}" addonresource="@{addOnResource}">
+										<doTags>
+											<delete dir="${ext.@{extname}.path}/@{addOnResource}/${mainDirVar}/addons/@{addOnExtension}/" verbose="true" failonerror="false" />
+										</doTags>
+										<doOthers>
+											<delete dir="${ext.@{extname}.path}/@{addOnResource}/addons/@{addOnExtension}" verbose="true" failonerror="false" />
+										</doOthers>
+										<doSrc>
+											<delete dir="${ext.@{extname}.path}/web/addonsrc/@{addOnExtension}" verbose="true" failonerror="false" />
+										</doSrc>
+									</processAddOn>
+								</then>
+							</if>
+						</do>
+					</containsExact>
+				</do>
+			</foreachext>
+		</sequential>
+	</macrodef>
+
+	<!--
+	Process addon extension dir as tags folder or static resource folder basing on the addOnResource path
+	-->
+	<macrodef name="processAddOn">
+		<element name="doTags" optional="false" />
+		<element name="doSrc" optional="false" />
+		<element name="doOthers" optional="false" />
+		<attribute name="addOnExtension" />
+		<attribute name="addOnResource" />
+		<sequential>
+			<if>
+				<contains string="@{addOnResource}" substring="/web/webroot" />
+				<then>
+					<!-- for each dir in <addonextension>/acceleratoraddon/webroot/WEB-INF/ -->
+					<for param="dir">
+						<dirset dir="${ext.@{addOnExtension}.path}/acceleratoraddon/@{addOnResource}/" includes="*" />
+						<sequential>
+							<basename property="@{dir}addOnDir" file="@{dir}" />
+							<var name="mainDirVar" value="${@{dir}addOnDir}" />
+							<if>
+								<contains string="@{dir}" substring="WEB-INF" />
+								<then>
+									<doTags />
+								</then>
+								<else>
+									<doOthers />
+								</else>
+							</if>
+						</sequential>
+					</for>
+				</then>
+			</if>
+			<if>
+				<contains string="@{addOnResource}" substring="/web/src" />
+				<then>
+					<doSrc />
+				</then>
+			</if>
+		</sequential>
+	</macrodef>
+	
+	<macrodef name="syncaddons">
+		<attribute name="addonlist" />
+		<sequential>
+			<if>
+				<or>
+					<equals arg1="@{addonlist}" arg2=""/>
+					<contains string="@{addonlist}" substring="$" />
+				</or>
+				<then>
+					<foreachext>
+						<do>
+							<sequential>
+								<if>
+									<available file="${ext.@{extname}.path}/acceleratoraddon" />
+									<then>
+										<extension_build extname="@{extname}" />
+									</then>
+								</if>
+							</sequential>
+						</do>
+					</foreachext>
+				</then>
+				<else>
+					<for list="@{addonlist}" delimiter="," param="addon">
+						<sequential>
+							<extension_build extname="@{addon}" />
+						</sequential>
+					</for>
+				</else>
+			</if>
+		</sequential>
+	</macrodef>
+	
+</project>

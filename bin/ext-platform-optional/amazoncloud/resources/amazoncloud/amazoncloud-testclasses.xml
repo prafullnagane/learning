@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<testclasses>
+  <amazoncloud>
+    <testclass>de.hybris.platform.amazon.media.storage.S3MediaStorageStrategyTest</testclass>
+    <testclass>de.hybris.platform.amazon.media.services.impl.DefaultS3StorageServiceFactoryTest</testclass>
+    <testclass>de.hybris.platform.amazon.media.storage.S3MediaStorageCleanerTest</testclass>
+    <testclass>de.hybris.platform.amazon.media.url.S3MediaURLStrategyTest</testclass>
+  </amazoncloud>
+</testclasses>

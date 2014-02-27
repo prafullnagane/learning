@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<testclasses>
+  <azurecloud>
+    <testclass>de.hybris.platform.azure.media.storage.WindowsAzureBlobStorageStrategyTest</testclass>
+    <testclass>de.hybris.platform.azure.media.services.impl.DefaultWindowsAzureServiceFactoryTest</testclass>
+    <testclass>de.hybris.platform.azure.media.url.WindowsAzureBlobURLStrategyTest</testclass>
+  </azurecloud>
+</testclasses>

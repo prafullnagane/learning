@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--
+  ~ [y] hybris Platform
+  ~
+  ~ Copyright (c) 2000-2013 hybris AG
+  ~ All rights reserved.
+  ~
+  ~ This software is the confidential and proprietary information of hybris
+  ~ ("Confidential Information"). You shall not disclose such Confidential
+  ~ Information and shall use it only in accordance with the terms of the
+  ~ license agreement you entered into with hybris.
+  -->
+
+<!--
+	ATTENTION: This is just an example file. You have to edit it according to your needs.
+-->
+
+<items xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="items.xsd">
+
+
+	<itemtypes>
+
+		<typegroup name="oms cronjobs">
+
+			<itemtype code="Order" autocreate="false" generate="false">
+				<description>Extending Order type with additional attributes.</description>
+				<attributes>
+					<attribute qualifier="exportedToOmsRetryCount" type="java.lang.Integer">
+						<description>Hold a counter of how many times the order was attempted to be sent to oms.</description>
+						<defaultvalue>Integer.valueOf(0)</defaultvalue>
+						<persistence type="property"/>
+					</attribute>
+					<attribute qualifier="orderExportTime" type="java.util.Date">
+						<description>The time of order export.</description>
+						<persistence type="property"/>
+					</attribute>
+				</attributes>
+			</itemtype>
+		</typegroup>
+	</itemtypes>
+</items>

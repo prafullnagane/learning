@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ [y] hybris Platform
+
+ Copyright (c) 2000-2013 hybris AG
+ All rights reserved.
+
+ This software is the confidential and proprietary information of hybris
+ ("Confidential Information"). You shall not disclose such Confidential
+ Information and shall use it only in accordance with the terms of the
+ license agreement you entered into with hybris.
+-->
+ 
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+           http://www.springframework.org/schema/aop
+           http://www.springframework.org/schema/aop/spring-aop-3.1.xsd
+           http://www.springframework.org/schema/context
+		   http://www.springframework.org/schema/context/spring-context-3.1.xsd" >
+
+	<import resource="classpath:/META-INF/standard-editors-spring.xml"/>
+	<import resource="classpath:/META-INF/backoffice-core-spring.xml"/>
+	<import resource="classpath:/META-INF/backoffice-widgets-spring.xml"/>
+	
+
+	<import resource="backoffice-spring-filter.xml"/>
+	<import resource="backoffice-spring-security.xml"/>
+	<import resource="backoffice-spring-eventing.xml"/>
+	
+	<alias alias="cockpitWidgetEngine" name="backofficeAdminmodeWidgetEngine" />
+	<bean id="backofficeAdminmodeWidgetEngine" parent="adminmodeWidgetEngine">
+		<property name="authorityGroupService" ref="adminModeAuthorityGroupService"/>
+		<property name="cockpitThreadContextCreator" ref="cockpitThreadContextCreator"/>
+	</bean>
+	
+	<alias name="backofficeLocaleService" alias="cockpitLocaleService"/>
+	<bean id="backofficeLocaleService" class="com.hybris.backoffice.i18n.BackofficeLocaleService">
+		<property name="i18nService" ref="i18nService"/>
+	</bean>
+	
+	<alias name="backofficeOPWidgetLibUtils" alias="widgetLibUtils"/>
+	<bean id="backofficeOPWidgetLibUtils" parent="backofficeWidgetLibUtils">
+		<property name="rootDirectory" value='#{ T(de.hybris.platform.util.Utilities).getPlatformConfig().getSystemConfig().getDataDir() + "/backoffice" }'/>
+	</bean>
+	
+	<alias name="backofficeAdminWidgetAuthorizationService" alias="widgetAuthorizationService"/>
+	<bean id="backofficeAdminWidgetAuthorizationService" parent="adminWidgetAuthorizationService">
+		<property name="authorityGroupService" ref="authorityGroupService"/>
+		<property name="adminAuthorityGroupService" ref="adminModeAuthorityGroupService"/>
+	</bean>
+	
+	<alias name="onPremiseSystemPropertyResolver" alias="cockpitProperties"/>
+	<bean id="onPremiseSystemPropertyResolver" class="com.hybris.backoffice.cockpitng.util.impl.PlatformSystemPropertyResolver" 
+		lazy-init="false" init-method="initProperties">
+		<property name="prefix" value="backoffice."/>
+	</bean>
+	
+	<alias name="backofficeAdditionalResourceLoader" alias="cockpitAdditionalResourceLoader"/>
+	<bean id="backofficeAdditionalResourceLoader" class="com.hybris.backoffice.cockpitng.util.impl.BackofficeResourceLoader" >
+		<property name="cockpitProperties" ref="cockpitProperties"/>
+		<property name="cockpitModuleConnector" ref="cockpitModuleConnector"/>
+	</bean>
+	
+	<alias name="backofficeCockpitUIFactoryBeanAccesHelper" alias="cockpitUIFactoryBeanAccesHelper"/>
+	<bean id="backofficeCockpitUIFactoryBeanAccesHelper" parent="defaultCockpitUIFactoryBeanAccesHelper">
+		<property name="cockpitResourceLoader" ref="cockpitAdditionalResourceLoader"/>
+	</bean>
+	
+	<alias alias="widgetPersistenceService" name="backofficeWidgetPersistenceService"/>
+	<bean id="backofficeWidgetPersistenceService" parent="cockpitModuleWidgetPersistenceService" >
+		<property name="cockpitProperties" ref="cockpitProperties"/>
+	</bean>
+	
+	<alias name="defaultBackofficeModuleConnector" alias="cockpitModuleConnector"/>
+	<bean id="defaultBackofficeModuleConnector" parent="defaultCockpitModuleConnector" class="com.hybris.backoffice.cockpitng.modules.BackofficeModuleConnector">
+		<property name="libraryHandlers">
+			<map merge="true">
+				<entry key="extension" value-ref="backofficeLibraryHandler"/>
+			</map>
+		</property>
+	</bean>
+	
+	
+	<alias name="defaultBackofficeLibraryHandler" alias="backofficeLibraryHandler"/>
+	<bean id="defaultBackofficeLibraryHandler" class="com.hybris.backoffice.cockpitng.modules.BackofficeLibraryHandler">
+		<property name="cockpitConfigurationService" ref="cockpitConfigurationService"/>
+	</bean>
+		
+	<alias name="backofficeCockpitUserService" alias="cockpitUserService"/>
+	<bean id="backofficeCockpitUserService" class="com.hybris.backoffice.cockpitng.user.BackofficeCockpitUserService">
+		<property name="userService" ref="userService"/>
+	</bean>
+	
+	<alias alias="cockpitConfigurationService" name="onPremiseCockpitConfigurationService"/>
+	<bean id="onPremiseCockpitConfigurationService" parent="defaultCockpitConfigurationService">
+		<property name="contextStrategies">
+			<map merge="true">
+				<entry key="type" value-ref="typeConfigurationContextStrategy" />
+			</map>
+		</property>
+	</bean>
+	
+	<bean id="typeConfigurationContextStrategy" class="com.hybris.backoffice.cockpitng.util.impl.PlatformTypeContextStrategy" >
+		<property name="typeService" ref="typeService"/>
+	</bean>
+	<alias name="backofficePrincipalContextStrategy" alias="principalContextStrategy"/>
+	<bean id="backofficePrincipalContextStrategy" parent="defaultPrincipalContextStrategy" >
+		<property name="cockpitUserService" ref="cockpitUserService"/>
+		<property name="authorityGroupService" ref="authorityGroupService"/>
+	</bean>
+	
+	
+	<alias name="defaultAuthorityGroupService" alias="authorityGroupService"/>
+	<bean id="defaultAuthorityGroupService"	class="com.hybris.backoffice.cockpitng.core.user.impl.DefaultPlatformAuthorityGroupService">
+		<property name="cockpitSessionService" ref="cockpitSessionService" />
+		<property name="userService" ref="userService" />
+		<property name="cockpitUserService" ref="cockpitUserService" />
+		<property name="backofficeRoleDao" ref="backofficeRoleDao"/>
+	</bean>  
+	
+	<alias name="backofficeAdminModeAuthorityGroupService" alias="adminModeAuthorityGroupService"/>
+	<bean id="backofficeAdminModeAuthorityGroupService" class="com.hybris.backoffice.cockpitng.core.user.impl.AdminModeAuthorityGroupService" 
+		parent="defaultAuthorityGroupService"/>
+		
+	
+	<alias name="backofficeSimpleSearchService" alias="simpleCockpitSearchService" />
+	<bean id="backofficeSimpleSearchService" class="com.hybris.backoffice.cockpitng.search.BackofficeSimpleSearchService">
+		<property name="genericSearchService" ref="genericSearchService"/>
+	</bean>
+	
+	<alias name="backofficeCockpitThreadContextCreator" alias="cockpitThreadContextCreator"/>
+	<bean id="backofficeCockpitThreadContextCreator" class="com.hybris.backoffice.cockpitng.util.BackofficeThreadContextCreator">
+		<property name="catalogVersionService" ref="catalogVersionService"/>
+		<property name="userService" ref="userService"/>
+	</bean>
+	         
+	<alias alias="resourceCockpitComponentLoader" name="backofficeResourceCockpitComponentLoader"/>
+	<bean id="backofficeResourceCockpitComponentLoader" parent="defaultWebResourceCockpitComponentLoader" >
+		<property name="widgetLibUtils" ref="widgetLibUtils"/>
+		<property name="packageUrlFilter" value='#{ T(de.hybris.platform.util.Config).getParameter("backoffice.cockpitng.resourceComponentLoader.packagefilter") }'/>
+	</bean>  
+</beans>

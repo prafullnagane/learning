@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<project name="acc.ant">
+
+	<!-- Load the separate ant scripts -->
+	<import file="acc-ant-localize-impex.xml"/>
+	<import file="acc-ant-addons.xml"/>
+
+</project>

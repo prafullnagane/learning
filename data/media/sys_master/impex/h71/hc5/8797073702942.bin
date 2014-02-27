@@ -1,0 +1,10 @@
+#
+# Import the Merchandise Content Catalog
+#
+# ENGLISH LOCALIZATION
+#
+$lang=en
+$contentCatalog=hybrisContentCatalog
+ 
+UPDATE ContentCatalog;id[unique=true];name[lang=$lang];
+;$contentCatalog;"hybris Content Catalog"

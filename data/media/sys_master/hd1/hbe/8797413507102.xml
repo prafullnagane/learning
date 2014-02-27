@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<editor>
+    <group qualifier="General" visible="true" tabbed="false" initially-opened="true" show-if-empty="true" show-in-create-mode="true" position="1" printable="true">
+        <label lang="de">Stammdaten</label>
+        <label lang="zh">基本</label>
+        <label lang="en">Basic</label>
+        <label lang="ja">基本</label>
+        <property qualifier="CMSItem.name" visible="true"/>
+        <property qualifier="CMSItem.catalogVersion" visible="true" editor="shortListEditor"/>
+        <property qualifier="AbstractCMSComponent.visible" visible="true"/>
+    </group>
+    <group qualifier="editorial" visible="true" tabbed="false" initially-opened="true" show-if-empty="true" show-in-create-mode="true" position="2" printable="true">
+        <label lang="de">Redaktionell</label>
+        <label lang="zh">编辑</label>
+        <label lang="en">Editorial</label>
+        <label lang="ja">編集</label>
+        <property qualifier="BannerComponent.headline" visible="true"/>
+        <property qualifier="BannerComponent.page" visible="true">
+            <parameter>
+                <name>predefinedValuesStrategy</name>
+                <value>cmsItemPredefinedValuesStrategy</value>
+            </parameter>
+        </property>
+        <property qualifier="AbstractBannerComponent.urlLink" visible="true"/>
+        <property qualifier="AbstractBannerComponent.external" visible="true"/>
+        <property qualifier="BannerComponent.content" visible="true" editor="wysiwyg"/>
+        <property qualifier="AbstractBannerComponent.media" visible="true" editor="simpleMediaReferenceSelector">
+            <parameter>
+                <name>allowCreate</name>
+                <value>true</value>
+            </parameter>
+            <parameter>
+                <name>celumMediaFormat</name>
+                <value>picture</value>
+            </parameter>
+            <parameter>
+                <name>mimeTypes</name>
+                <value>image/jpeg;image/gif;image/png</value>
+            </parameter>
+            <parameter>
+                <name>restrictToCreateTypes</name>
+                <value>Media</value>
+            </parameter>
+            <parameter>
+                <name>predefinedValuesStrategy</name>
+                <value>imageMediaPredefinedValuesStrategy</value>
+            </parameter>
+        </property>
+    </group>
+    <group qualifier="visibility" visible="true" tabbed="false" initially-opened="true" show-if-empty="true" show-in-create-mode="true" position="3" printable="true">
+        <label lang="de">Kontextsichtbarkeit</label>
+        <label lang="zh">上下文可见性</label>
+        <label lang="en">Context Visibility</label>
+        <label lang="ja">コンテキスト可視性</label>
+        <property qualifier="AbstractCMSComponent.restrictions" visible="true">
+            <parameter>
+                <name>allowCreate</name>
+                <value>true</value>
+            </parameter>
+        </property>
+        <property qualifier="AbstractCMSComponent.onlyOneRestrictionMustApply" visible="true"/>
+    </group>
+    <group qualifier="admin" visible="true" tabbed="false" initially-opened="true" show-if-empty="true" show-in-create-mode="true" position="4" printable="true">
+        <label lang="de">Verwaltung</label>
+        <label lang="zh">管理</label>
+        <label lang="en">Administration</label>
+        <label lang="ja">管理</label>
+        <property qualifier="CMSItem.uid" visible="true"/>
+        <property qualifier="AbstractCMSComponent.slots" visible="true"/>
+        <property qualifier="AbstractCMSComponent.container" visible="true"/>
+        <property qualifier="Item.pk" visible="true"/>
+        <property qualifier="Item.creationtime" visible="true"/>
+        <property qualifier="Item.modifiedtime" visible="true"/>
+    </group>
+    <custom-group qualifier="unassigned" visible="false" class="de.hybris.platform.cockpit.services.config.impl.UnassignedEditorSectionConfiguration" initially-opened="false" show-if-empty="true" printable="true">
+        <label lang="de">Andere</label>
+        <label lang="zh">其他</label>
+        <label lang="en">Other</label>
+        <label lang="ja">その他</label>
+    </custom-group>
+</editor>
